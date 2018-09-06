@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { getCurrentWeatherData } from './helper/apiCalls';
 import { addCurrentWeather } from './actions/weatherActions';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     this.state = {
       errors: ''
     };
   }
+
   componentDidMount = () => {
     this.populateCurrentWeather();
   };
@@ -38,7 +40,14 @@ class App extends Component {
 }
 
 App.propTypes = {
-  addCurrentWeather: PropTypes.isRequired
+  addCurrentWeather: PropTypes.func.isRequired
 };
 
-export default App;
+export const mapDispatchToProps = dispatch => ({
+  addCurrentWeather: weather => dispatch(addCurrentWeather(weather))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);
