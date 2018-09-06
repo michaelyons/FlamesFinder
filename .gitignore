@@ -1,5 +1,5 @@
 # apiKeys
-/src/key.js
+/src/variables.js
 
 # dependencies
 /node_modules

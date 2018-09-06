@@ -37,8 +37,8 @@ class App extends Component {
   }
 }
 
-// App.propTypes = {
-//   addCurrentWeather: PropTypes.isRequired
-// };
+App.propTypes = {
+  addCurrentWeather: PropTypes.isRequired
+};
 
 export default App;
