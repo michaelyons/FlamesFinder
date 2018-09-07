@@ -20,6 +20,7 @@ export class App extends Component {
   populateCurrentWeather = async () => {
     try {
       const currentLocationWeather = await getCurrentWeatherData();
+      console.log(currentLocationWeather);
       this.props.addCurrentWeather(currentLocationWeather);
     } catch (error) {
       this.setState({
