@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {
-  getCurrentWeatherData,
-  getTenHourWeatherData,
-  getFiveDayWeatherData
-} from './helper/apiCalls';
-import {
-  addCurrentWeather,
-  addTenHourWeather,
-  addFiveDayWeather
-} from './actions/weatherActions';
+import { allWeatherData } from './helper/apiCalls';
+import { addCurrentWeather } from './actions/weatherActions';
 import './App.css';
 
 export class App extends Component {
@@ -22,37 +14,13 @@ export class App extends Component {
   }
 
   componentDidMount = () => {
-    this.populateCurrentWeather();
-    this.populateFiveDayWeather();
-    this.populateTenHourWeather();
+    this.populateWeather();
   };
 
-  populateCurrentWeather = async () => {
+  populateWeather = async () => {
     try {
-      const currentLocationWeather = await getCurrentWeatherData();
+      const currentLocationWeather = await allWeatherData();
       this.props.addCurrentWeather(currentLocationWeather);
-    } catch (error) {
-      this.setState({
-        errors: error.message
-      });
-    }
-  };
-
-  populateFiveDayWeather = async () => {
-    try {
-      const addFiveDayWeather = await getFiveDayWeatherData();
-      this.props.addFiveDayWeather(addFiveDayWeather);
-    } catch (error) {
-      this.setState({
-        errors: error.message
-      });
-    }
-  };
-
-  populateTenHourWeather = async () => {
-    try {
-      const addTenHourWeather = await getTenHourWeatherData();
-      this.props.addTenHourWeather(addTenHourWeather);
     } catch (error) {
       this.setState({
         errors: error.message
@@ -72,15 +40,11 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  addCurrentWeather: PropTypes.func.isRequired,
-  addTenHourWeather: PropTypes.func.isRequired,
-  addFiveDayWeather: PropTypes.func.isRequired
+  addCurrentWeather: PropTypes.func.isRequired
 };
 
 export const mapDispatchToProps = dispatch => ({
-  addCurrentWeather: weather => dispatch(addCurrentWeather(weather)),
-  addTenHourWeather: weather => dispatch(addTenHourWeather(weather)),
-  addFiveDayWeather: weather => dispatch(addFiveDayWeather(weather))
+  addCurrentWeather: weather => dispatch(addCurrentWeather(weather))
 });
 
 export default connect(
