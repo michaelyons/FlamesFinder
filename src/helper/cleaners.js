@@ -53,3 +53,29 @@ export const currentWeatherCleaner = data => {
     longitude: data.coord.lon + '°'
   };
 };
+
+export const tenHourWeatherCleaner = response => {
+  return response.hourly_forecast
+    .filter(object => Object.values(object)[0])
+    .reduce((tenHour, hour, index) => {
+      if (index < 11) {
+        tenHour.push({
+          time: hour.FCTTIME.civil,
+          temp: Math.floor(hour.temp.english) + '°F',
+          condition: hour.condition,
+          icon_url: hour.icon_url
+        });
+      }
+      return tenHour;
+    }, []);
+};
+
+export const fiveDayWeatherCleaner = data => {
+  const cityName = data.city.name;
+  return data.list.map(object => {
+    console.log(object);
+    return {
+      location: cityName
+    };
+  });
+};
