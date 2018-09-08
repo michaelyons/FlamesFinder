@@ -35,11 +35,11 @@ export const currentWeatherCleaner = data => {
   const weatherDescription = data.weather.find(des => des.description);
   return {
     location: data.name,
-    currentTemp: Math.round(data.main.temp) + '°',
+    currentTemp: Math.round(data.main.temp) + '°F',
     humidity: data.main.humidity + '%',
-    highTemp: Math.round(data.main.temp_max) + '°',
-    lowTemp: Math.round(data.main.temp_min) + '°',
-    windSpeed: data.wind.speed + 'MPH',
+    highTemp: Math.round(data.main.temp_max) + '°F',
+    lowTemp: Math.round(data.main.temp_min) + '°F',
+    windSpeed: data.wind.speed + ' MPH',
     sunrise: formattedSunrise + ' AM',
     sunset: formattedSunset + ' PM',
     windDirection: wind,
@@ -62,7 +62,11 @@ export const tenHourWeatherCleaner = response => {
         tenHour.push({
           time: hour.FCTTIME.civil,
           temp: Math.floor(hour.temp.english) + '°F',
+          feelsLike: Math.floor(hour.feelslike.english) + '°F',
+          averageHumidity: hour.humidity + '%',
           condition: hour.condition,
+          averageWind: hour.wdir.dir + ' ' + hour.wspd.english,
+          uvIndex: hour.uvi + '/10',
           icon_url: hour.icon_url
         });
       }
@@ -70,12 +74,16 @@ export const tenHourWeatherCleaner = response => {
     }, []);
 };
 
-export const fiveDayWeatherCleaner = data => {
-  const cityName = data.city.name;
-  return data.list.map(object => {
-    console.log(object);
+export const tenDayWeatherCleaner = data => {
+  return data.forecast.simpleforecast.forecastday.map(object => {
     return {
-      location: cityName
+      day: object.date.weekday,
+      date: object.date.month + '/' + object.date.day + '/' + object.date.year,
+      high: object.high.fahrenheit + '°F',
+      low: object.low.fahrenheit + '°F',
+      icon: object.icon_url,
+      conditions: object.conditions,
+      averageWind: object.avewind.dir + ' ' + object.avewind.mph + ' MPH'
     };
   });
 };
