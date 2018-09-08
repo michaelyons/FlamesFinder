@@ -39,7 +39,7 @@ export const currentWeatherCleaner = data => {
     humidity: data.main.humidity + '%',
     highTemp: Math.round(data.main.temp_max) + '°F',
     lowTemp: Math.round(data.main.temp_min) + '°F',
-    windSpeed: data.wind.speed + 'MPH',
+    windSpeed: data.wind.speed + ' MPH',
     sunrise: formattedSunrise + ' AM',
     sunset: formattedSunset + ' PM',
     windDirection: wind,
@@ -62,7 +62,11 @@ export const tenHourWeatherCleaner = response => {
         tenHour.push({
           time: hour.FCTTIME.civil,
           temp: Math.floor(hour.temp.english) + '°F',
+          feelsLike: Math.floor(hour.feelslike.english) + '°F',
+          averageHumidity: hour.humidity + '%',
           condition: hour.condition,
+          averageWind: hour.wdir.dir + ' ' + hour.wspd.english,
+          uvIndex: hour.uvi + '/10',
           icon_url: hour.icon_url
         });
       }
@@ -77,7 +81,9 @@ export const tenDayWeatherCleaner = data => {
       date: object.date.month + '/' + object.date.day + '/' + object.date.year,
       high: object.high.fahrenheit + '°F',
       low: object.low.fahrenheit + '°F',
-      icon: object.icon_url
+      icon: object.icon_url,
+      conditions: object.conditions,
+      averageWind: object.avewind.dir + ' ' + object.avewind.mph + ' MPH'
     };
   });
 };
