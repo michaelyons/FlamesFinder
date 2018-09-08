@@ -24,6 +24,7 @@ export class App extends Component {
   componentDidMount = () => {
     this.populateCurrentWeather();
     this.populateFiveDayWeather();
+    this.populateTenHourWeather();
   };
 
   populateCurrentWeather = async () => {

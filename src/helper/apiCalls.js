@@ -13,7 +13,7 @@ export const getCurrentWeatherData = async () => {
 };
 
 export const getTenHourWeatherData = async () => {
-  const url = `http://api.wunderground.com/api/${keyW}/geolookup/conditions/hourly/forecast10day/q/denver,co.json`;
+  const url = `http://api.wunderground.com/api/${keyW}/geolookup/conditions/hourly/forecast10day/q/80228.json`;
   const response = await fetch(url);
   const tenHourWeather = await response.json();
   return tenHourWeatherCleaner(tenHourWeather);
