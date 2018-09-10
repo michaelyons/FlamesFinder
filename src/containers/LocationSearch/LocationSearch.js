@@ -14,7 +14,6 @@ export class LocationSearch extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-    const { location } = this.state;
   };
 
   render() {
