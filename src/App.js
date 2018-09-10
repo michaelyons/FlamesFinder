@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { allWeatherData } from './helper/apiCalls';
-import { addCurrentWeather } from './actions/weatherActions';
+import {
+  addCurrentWeather,
+  addTenHourWeather,
+  addTenDayWeather
+} from './actions/weatherActions';
 import { LocationSearch } from './containers/LocationSearch/LocationSearch';
 import './App.css';
 
@@ -20,8 +24,10 @@ export class App extends Component {
 
   populateWeather = async () => {
     try {
-      const currentLocationWeather = await allWeatherData();
-      this.props.addCurrentWeather(currentLocationWeather);
+      const allWeatherDataArray = await allWeatherData();
+      this.props.addCurrentWeather(allWeatherDataArray[0]);
+      this.props.addTenHourWeather(allWeatherDataArray[1]);
+      this.props.addTenDayWeather(allWeatherDataArray[2]);
     } catch (error) {
       this.setState({
         errors: error.message
@@ -42,11 +48,15 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  addCurrentWeather: PropTypes.func
+  addCurrentWeather: PropTypes.func.isRequired,
+  addTenHourWeather: PropTypes.func.isRequired,
+  addTenDayWeather: PropTypes.func.isRequired
 };
 
 export const mapDispatchToProps = dispatch => ({
-  addCurrentWeather: weather => dispatch(addCurrentWeather(weather))
+  addCurrentWeather: weather => dispatch(addCurrentWeather(weather)),
+  addTenHourWeather: weather => dispatch(addTenHourWeather(weather)),
+  addTenDayWeather: weather => dispatch(addTenDayWeather(weather))
 });
 
 export default connect(

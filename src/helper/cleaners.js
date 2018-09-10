@@ -58,7 +58,7 @@ export const tenHourWeatherCleaner = response => {
   return response.hourly_forecast
     .filter(object => Object.values(object)[0])
     .reduce((tenHour, hour, index) => {
-      if (index < 11) {
+      if (index < 10) {
         tenHour.push({
           time: hour.FCTTIME.civil,
           temp: Math.floor(hour.temp.english) + '°F',
