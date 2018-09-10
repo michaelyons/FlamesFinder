@@ -42,7 +42,7 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  addCurrentWeather: PropTypes.func.isRequired
+  addCurrentWeather: PropTypes.func
 };
 
 export const mapDispatchToProps = dispatch => ({
