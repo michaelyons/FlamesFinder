@@ -1,0 +1,10 @@
+.search-input {
+  width: 70%;
+  height: 6vh;
+  text-align: center;
+}
+
+.search-input::placeholder {
+  color: grey;
+  font-size: 1.4rem;
+}
