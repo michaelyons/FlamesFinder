@@ -87,3 +87,9 @@ export const tenDayWeatherCleaner = data => {
     };
   });
 };
+
+// export const cleanCampgroundData = data => {
+//   return data.elements;
+// };
+
+// cleanCampgroundData();

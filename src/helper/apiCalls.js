@@ -58,5 +58,20 @@ export const getCampsiteData = async () => {
   const convert = require('xml-js');
   const xml = xmlCampData;
   const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
-  return campObject;
+  const parsedCampObject = JSON.parse(campObject);
+  console.log(parsedCampObject.elements.map(name => name));
+  return parsedCampObject;
 };
+
+export const getCampsiteData2 = async () => {
+  const url = `http://api.amp.active.com/camping/campgrounds?state=CA&api_key=${key3}`;
+  const response = await fetch(url);
+  const xmlCampData = await response.text();
+  const convert = require('xml-js');
+  const xml = xmlCampData;
+  const campObject = convert.xml2json(xml, { compact: false, spaces: 4 });
+  const parsedCampObject2 = JSON.parse(campObject);
+  console.log(parsedCampObject2);
+  return parsedCampObject2;
+};
+getCampsiteData2();
