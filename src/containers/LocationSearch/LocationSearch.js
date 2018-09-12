@@ -10,6 +10,7 @@ import {
   addTenHourWeather,
   addTenDayWeather
 } from '../../actions/weatherActions';
+const uuidv1 = require('uuid/v1');
 
 class LocationSearch extends Component {
   constructor() {
@@ -84,16 +85,28 @@ class LocationSearch extends Component {
       onChange: this.onChange
     };
 
+    // let displayCurrentWeather;
+
     let displayTenHourWeather;
 
     let displayTenDayWeather;
+
+    // if (!this.props.currentWeather) {
+    //   displayCurrentWeather = <p className="loading-fetch">Loading...</p>;
+    // } else {
+    //   displayCurrentWeather = (
+    //     <section>
+    //       <p>{this.currentWeather.location}</p>
+    //     </section>
+    //   );
+    // }
 
     if (!this.props.tenHourWeather) {
       displayTenHourWeather = <p className="loading-fetch">Loading...</p>;
     } else {
       displayTenHourWeather = this.props.tenHourWeather.map(weather1 => {
         return (
-          <section>
+          <section key={uuidv1()}>
             <p>{`${weather1.time}`}</p>
             <p>{`${weather1.temp}`}</p>
             <p>{`${weather1.feelsLike}`}</p>
@@ -108,9 +121,9 @@ class LocationSearch extends Component {
     if (!this.props.tenDayWeather) {
       displayTenDayWeather = <p className="loading-fetch">Loading...</p>;
     } else {
-      displayTenDayWeather = this.props.tenDayWeather.map(weather2 => {
+      displayTenDayWeather = this.props.tenDayWeather.map((weather2, index) => {
         return (
-          <section>
+          <section key={uuidv1()}>
             <p>{`${weather2.day}`}</p>
             <p>{`${weather2.date}`}</p>
             <p>{`${weather2.high}`}</p>
@@ -134,6 +147,7 @@ class LocationSearch extends Component {
           />
           <button>Submit</button>
         </form>
+        {/* <div>{displayCurrentWeather}</div> */}
         <div>{displayTenHourWeather}</div>
         <div>{displayTenDayWeather}</div>
       </div>
@@ -148,7 +162,7 @@ LocationSearch.propTypes = {
 };
 
 export const mapStateToProps = state => ({
-  // currentWeather: state.currentWeather,
+  currentWeather: state.currentWeather,
   tenHourWeather: state.tenHourWeather,
   tenDayWeather: state.tenDayWeather
 });
