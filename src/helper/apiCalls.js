@@ -2,18 +2,18 @@ import { key, key2, key3 } from '../variables';
 import {
   currentWeatherCleaner,
   tenHourWeatherCleaner,
-  tenDayWeatherCleaner,
-  campgroundCleaner
+  tenDayWeatherCleaner
+  // campgroundCleaner
 } from './cleaners';
 
 export const allWeatherData = async () => {
   const currentWeatherPromise = cleanCurrentWeather();
   const tenHourPromise = cleanTenHourWeather();
-  const fiveDayPromise = cleanTenDayWeather();
+  const tenDayPromise = cleanTenDayWeather();
   return await Promise.all([
     currentWeatherPromise,
     tenHourPromise,
-    fiveDayPromise
+    tenDayPromise
   ]);
 };
 
@@ -31,11 +31,11 @@ export const cleanTenDayWeather = async () => {
   return tenDayWeatherCleaner(tenDayWeather);
 };
 
-export const cleanCampgroundInfo = () => {
-  const campgrounds = getCampsiteData();
-  console.log('hi');
-  return campgroundCleaner(campgrounds);
-};
+// export const cleanCampgroundInfo = () => {
+//   const campgrounds = getCampsiteData();
+//   console.log('hi');
+//   return campgroundCleaner(campgrounds);
+// };
 
 export const getCurrentWeatherData = async () => {
   const url = `https://api.openweathermap.org/data/2.5/weather?zip=80228,us&units=imperial&APPID=${key}`;
@@ -66,7 +66,7 @@ export const getCampsiteData = async () => {
   const xml = xmlCampData;
   const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
   const parsedCampObject = JSON.parse(campObject);
-  // console.log(parsedCampObject);
+  console.log(parsedCampObject);
   return parsedCampObject;
 };
 
