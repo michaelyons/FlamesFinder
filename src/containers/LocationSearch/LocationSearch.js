@@ -35,6 +35,7 @@ class LocationSearch extends Component {
   };
 
   onChange = (event, { newValue }) => {
+    event.preventDefault();
     this.setState({
       value: newValue
     });
@@ -85,21 +86,21 @@ class LocationSearch extends Component {
       onChange: this.onChange
     };
 
-    // let displayCurrentWeather;
+    let displayCurrentWeather;
 
     let displayTenHourWeather;
 
     let displayTenDayWeather;
 
-    // if (!this.props.currentWeather) {
-    //   displayCurrentWeather = <p className="loading-fetch">Loading...</p>;
-    // } else {
-    //   displayCurrentWeather = (
-    //     <section>
-    //       <p>{this.currentWeather.location}</p>
-    //     </section>
-    //   );
-    // }
+    if (!this.props.currentWeather) {
+      displayCurrentWeather = <p className="loading-fetch">Loading...</p>;
+    } else {
+      displayCurrentWeather = (
+        <section>
+          <p>{this.currentWeather}</p>
+        </section>
+      );
+    }
 
     if (!this.props.tenHourWeather) {
       displayTenHourWeather = <p className="loading-fetch">Loading...</p>;
@@ -121,7 +122,7 @@ class LocationSearch extends Component {
     if (!this.props.tenDayWeather) {
       displayTenDayWeather = <p className="loading-fetch">Loading...</p>;
     } else {
-      displayTenDayWeather = this.props.tenDayWeather.map((weather2, index) => {
+      displayTenDayWeather = this.props.tenDayWeather.map(weather2 => {
         return (
           <section key={uuidv1()}>
             <p>{`${weather2.day}`}</p>
@@ -147,7 +148,7 @@ class LocationSearch extends Component {
           />
           <button>Submit</button>
         </form>
-        {/* <div>{displayCurrentWeather}</div> */}
+        <div>{displayCurrentWeather}</div>
         <div>{displayTenHourWeather}</div>
         <div>{displayTenDayWeather}</div>
       </div>
@@ -158,7 +159,10 @@ class LocationSearch extends Component {
 LocationSearch.propTypes = {
   addCurrentWeather: PropTypes.func.isRequired,
   addTenHourWeather: PropTypes.func.isRequired,
-  addTenDayWeather: PropTypes.func.isRequired
+  addTenDayWeather: PropTypes.func.isRequired,
+  currentWeather: PropTypes.object.isRequired,
+  tenDayWeather: PropTypes.array.isRequired,
+  tenHourWeather: PropTypes.array.isRequired
 };
 
 export const mapStateToProps = state => ({
