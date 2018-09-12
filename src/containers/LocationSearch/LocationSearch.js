@@ -20,13 +20,9 @@ class LocationSearch extends Component {
     };
   }
 
-  componentDidMount = () => {
-    this.populateWeather();
-  };
-
   populateWeather = async () => {
     try {
-      const allWeatherDataArray = await allWeatherData();
+      const allWeatherDataArray = await allWeatherData(this.state.value);
       this.props.addCurrentWeather(allWeatherDataArray[0]);
       this.props.addTenHourWeather(allWeatherDataArray[1]);
       this.props.addTenDayWeather(allWeatherDataArray[2]);
@@ -45,6 +41,7 @@ class LocationSearch extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    this.populateWeather(this.state.value);
     this.setState({
       value: '',
       suggestions: []
@@ -121,11 +118,11 @@ LocationSearch.propTypes = {
   addTenDayWeather: PropTypes.func.isRequired
 };
 
-// export const mapStateToProps = state => ({
-//   // currentWeather: state.currentWeather,
-//   // tenHourWeather: state.tenHourWeather,
-//   tenDayWeather: state.tenDayWeather
-// });
+export const mapStateToProps = state => ({
+  // currentWeather: state.currentWeather,
+  // tenHourWeather: state.tenHourWeather,
+  tenDayWeather: state.tenDayWeather
+});
 
 export const mapDispatchToProps = dispatch => ({
   addCurrentWeather: weather => dispatch(addCurrentWeather(weather)),
@@ -134,6 +131,6 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(LocationSearch);
