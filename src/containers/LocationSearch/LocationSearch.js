@@ -21,6 +21,14 @@ export class LocationSearch extends Component {
     });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    this.setState({
+      value: '',
+      suggestions: []
+    });
+  };
+
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({
       suggestions: this.getSuggestions(value)
@@ -46,7 +54,7 @@ export class LocationSearch extends Component {
       );
   };
 
-  renderSuggestion = suggestion => <div>{suggestion}</div>;
+  renderSuggestion = suggestion => <p>{suggestion}</p>;
 
   render() {
     const { value, suggestions } = this.state;
@@ -58,14 +66,17 @@ export class LocationSearch extends Component {
     };
 
     return (
-      <Autosuggest
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={this.getSuggestionValue}
-        renderSuggestion={this.renderSuggestion}
-        inputProps={inputProps}
-      />
+      <form onSubmit={this.handleSubmit}>
+        <Autosuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+          getSuggestionValue={this.getSuggestionValue}
+          renderSuggestion={this.renderSuggestion}
+          inputProps={inputProps}
+        />
+        <button>Submit</button>
+      </form>
     );
   }
 }

@@ -22,7 +22,7 @@ const citiesList = {
     'Memphis, TN',
     'Seattle, WA',
     'Denver, CO',
-    'Washington, undefined',
+    'Washington, DC',
     'Boston, MA',
     'Nashville, TN',
     'Baltimore, MD',
