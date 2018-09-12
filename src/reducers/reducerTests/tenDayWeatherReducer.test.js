@@ -1,5 +1,4 @@
 import { tenDayWeatherReducer } from '../tenDayWeatherReducer';
-import { addTenDayWeather } from '../../actions/weatherActions';
 
 describe('tenHourWeatherReducer', () => {
   it('should return the initial state', () => {
