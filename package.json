@@ -34,5 +34,15 @@
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "eslint": "^5.5.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/registerServiceWorker.js",
+      "!src/variables.js",
+      "!src/citiesList.js",
+      "!src/helper/mockFetchData.js"
+    ]
   }
 }
