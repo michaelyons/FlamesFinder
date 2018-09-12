@@ -1,4 +1,4 @@
-export default {
+const citiesList = {
   data: [
     'New York, NY',
     'Los Angeles, CA',
@@ -22,7 +22,7 @@ export default {
     'Memphis, TN',
     'Seattle, WA',
     'Denver, CO',
-    'Washington, undefined',
+    'Washington, DC',
     'Boston, MA',
     'Nashville, TN',
     'Baltimore, MD',
@@ -1002,3 +1002,5 @@ export default {
     'Panama City, FL'
   ]
 };
+
+export default citiesList;
