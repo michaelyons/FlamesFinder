@@ -83,14 +83,42 @@ class LocationSearch extends Component {
       value,
       onChange: this.onChange
     };
-    let displayWeather;
 
-    if (!this.props.tenDayWeather) {
-      displayWeather = <p className="loading-fetch">Loading...</p>;
+    let displayTenHourWeather;
+
+    let displayTenDayWeather;
+
+    if (!this.props.tenHourWeather) {
+      displayTenHourWeather = <p className="loading-fetch">Loading...</p>;
     } else {
-      displayWeather = this.props.tenDayWeather.map(weather => {
-        console.log(weather);
-        return <p>{`${weather.day}`}</p>;
+      displayTenHourWeather = this.props.tenHourWeather.map(weather1 => {
+        return (
+          <section>
+            <p>{`${weather1.time}`}</p>
+            <p>{`${weather1.temp}`}</p>
+            <p>{`${weather1.feelsLike}`}</p>
+            <p>{`${weather1.averageHumidity}`}</p>
+            <p>{`${weather1.condition}`}</p>
+            <p>{`${weather1.averageWind}`}</p>
+            <p>{`${weather1.uvIndex}`}</p>
+          </section>
+        );
+      });
+    }
+    if (!this.props.tenDayWeather) {
+      displayTenDayWeather = <p className="loading-fetch">Loading...</p>;
+    } else {
+      displayTenDayWeather = this.props.tenDayWeather.map(weather2 => {
+        return (
+          <section>
+            <p>{`${weather2.day}`}</p>
+            <p>{`${weather2.date}`}</p>
+            <p>{`${weather2.high}`}</p>
+            <p>{`${weather2.low}`}</p>
+            <p>{`${weather2.conditions}`}</p>
+            <p>{`${weather2.averageWind}`}</p>
+          </section>
+        );
       });
     }
     return (
@@ -106,7 +134,8 @@ class LocationSearch extends Component {
           />
           <button>Submit</button>
         </form>
-        <div>{displayWeather}</div>
+        <div>{displayTenHourWeather}</div>
+        <div>{displayTenDayWeather}</div>
       </div>
     );
   }
@@ -120,7 +149,7 @@ LocationSearch.propTypes = {
 
 export const mapStateToProps = state => ({
   // currentWeather: state.currentWeather,
-  // tenHourWeather: state.tenHourWeather,
+  tenHourWeather: state.tenHourWeather,
   tenDayWeather: state.tenDayWeather
 });
 
