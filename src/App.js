@@ -25,7 +25,7 @@ export class App extends Component {
   populateWeather = async () => {
     try {
       const allWeatherDataArray = await allWeatherData();
-      console.log(allWeatherDataArray[2]);
+      console.log(allWeatherDataArray);
       this.props.addCurrentWeather(allWeatherDataArray[0]);
       this.props.addTenHourWeather(allWeatherDataArray[1]);
       this.props.addTenDayWeather(allWeatherDataArray[2]);
