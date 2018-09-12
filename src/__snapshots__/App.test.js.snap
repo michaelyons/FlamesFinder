@@ -27,7 +27,7 @@ ShallowWrapper {
                     FlamesFinder
           </h1>
 </header>,
-        <LocationSearch />,
+        <Connect(LocationSearch) />,
       ],
       "className": "App",
     },
@@ -88,7 +88,7 @@ ShallowWrapper {
                         FlamesFinder
             </h1>
 </header>,
-          <LocationSearch />,
+          <Connect(LocationSearch) />,
         ],
         "className": "App",
       },

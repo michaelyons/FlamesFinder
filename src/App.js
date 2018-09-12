@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LocationSearch from './containers/LocationSearch/LocationSearch';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     this.state = {
