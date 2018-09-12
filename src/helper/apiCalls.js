@@ -2,7 +2,8 @@ import { key, key2, key3 } from '../variables';
 import {
   currentWeatherCleaner,
   tenHourWeatherCleaner,
-  tenDayWeatherCleaner
+  tenDayWeatherCleaner,
+  campgroundCleaner
 } from './cleaners';
 
 export const allWeatherData = async () => {
@@ -30,6 +31,12 @@ export const cleanTenDayWeather = async () => {
   return tenDayWeatherCleaner(tenDayWeather);
 };
 
+export const cleanCampgroundInfo = () => {
+  const campgrounds = getCampsiteData();
+  console.log('hi');
+  return campgroundCleaner(campgrounds);
+};
+
 export const getCurrentWeatherData = async () => {
   const url = `https://api.openweathermap.org/data/2.5/weather?zip=80228,us&units=imperial&APPID=${key}`;
   const response = await fetch(url);
@@ -52,26 +59,15 @@ export const getTenDayWeatherData = async () => {
 };
 
 export const getCampsiteData = async () => {
-  const url = `http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=50032&api_key=${key3}`;
+  const url = `http://api.amp.active.com/camping/campgrounds?pstate=CO&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
   const xml = xmlCampData;
   const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
   const parsedCampObject = JSON.parse(campObject);
-  console.log(parsedCampObject.elements.map(name => name));
+  // console.log(parsedCampObject);
   return parsedCampObject;
 };
 
-export const getCampsiteData2 = async () => {
-  const url = `http://api.amp.active.com/camping/campgrounds?state=CA&api_key=${key3}`;
-  const response = await fetch(url);
-  const xmlCampData = await response.text();
-  const convert = require('xml-js');
-  const xml = xmlCampData;
-  const campObject = convert.xml2json(xml, { compact: false, spaces: 4 });
-  const parsedCampObject2 = JSON.parse(campObject);
-  console.log(parsedCampObject2);
-  return parsedCampObject2;
-};
-getCampsiteData2();
+getCampsiteData();

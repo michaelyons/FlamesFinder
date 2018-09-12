@@ -88,8 +88,8 @@ export const tenDayWeatherCleaner = data => {
   });
 };
 
-// export const cleanCampgroundData = data => {
-//   return data.elements;
-// };
-
-// cleanCampgroundData();
+export const campgroundCleaner = data => {
+  return data.elements.map(element => {
+    console.log(element.elements);
+  });
+};
