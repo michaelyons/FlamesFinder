@@ -83,12 +83,30 @@ describe('LocationSearch Container', () => {
     });
   });
   describe('mapDispatchToProps', () => {
-    it('should call dispatch with an addCurrentWeather action when handleSubmit is called', () => {
+    it('should call dispatch with an addCurrentWeather action when addCurrentWeather is called', () => {
       const mockDispatch = jest.fn();
       const actionToDispatch = addCurrentWeather({ location: 'Denver' });
 
       const mappedProps = mapDispatchToProps(mockDispatch);
       mappedProps.addCurrentWeather({ location: 'Denver' });
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
+    it('should call dispatch with an addTenHourWeather action when addTenHourWeather is called', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = addTenHourWeather([{ time: '9:00PM' }]);
+
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      mappedProps.addTenHourWeather([{ time: '9:00PM' }]);
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
+    it('should call dispatch with an addTenDayWeather action when addTenDayWeather is called', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = addTenDayWeather([{ day: 'Friday' }]);
+
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      mappedProps.addTenDayWeather([{ day: 'Friday' }]);
 
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     });
