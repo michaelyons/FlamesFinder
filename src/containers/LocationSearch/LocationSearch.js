@@ -10,8 +10,9 @@ import {
   addTenHourWeather,
   addTenDayWeather
 } from '../../actions/weatherActions';
+const uuidv1 = require('uuid/v1');
 
-class LocationSearch extends Component {
+export class LocationSearch extends Component {
   constructor() {
     super();
     this.state = {
@@ -34,6 +35,7 @@ class LocationSearch extends Component {
   };
 
   onChange = (event, { newValue }) => {
+    event.preventDefault();
     this.setState({
       value: newValue
     });
@@ -83,14 +85,66 @@ class LocationSearch extends Component {
       value,
       onChange: this.onChange
     };
-    let displayWeather;
 
-    if (!this.props.tenDayWeather) {
-      displayWeather = <p className="loading-fetch">Loading...</p>;
+    let displayCurrentWeather;
+
+    let displayTenHourWeather;
+
+    let displayTenDayWeather;
+
+    if (!this.props.currentWeather) {
+      displayCurrentWeather = <p className="loading-fetch">Loading...</p>;
     } else {
-      displayWeather = this.props.tenDayWeather.map(weather => {
-        console.log(weather);
-        return <p>{`${weather.day}`}</p>;
+      displayCurrentWeather = (
+        <section>
+          <p>{this.props.currentWeather.location}</p>
+          <p>{this.props.currentWeather.currentTemp}</p>
+          <p>{this.props.currentWeather.humidity}</p>
+          <p>{this.props.currentWeather.highTemp}</p>
+          <p>{this.props.currentWeather.lowTemp}</p>
+          <p>{this.props.currentWeather.windSpeed}</p>
+          <p>{this.props.currentWeather.sunrise}</p>
+          <p>{this.props.currentWeather.sunset}</p>
+          <p>{this.props.currentWeather.windDirection}</p>
+          <p>{this.props.currentWeather.visibility}</p>
+          <p>{this.props.currentWeather.currentConditions}</p>
+          <p>{this.props.currentWeather.latitude}</p>
+          <p>{this.props.currentWeather.longitude}</p>
+        </section>
+      );
+    }
+
+    if (!this.props.tenHourWeather) {
+      displayTenHourWeather = <p className="loading-fetch">Loading...</p>;
+    } else {
+      displayTenHourWeather = this.props.tenHourWeather.map(weather1 => {
+        return (
+          <section key={uuidv1()}>
+            <p>{`${weather1.time}`}</p>
+            <p>{`${weather1.temp}`}</p>
+            <p>{`${weather1.feelsLike}`}</p>
+            <p>{`${weather1.averageHumidity}`}</p>
+            <p>{`${weather1.condition}`}</p>
+            <p>{`${weather1.averageWind}`}</p>
+            <p>{`${weather1.uvIndex}`}</p>
+          </section>
+        );
+      });
+    }
+    if (!this.props.tenDayWeather) {
+      displayTenDayWeather = <p className="loading-fetch">Loading...</p>;
+    } else {
+      displayTenDayWeather = this.props.tenDayWeather.map(weather2 => {
+        return (
+          <section key={uuidv1()}>
+            <p>{`${weather2.day}`}</p>
+            <p>{`${weather2.date}`}</p>
+            <p>{`${weather2.high}`}</p>
+            <p>{`${weather2.low}`}</p>
+            <p>{`${weather2.conditions}`}</p>
+            <p>{`${weather2.averageWind}`}</p>
+          </section>
+        );
       });
     }
     return (
@@ -106,21 +160,26 @@ class LocationSearch extends Component {
           />
           <button>Submit</button>
         </form>
-        <div>{displayWeather}</div>
+        <div>{displayCurrentWeather}</div>
+        <div>{displayTenHourWeather}</div>
+        <div>{displayTenDayWeather}</div>
       </div>
     );
   }
 }
 
 LocationSearch.propTypes = {
-  addCurrentWeather: PropTypes.func.isRequired,
-  addTenHourWeather: PropTypes.func.isRequired,
-  addTenDayWeather: PropTypes.func.isRequired
+  addCurrentWeather: PropTypes.func,
+  addTenHourWeather: PropTypes.func,
+  addTenDayWeather: PropTypes.func,
+  currentWeather: PropTypes.object,
+  tenDayWeather: PropTypes.array,
+  tenHourWeather: PropTypes.array
 };
 
 export const mapStateToProps = state => ({
-  // currentWeather: state.currentWeather,
-  // tenHourWeather: state.tenHourWeather,
+  currentWeather: state.currentWeather,
+  tenHourWeather: state.tenHourWeather,
   tenDayWeather: state.tenDayWeather
 });
 

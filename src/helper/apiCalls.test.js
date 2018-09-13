@@ -26,7 +26,7 @@ describe('API calls', () => {
     it('should make a fetch call with the correct params', () => {
       getCurrentWeatherData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `https://api.openweathermap.org/data/2.5/weather?zip=80228,us&units=imperial&APPID=${key}`
+        `https://api.openweathermap.org/data/2.5/weather?q=undefined,us&units=imperial&APPID=${key}`
       );
     });
   });
@@ -44,7 +44,7 @@ describe('API calls', () => {
     it('should make a fetch call with the correct params', () => {
       getTenHourWeatherData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/80228.json`
+        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/undefined.json`
       );
     });
   });
@@ -62,7 +62,7 @@ describe('API calls', () => {
     it('should make a fetch with the correct params', () => {
       getTenDayWeatherData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/80228.json`
+        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/undefined.json`
       );
     });
   });
