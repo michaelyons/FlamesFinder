@@ -12,7 +12,7 @@ import {
 } from '../../actions/weatherActions';
 const uuidv1 = require('uuid/v1');
 
-class LocationSearch extends Component {
+export class LocationSearch extends Component {
   constructor() {
     super();
     this.state = {
@@ -97,7 +97,19 @@ class LocationSearch extends Component {
     } else {
       displayCurrentWeather = (
         <section>
-          <p>{this.currentWeather}</p>
+          <p>{this.props.currentWeather.location}</p>
+          <p>{this.props.currentWeather.currentTemp}</p>
+          <p>{this.props.currentWeather.humidity}</p>
+          <p>{this.props.currentWeather.highTemp}</p>
+          <p>{this.props.currentWeather.lowTemp}</p>
+          <p>{this.props.currentWeather.windSpeed}</p>
+          <p>{this.props.currentWeather.sunrise}</p>
+          <p>{this.props.currentWeather.sunset}</p>
+          <p>{this.props.currentWeather.windDirection}</p>
+          <p>{this.props.currentWeather.visibility}</p>
+          <p>{this.props.currentWeather.currentConditions}</p>
+          <p>{this.props.currentWeather.latitude}</p>
+          <p>{this.props.currentWeather.longitude}</p>
         </section>
       );
     }
@@ -157,12 +169,12 @@ class LocationSearch extends Component {
 }
 
 LocationSearch.propTypes = {
-  addCurrentWeather: PropTypes.func.isRequired,
-  addTenHourWeather: PropTypes.func.isRequired,
-  addTenDayWeather: PropTypes.func.isRequired,
-  currentWeather: PropTypes.object.isRequired,
-  tenDayWeather: PropTypes.array.isRequired,
-  tenHourWeather: PropTypes.array.isRequired
+  addCurrentWeather: PropTypes.func,
+  addTenHourWeather: PropTypes.func,
+  addTenDayWeather: PropTypes.func,
+  currentWeather: PropTypes.object,
+  tenDayWeather: PropTypes.array,
+  tenHourWeather: PropTypes.array
 };
 
 export const mapStateToProps = state => ({
