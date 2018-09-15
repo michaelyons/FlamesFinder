@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 export class Home extends Component {
-  getCurrentPosition = () => {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      console.log(position);
-      // do_something(position.coords.latitude, position.coords.longitude);
-    });
-  };
-
   render() {
     return (
       <div>
-        <h1>poop</h1>
-        <button onClick={this.getCurrentPosition}>Find Campsites Nearby</button>
+        <header className="App-header">
+          <h1 className="App-title">FlamesFinder</h1>
+        </header>
+        <Link to={'/campsites'}>Find Nearby Campsites</Link>
       </div>
     );
   }

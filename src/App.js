@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Routes from './containers/Routes/Routes';
 import LocationSearch from './containers/LocationSearch/LocationSearch';
-import { Home } from './containers/Home/Home';
+
 import './App.css';
 
 export class App extends Component {
@@ -13,12 +14,8 @@ export class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">FlamesFinder</h1>
-        </header>
-        <Home />
-        {/* <LocationSearch /> */}
+      <div>
+        <Routes />
       </div>
     );
   }
