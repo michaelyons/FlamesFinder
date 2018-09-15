@@ -58,22 +58,29 @@ export const getTenDayWeatherData = async location => {
   return tenDayWeather;
 };
 
-export const getCampsiteData = async (lat, long) => {
-  const url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=${lat}&landmarkLong=${long}&xml=true&api_key=${key3}`;
+export const getCampsiteData = async () => {
+  const position = await getCurrentPosition();
+  const { latitude, longitude } = position.coords;
+  const url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
   const xml = xmlCampData;
   const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
   const parsedCampObject = JSON.parse(campObject);
-  console.log(parsedCampObject);
-  return parsedCampObject;
+  return parsedCampObject.elements[0].elements;
 };
 
+// export const getCurrentPosition = () => {
+//   return navigator.geolocation.getCurrentPosition(async function(position) {
+//     const { latitude, longitude } = position.coords;
+//     return await getCampsiteData(latitude, longitude);
+//   });
+// };
+
 export const getCurrentPosition = () => {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    const { latitude, longitude } = position.coords;
-    getCampsiteData(latitude, longitude);
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
   });
 };
 

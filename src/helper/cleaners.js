@@ -90,6 +90,6 @@ export const tenDayWeatherCleaner = data => {
 
 // export const campgroundCleaner = data => {
 //   return data.elements.map(element => {
-//     console.log(element.elements);
+//     console.log(element);
 //   });
 // };

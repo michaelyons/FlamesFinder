@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
-import { getCurrentPosition } from '../../helper/apiCalls';
+import { getCampsiteData } from '../../helper/apiCalls';
+import { Link } from 'react-router-dom';
 
 export class CampsiteList extends Component {
-  componentDidMount() {
-    getCurrentPosition();
+  constructor() {
+    super();
+    this.state = {
+      campsites: []
+    };
   }
 
-  // getCurrentPosition = () => {
-  //   navigator.geolocation.getCurrentPosition(function(position) {
-  //     console.log(position);
-  //     const { latitude, longitude } = position.coords;
-
-  //     // do_something(position.coords.latitude, position.coords.longitude);
-  //     getCampsiteData();
-  //   });
-  // };
+  async componentDidMount() {
+    const campsites = await getCampsiteData();
+    this.setState({
+      campsites
+    });
+  }
 
   render() {
+    const { campsites } = this.state;
+    const displayCampsites = campsites.slice(0, 20).map(campsite => {
+      const { facilityId, facilityName } = campsite.attributes;
+      return (
+        <div>
+          <Link to={`/campsites/${facilityId}`}>{facilityName}</Link>
+        </div>
+      );
+    });
     return (
       <div>
-        <h2>poop</h2>
+        <h2>Nearby campsites</h2>
+        <div>{displayCampsites}</div>
       </div>
     );
   }
