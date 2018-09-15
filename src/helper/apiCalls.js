@@ -58,8 +58,9 @@ export const getTenDayWeatherData = async location => {
   return tenDayWeather;
 };
 
-export const getCampsiteData = async () => {
-  const url = `http://api.amp.active.com/camping/campgrounds?pstate=CO&api_key=${key3}`;
+export const getCampsiteData = async (lat, long) => {
+  console.log(lat);
+  const url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=37.84035&landmarkLong=-122.4888889&xml=true&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
@@ -70,4 +71,6 @@ export const getCampsiteData = async () => {
   return parsedCampObject;
 };
 
-getCampsiteData();
+// http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=37.84035&landmarkLong=-122.4888889&xml=true&api_key=2chxq68efd4azrpygt5hh2qu
+
+// const url = `http://api.amp.active.com/camping/campgrounds?pstate=CO&api_key=${key3}`;
