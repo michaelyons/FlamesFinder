@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getCampsiteData } from '../../helper/apiCalls';
 import { Link } from 'react-router-dom';
+const uuidv1 = require('uuid/v1');
 
 export class CampsiteList extends Component {
   constructor() {
@@ -22,14 +23,14 @@ export class CampsiteList extends Component {
     const displayCampsites = campsites.slice(0, 20).map(campsite => {
       const { facilityId, facilityName } = campsite.attributes;
       return (
-        <div>
+        <div key={uuidv1()}>
           <Link to={`/campsites/${facilityId}`}>{facilityName}</Link>
         </div>
       );
     });
     return (
       <div>
-        <h2>Nearby campsites</h2>
+        <h2>Nearby Campsites</h2>
         <div>{displayCampsites}</div>
       </div>
     );
