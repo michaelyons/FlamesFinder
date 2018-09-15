@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LocationSearch from './containers/LocationSearch/LocationSearch';
+import { Home } from './containers/Home/Home';
 import './App.css';
 
 export class App extends Component {
@@ -16,7 +17,8 @@ export class App extends Component {
         <header className="App-header">
           <h1 className="App-title">FlamesFinder</h1>
         </header>
-        <LocationSearch />
+        <Home />
+        {/* <LocationSearch /> */}
       </div>
     );
   }

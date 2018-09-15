@@ -1,4 +1,4 @@
-import { key, key2 } from '../variables';
+import { key, key2, key3 } from '../variables';
 import {
   currentWeatherCleaner,
   tenHourWeatherCleaner,
@@ -58,16 +58,16 @@ export const getTenDayWeatherData = async location => {
   return tenDayWeather;
 };
 
-// export const getCampsiteData = async () => {
-//   const url = `http://api.amp.active.com/camping/campgrounds?pstate=CO&api_key=${key3}`;
-//   const response = await fetch(url);
-//   const xmlCampData = await response.text();
-//   const convert = require('xml-js');
-//   const xml = xmlCampData;
-//   const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
-//   const parsedCampObject = JSON.parse(campObject);
-//   console.log(parsedCampObject);
-//   return parsedCampObject;
-// };
+export const getCampsiteData = async () => {
+  const url = `http://api.amp.active.com/camping/campgrounds?pstate=CO&api_key=${key3}`;
+  const response = await fetch(url);
+  const xmlCampData = await response.text();
+  const convert = require('xml-js');
+  const xml = xmlCampData;
+  const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
+  const parsedCampObject = JSON.parse(campObject);
+  console.log(parsedCampObject);
+  return parsedCampObject;
+};
 
-// getCampsiteData();
+getCampsiteData();
