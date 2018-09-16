@@ -20,11 +20,11 @@ export class CampsiteList extends Component {
 
   render() {
     const { campsites } = this.state;
-    const displayCampsites = campsites.slice(0, 20).map(campsite => {
-      const { facilityId, facilityName } = campsite.attributes;
+    const displayCampsites = campsites.map(campsite => {
+      const { facilityID, facilityName } = campsite.attributes;
       return (
         <div key={uuidv1()}>
-          <Link to={`/campsites/${facilityId}`}>{facilityName}</Link>
+          <Link to={`/campsites/${facilityID}`}>{facilityName}</Link>
         </div>
       );
     });

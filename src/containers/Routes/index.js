@@ -12,7 +12,13 @@ export class Routes extends Component {
           <div className="App">
             <Route exact path="/" component={Home} />
             <Route exact path="/campsites" component={CampsiteList} />
-            <Route exact path="/campsites/:id" component={Campsite} />
+            <Route
+              exact
+              path="/campsites/:id"
+              render={({ match }) => {
+                return <Campsite facilityID={match.params.id} />;
+              }}
+            />
             {/* <LocationSearch /> */}
           </div>
         </BrowserRouter>

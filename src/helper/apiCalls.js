@@ -3,7 +3,6 @@ import {
   currentWeatherCleaner,
   tenHourWeatherCleaner,
   tenDayWeatherCleaner
-  // campgroundCleaner
 } from './cleaners';
 
 export const allWeatherData = async location => {
@@ -30,12 +29,6 @@ export const cleanTenDayWeather = async location => {
   const tenDayWeather = await getTenDayWeatherData(location);
   return tenDayWeatherCleaner(tenDayWeather);
 };
-
-// export const cleanCampgroundInfo = () => {
-//   const campgrounds = getCampsiteData();
-//   console.log('hi');
-//   return campgroundCleaner(campgrounds);
-// };
 
 export const getCurrentWeatherData = async location => {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location},us&units=imperial&APPID=${key}`;
@@ -71,17 +64,19 @@ export const getCampsiteData = async () => {
   return parsedCampObject.elements[0].elements;
 };
 
-// export const getCurrentPosition = () => {
-//   return navigator.geolocation.getCurrentPosition(async function(position) {
-//     const { latitude, longitude } = position.coords;
-//     return await getCampsiteData(latitude, longitude);
-//   });
-// };
-
 export const getCurrentPosition = () => {
   return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(resolve, reject);
   });
 };
 
-// const url = `http://api.amp.active.com/camping/campgrounds?pstate=CO&api_key=${key3}`;
+export const getCampsite = async facility_id => {
+  const url = `http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=${facility_id}&api_key=${key3}`;
+  const response = await fetch(url);
+  const xmlCampsiteData = await response.text();
+  const convert = require('xml-js');
+  const xml = xmlCampsiteData;
+  const campsiteObject = convert.xml2json(xml, { compact: false, spaces: 2 });
+  const parsedCampsiteObject = JSON.parse(campsiteObject);
+  return parsedCampsiteObject;
+};
