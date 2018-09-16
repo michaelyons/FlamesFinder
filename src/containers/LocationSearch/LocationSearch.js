@@ -72,8 +72,8 @@ export class LocationSearch extends Component {
     return inputLength === 0
       ? []
       : citiesList.data.filter(
-          city => city.toLowerCase().slice(0, inputLength) === inputValue
-        );
+        city => city.toLowerCase().slice(0, inputLength) === inputValue
+      );
   };
 
   renderSuggestion = suggestion => <p>{suggestion}</p>;

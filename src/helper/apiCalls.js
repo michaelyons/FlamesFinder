@@ -3,8 +3,9 @@ import {
   currentWeatherCleaner,
   tenHourWeatherCleaner,
   tenDayWeatherCleaner
-  // campgroundCleaner
 } from './cleaners';
+
+// import { convert } from 'xml-js';
 
 export const allWeatherData = async location => {
   const currentWeatherPromise = cleanCurrentWeather(location);
@@ -31,12 +32,6 @@ export const cleanTenDayWeather = async location => {
   return tenDayWeatherCleaner(tenDayWeather);
 };
 
-// export const cleanCampgroundInfo = () => {
-//   const campgrounds = getCampsiteData();
-//   console.log('hi');
-//   return campgroundCleaner(campgrounds);
-// };
-
 export const getCurrentWeatherData = async location => {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location},us&units=imperial&APPID=${key}`;
   const response = await fetch(url);
@@ -58,19 +53,34 @@ export const getTenDayWeatherData = async location => {
   return tenDayWeather;
 };
 
-export const getCampsiteData = async (lat, long) => {
-  console.log(lat);
-  const url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=37.84035&landmarkLong=-122.4888889&xml=true&api_key=${key3}`;
+export const getCampsiteData = async () => {
+  const position = await getCurrentPosition();
+  const { latitude, longitude } = position.coords;
+  const url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
   const xml = xmlCampData;
   const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
   const parsedCampObject = JSON.parse(campObject);
-  console.log(parsedCampObject);
-  return parsedCampObject;
+  return parsedCampObject.elements[0].elements;
 };
 
-// http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=37.84035&landmarkLong=-122.4888889&xml=true&api_key=2chxq68efd4azrpygt5hh2qu
+export const getCurrentPosition = () => {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
 
-// const url = `http://api.amp.active.com/camping/campgrounds?pstate=CO&api_key=${key3}`;
+export const getCampsite = async facilityID => {
+  const url = `http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=${facilityID}&api_key=${key3}`;
+  const response = await fetch(url);
+  const xmlCampData = await response.text();
+  const convert = require('xml-js');
+  const campObject = convert.xml2json(xmlCampData, {
+    compact: false,
+    spaces: 4
+  });
+  const parsedCampObject = JSON.parse(campObject);
+  return parsedCampObject.elements;
+};

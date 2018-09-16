@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Routes from './containers/Routes/Routes';
-import LocationSearch from './containers/LocationSearch/LocationSearch';
+import Routes from './containers/Routes';
 
 import './App.css';
 
