@@ -12,7 +12,6 @@ export class Campsite extends Component {
 
   async componentDidMount() {
     const campsiteDetails = await getCampsite(this.props.facilityID);
-    console.log(campsiteDetails.elements);
     this.setState({
       campsiteDetails,
       loading: false
@@ -21,15 +20,20 @@ export class Campsite extends Component {
 
   render() {
     const { campsiteDetails, loading } = this.state;
-    if (!loading) {
-      const displayChoosedCampsite = campsiteDetails.map(site => {
-        console.log(site);
+    let displayChoosenCampsite;
+
+    if (loading) {
+      displayChoosenCampsite = <div>Loading...</div>;
+    } else {
+      displayChoosenCampsite = campsiteDetails.map(site => {
+        return <p>{site.attributes.facility}</p>;
       });
     }
     return (
       <div>
         <h2>Campsite Info</h2>
         {this.props.facilityID}
+        <section>{displayChoosenCampsite}</section>
       </div>
     );
   }
