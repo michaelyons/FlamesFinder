@@ -5,6 +5,8 @@ import {
   tenDayWeatherCleaner
 } from './cleaners';
 
+// import { convert } from 'xml-js';
+
 export const allWeatherData = async location => {
   const currentWeatherPromise = cleanCurrentWeather(location);
   const tenHourPromise = cleanTenHourWeather(location);
@@ -70,13 +72,15 @@ export const getCurrentPosition = () => {
   });
 };
 
-export const getCampsite = async facility_id => {
-  const url = `http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=${facility_id}&api_key=${key3}`;
+export const getCampsite = async facilityID => {
+  const url = `http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=${facilityID}&api_key=${key3}`;
   const response = await fetch(url);
-  const xmlCampsiteData = await response.text();
+  const xmlCampData = await response.text();
   const convert = require('xml-js');
-  const xml = xmlCampsiteData;
-  const campsiteObject = convert.xml2json(xml, { compact: false, spaces: 2 });
-  const parsedCampsiteObject = JSON.parse(campsiteObject);
-  return parsedCampsiteObject;
+  const campObject = convert.xml2json(xmlCampData, {
+    compact: false,
+    spaces: 4
+  });
+  const parsedCampObject = JSON.parse(campObject);
+  return parsedCampObject.elements;
 };

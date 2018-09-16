@@ -5,18 +5,27 @@ export class Campsite extends Component {
   constructor() {
     super();
     this.state = {
-      campsiteDetails: {}
+      loading: true,
+      campsiteDetails: []
     };
   }
 
   async componentDidMount() {
-    const campsite = await getCampsite(this.props.facilityID);
+    const campsiteDetails = await getCampsite(this.props.facilityID);
+    console.log(campsiteDetails.elements);
     this.setState({
-      campsiteDetails: campsite
+      campsiteDetails,
+      loading: false
     });
   }
 
   render() {
+    const { campsiteDetails, loading } = this.state;
+    if (!loading) {
+      const displayChoosedCampsite = campsiteDetails.map(site => {
+        console.log(site);
+      });
+    }
     return (
       <div>
         <h2>Campsite Info</h2>

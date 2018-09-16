@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
 import { getCampsiteData } from '../../helper/apiCalls';
 import { Link } from 'react-router-dom';
-const uuidv1 = require('uuid/v1');
+import { connect } from 'react-redux';
+import { populateCampsites } from '../../actions/campsiteActions';
 
 export class CampsiteList extends Component {
-  constructor() {
-    super();
-    this.state = {
-      campsites: []
-    };
-  }
-
   async componentDidMount() {
     const campsites = await getCampsiteData();
-    this.setState({
-      campsites
-    });
+    this.props.populateCampsites(campsites);
   }
 
   render() {
-    const { campsites } = this.state;
-    const displayCampsites = campsites.map(campsite => {
+    const { campsites } = this.props;
+    const displayCampsites = campsites.map((campsite, i) => {
       const { facilityID, facilityName } = campsite.attributes;
       return (
-        <div key={uuidv1()}>
+        <div key={`${facilityID}-${i}`}>
           <Link to={`/campsites/${facilityID}`}>{facilityName}</Link>
         </div>
       );
@@ -37,4 +29,15 @@ export class CampsiteList extends Component {
   }
 }
 
-export default CampsiteList;
+const mapStateToProps = state => ({
+  campsites: state.campsites
+});
+
+const mapDispatchToProps = dispatch => ({
+  populateCampsites: campsite => dispatch(populateCampsites(campsite))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CampsiteList);
