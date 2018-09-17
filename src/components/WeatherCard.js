@@ -6,20 +6,24 @@ const uuidv1 = require('uuid/v1');
 
 export class WeatherCard extends Component {
   render() {
-    let displayCurrentWeather;
-
+    let displayCurrentWeather1;
+    let displayCurrentWeather2;
     let displayTenHourWeather;
 
     let displayTenDayWeather;
 
     if (!this.props.currentWeather) {
-      displayCurrentWeather = <p className="loading-fetch">Loading...</p>;
+      displayCurrentWeather1 = <p className="loading-fetch">Loading...</p>;
     } else {
-      displayCurrentWeather = (
+      displayCurrentWeather1 = (
         <section className="current-weather-card">
           <p>Current Weather</p>
           <p>{this.props.currentWeather.currentTemp}</p>
           <p>{this.props.currentWeather.currentConditions}</p>
+        </section>
+      );
+      displayCurrentWeather2 = (
+        <section>
           <p>Humidity: {this.props.currentWeather.humidity}</p>
           <p>High: {this.props.currentWeather.highTemp}</p>
           <p>Low: {this.props.currentWeather.lowTemp}</p>
@@ -62,9 +66,10 @@ export class WeatherCard extends Component {
     }
     return (
       <div>
-        <div>{displayCurrentWeather}</div>
+        <div>{displayCurrentWeather1}</div>
         <div className="ten-hour-container">{displayTenHourWeather}</div>
         <div>{displayTenDayWeather}</div>
+        <div>{displayCurrentWeather2}</div>
       </div>
     );
   }
