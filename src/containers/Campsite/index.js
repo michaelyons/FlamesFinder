@@ -24,24 +24,41 @@ export class Campsite extends Component {
   render() {
     const { campsiteDetails, loading } = this.state;
     let displayChoosenCampsite;
+    let campgroundName;
+    let importantCampInfo;
+    let campDetails;
 
     if (loading) {
       displayChoosenCampsite = <div>Loading...</div>;
     } else {
-      displayChoosenCampsite = campsiteDetails.map((site, index) => {
-        return (
-          <div>
-            <p>{site.attributes.facility}</p>
-            <p>{site.attributes.note}</p>
-          </div>
-        );
-      });
+      campgroundName = campsiteDetails[0].attributes.facility;
+      importantCampInfo = campsiteDetails[0].attributes.note;
+      campDetails = campsiteDetails[0].attributes.importantInformation;
+      displayChoosenCampsite = campsiteDetails[0].elements.map(
+        (site, index) => {
+          console.log(site);
+          return (
+            <div key={`${site}-${index}`}>
+              <p>
+                {site.attributes.streetAddress} {site.attributes.zip}
+              </p>
+              <p>
+                {site.attributes.city} {site.attributes.state}
+              </p>
+              <p>{site.attributes.number}</p>
+              <p>{site.attributes.name}</p>
+            </div>
+          );
+        }
+      );
     }
     return (
       <div>
         <h2>Campsite Info</h2>
-        {this.props.facilityID}
+        <h3>{campgroundName}</h3>
+        <p>{importantCampInfo}</p>
         <section>{displayChoosenCampsite}</section>
+        <p>{campDetails}</p>
       </div>
     );
   }

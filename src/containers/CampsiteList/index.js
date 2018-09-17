@@ -24,7 +24,7 @@ export class CampsiteList extends Component {
     });
     return (
       <div>
-        <h2>Nearby Campsites</h2>
+        <h2>Nearby Campgrounds</h2>
         <div>{displayCampsites}</div>
       </div>
     );
