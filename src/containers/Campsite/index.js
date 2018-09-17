@@ -27,6 +27,7 @@ export class Campsite extends Component {
     this.props.addCurrentWeather(allWeatherDataArray[0]);
     this.props.addTenHourWeather(allWeatherDataArray[1]);
     this.props.addTenDayWeather(allWeatherDataArray[2]);
+    console.log(campsiteDetails);
     this.setState({
       campsiteDetails,
       loading: false,

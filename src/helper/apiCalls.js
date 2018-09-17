@@ -57,6 +57,7 @@ export const getCampsiteData = async () => {
   const url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
+  console.log(xmlCampData);
   const convert = require('xml-js');
   const xml = xmlCampData;
   const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
