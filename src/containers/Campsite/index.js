@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { getCampsite } from '../../helper/apiCalls';
 
+import './index.css';
+
 export class Campsite extends Component {
   constructor() {
     super();
@@ -12,6 +14,7 @@ export class Campsite extends Component {
 
   async componentDidMount() {
     const campsiteDetails = await getCampsite(this.props.facilityID);
+    console.log(campsiteDetails);
     this.setState({
       campsiteDetails,
       loading: false
@@ -25,8 +28,13 @@ export class Campsite extends Component {
     if (loading) {
       displayChoosenCampsite = <div>Loading...</div>;
     } else {
-      displayChoosenCampsite = campsiteDetails.map(site => {
-        return <p>{site.attributes.facility}</p>;
+      displayChoosenCampsite = campsiteDetails.map((site, index) => {
+        return (
+          <div>
+            <p>{site.attributes.facility}</p>
+            <p>{site.attributes.note}</p>
+          </div>
+        );
       });
     }
     return (

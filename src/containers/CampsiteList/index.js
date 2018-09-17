@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { populateCampsites } from '../../actions/campsiteActions';
 
+import './index.css';
+
 export class CampsiteList extends Component {
   async componentDidMount() {
     const campsites = await getCampsiteData();
@@ -12,10 +14,10 @@ export class CampsiteList extends Component {
 
   render() {
     const { campsites } = this.props;
-    const displayCampsites = campsites.map((campsite, i) => {
+    const displayCampsites = campsites.map((campsite, index) => {
       const { facilityID, facilityName } = campsite.attributes;
       return (
-        <div key={`${facilityID}-${i}`}>
+        <div key={`${facilityID}-${index}`} className="campsite-list">
           <Link to={`/campsites/${facilityID}`}>{facilityName}</Link>
         </div>
       );
