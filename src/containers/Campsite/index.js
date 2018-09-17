@@ -45,8 +45,8 @@ export class Campsite extends Component {
       displayChoosenCampsite = <div>Loading...</div>;
     } else {
       campgroundName = campsiteDetails[0].attributes.facility;
-      importantCampInfo = campsiteDetails[0].attributes.note;
       campDetails = campsiteDetails[0].attributes.importantInformation;
+      importantCampInfo = campsiteDetails[0].attributes.note;
       displayChoosenCampsite = campsiteDetails[0].elements.map(
         (site, index) => {
           return (
@@ -69,9 +69,9 @@ export class Campsite extends Component {
         <div>
           <h2>Campsite Info</h2>
           <h3>{campgroundName}</h3>
-          <p>{importantCampInfo}</p>
           <section>{displayChoosenCampsite}</section>
           <p>{campDetails}</p>
+          <p>{importantCampInfo}</p>
         </div>
         <div>
           <WeatherCard

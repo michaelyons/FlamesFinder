@@ -19,7 +19,6 @@ export class Routes extends Component {
                 return <Campsite facilityID={match.params.id} />;
               }}
             />
-            {/* <LocationSearch /> */}
           </div>
         </BrowserRouter>
       </div>
