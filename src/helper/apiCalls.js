@@ -5,10 +5,10 @@ import {
   tenDayWeatherCleaner
 } from './cleaners';
 
-export const allWeatherData = async location => {
-  const currentWeatherPromise = cleanCurrentWeather(location);
-  const tenHourPromise = cleanTenHourWeather(location);
-  const tenDayPromise = cleanTenDayWeather(location);
+export const allWeatherData = async (lat, long) => {
+  const currentWeatherPromise = cleanCurrentWeather(lat, long);
+  const tenHourPromise = cleanTenHourWeather(lat, long);
+  const tenDayPromise = cleanTenDayWeather(lat, long);
   return await Promise.all([
     currentWeatherPromise,
     tenHourPromise,
@@ -16,22 +16,22 @@ export const allWeatherData = async location => {
   ]);
 };
 
-export const cleanCurrentWeather = async location => {
-  const currentWeather = await getCurrentWeatherData(location);
+export const cleanCurrentWeather = async (lat, long) => {
+  const currentWeather = await getCurrentWeatherData(lat, long);
   return currentWeatherCleaner(currentWeather);
 };
 
-export const cleanTenHourWeather = async location => {
-  const tenHourWeather = await getTenHourWeatherData(location);
+export const cleanTenHourWeather = async (lat, long) => {
+  const tenHourWeather = await getTenHourWeatherData(lat, long);
   return tenHourWeatherCleaner(tenHourWeather);
 };
-export const cleanTenDayWeather = async location => {
-  const tenDayWeather = await getTenDayWeatherData(location);
+export const cleanTenDayWeather = async (lat, long) => {
+  const tenDayWeather = await getTenDayWeatherData(lat, long);
   return tenDayWeatherCleaner(tenDayWeather);
 };
 
 export const getCurrentWeatherData = async (lat, long) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long},us&units=imperial&APPID=${key}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&us&units=imperial&APPID=${key}`;
   const response = await fetch(url);
   const currentCityWeather = await response.json();
   return currentCityWeather;

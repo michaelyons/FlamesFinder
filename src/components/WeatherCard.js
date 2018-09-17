@@ -65,7 +65,6 @@ export class WeatherCard extends Component {
     }
     return (
       <div>
-        <button>Click for Nearby Campgrounds</button>
         <div>{displayCurrentWeather}</div>
         <div>{displayTenHourWeather}</div>
         <div>{displayTenDayWeather}</div>

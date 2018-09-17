@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { getCampsite } from '../../helper/apiCalls';
 import PropTypes from 'prop-types';
-
+import { connect } from 'react-redux';
+import { allWeatherData } from '../../helper/apiCalls';
+import {
+  addCurrentWeather,
+  addTenHourWeather,
+  addTenDayWeather
+} from '../../actions/weatherActions';
 import './index.css';
 import { WeatherCard } from '../../components/WeatherCard';
 
@@ -10,15 +16,22 @@ export class Campsite extends Component {
     super();
     this.state = {
       loading: true,
-      campsiteDetails: []
+      campsiteDetails: [],
+      allWeatherDataArray: []
     };
   }
 
   async componentDidMount() {
     const campsiteDetails = await getCampsite(this.props.facilityID);
+    const { latitude, longitude } = campsiteDetails[0].attributes;
+    const allWeatherDataArray = await allWeatherData(latitude, longitude);
+    this.props.addCurrentWeather(allWeatherDataArray[0]);
+    this.props.addTenHourWeather(allWeatherDataArray[1]);
+    this.props.addTenDayWeather(allWeatherDataArray[2]);
     this.setState({
       campsiteDetails,
-      loading: false
+      loading: false,
+      allWeatherDataArray
     });
   }
 
@@ -62,7 +75,11 @@ export class Campsite extends Component {
           <p>{campDetails}</p>
         </div>
         <div>
-          <WeatherCard />
+          <WeatherCard
+            currentWeather={this.props.currentWeather}
+            tenHourWeather={this.props.tenHourWeather}
+            tenDayWeather={this.props.tenDayWeather}
+          />
         </div>
       </div>
     );
@@ -70,7 +87,28 @@ export class Campsite extends Component {
 }
 
 Campsite.propTypes = {
-  facilityID: PropTypes.string
+  facilityID: PropTypes.string,
+  addCurrentWeather: PropTypes.func,
+  addTenHourWeather: PropTypes.func,
+  addTenDayWeather: PropTypes.func,
+  currentWeather: PropTypes.object,
+  tenDayWeather: PropTypes.array,
+  tenHourWeather: PropTypes.array
 };
 
-export default Campsite;
+export const mapStateToProps = state => ({
+  currentWeather: state.currentWeather,
+  tenHourWeather: state.tenHourWeather,
+  tenDayWeather: state.tenDayWeather
+});
+
+export const mapDispatchToProps = dispatch => ({
+  addCurrentWeather: weather => dispatch(addCurrentWeather(weather)),
+  addTenHourWeather: weather => dispatch(addTenHourWeather(weather)),
+  addTenDayWeather: weather => dispatch(addTenDayWeather(weather))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Campsite);
