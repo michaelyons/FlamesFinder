@@ -37,14 +37,10 @@ export class WeatherCard extends Component {
     } else {
       displayTenHourWeather = this.props.tenHourWeather.map(weather1 => {
         return (
-          <section key={uuidv1()}>
+          <section key={uuidv1()} className="hour-weather-card">
             <p>{`${weather1.time}`}</p>
             <p>{`${weather1.temp}`}</p>
-            <p>{`${weather1.feelsLike}`}</p>
-            <p>{`${weather1.averageHumidity}`}</p>
             <p>{`${weather1.condition}`}</p>
-            <p>{`${weather1.averageWind}`}</p>
-            <p>{`${weather1.uvIndex}`}</p>
           </section>
         );
       });
@@ -54,13 +50,12 @@ export class WeatherCard extends Component {
     } else {
       displayTenDayWeather = this.props.tenDayWeather.map(weather2 => {
         return (
-          <section key={uuidv1()}>
+          <section key={uuidv1()} className="day-weather-card">
             <p>{`${weather2.day}`}</p>
             <p>{`${weather2.date}`}</p>
             <p>{`${weather2.high}`}</p>
             <p>{`${weather2.low}`}</p>
             <p>{`${weather2.conditions}`}</p>
-            <p>{`${weather2.averageWind}`}</p>
           </section>
         );
       });
@@ -68,7 +63,7 @@ export class WeatherCard extends Component {
     return (
       <div>
         <div>{displayCurrentWeather}</div>
-        <div>{displayTenHourWeather}</div>
+        <div className="ten-hour-container">{displayTenHourWeather}</div>
         <div>{displayTenDayWeather}</div>
       </div>
     );
