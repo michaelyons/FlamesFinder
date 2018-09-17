@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getCampsite } from '../../helper/apiCalls';
+import PropTypes from 'prop-types';
 
 import './index.css';
 
@@ -61,5 +62,9 @@ export class Campsite extends Component {
     );
   }
 }
+
+Campsite.propTypes = {
+  facilityID: PropTypes.string
+};
 
 export default Campsite;
