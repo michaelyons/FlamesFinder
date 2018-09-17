@@ -54,10 +54,9 @@ export const getTenDayWeatherData = async (lat, long) => {
 export const getCampsiteData = async () => {
   const position = await getCurrentPosition();
   const { latitude, longitude } = position.coords;
-  const url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&api_key=${key3}`;
+  const url = `http://api.amp.active.com/camping/campgrounds?contractCode=CO&landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
-  console.log(xmlCampData);
   const convert = require('xml-js');
   const xml = xmlCampData;
   const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
@@ -71,8 +70,8 @@ export const getCurrentPosition = () => {
   });
 };
 
-export const getCampsite = async facilityID => {
-  const url = `http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=${facilityID}&api_key=${key3}`;
+export const getCampsite = async (contractID, facilityID) => {
+  const url = `http://api.amp.active.com/camping/campground/details?contractCode=${contractID}&parkId=${facilityID}&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
@@ -81,5 +80,5 @@ export const getCampsite = async facilityID => {
     spaces: 4
   });
   const parsedCampObject = JSON.parse(campObject);
-  return parsedCampObject.elements;
+  return parsedCampObject.elements[0];
 };

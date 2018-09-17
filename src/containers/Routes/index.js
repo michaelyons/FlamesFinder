@@ -14,9 +14,14 @@ export class Routes extends Component {
             <Route exact path="/campsites" component={CampsiteList} />
             <Route
               exact
-              path="/campsites/:id"
+              path="/campsites/:contractID/:facilityID"
               render={({ match }) => {
-                return <Campsite facilityID={match.params.id} />;
+                return (
+                  <Campsite
+                    contractID={match.params.contractID}
+                    facilityID={match.params.facilityID}
+                  />
+                );
               }}
             />
           </div>

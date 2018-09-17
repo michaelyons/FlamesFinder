@@ -16,10 +16,12 @@ export class CampsiteList extends Component {
   render() {
     const { campsites } = this.props;
     const displayCampsites = campsites.map((campsite, index) => {
-      const { facilityID, facilityName } = campsite.attributes;
+      const { facilityID, contractID, facilityName } = campsite.attributes;
       return (
         <div key={`${facilityID}-${index}`} className="campsite-list">
-          <Link to={`/campsites/${facilityID}`}>{facilityName}</Link>
+          <Link to={`/campsites/${contractID}/${facilityID}/`}>
+            {facilityName}
+          </Link>
         </div>
       );
     });

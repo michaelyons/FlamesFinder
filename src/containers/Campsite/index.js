@@ -15,19 +15,21 @@ export class Campsite extends Component {
     super();
     this.state = {
       loading: true,
-      campsiteDetails: [],
+      campsiteDetails: {},
       allWeatherDataArray: []
     };
   }
 
   async componentDidMount() {
-    const campsiteDetails = await getCampsite(this.props.facilityID);
-    const { latitude, longitude } = campsiteDetails[0].attributes;
+    const campsiteDetails = await getCampsite(
+      this.props.contractID,
+      this.props.facilityID
+    );
+    const { latitude, longitude } = campsiteDetails.attributes;
     const allWeatherDataArray = await allWeatherData(latitude, longitude);
     this.props.addCurrentWeather(allWeatherDataArray[0]);
     this.props.addTenHourWeather(allWeatherDataArray[1]);
     this.props.addTenDayWeather(allWeatherDataArray[2]);
-    console.log(campsiteDetails);
     this.setState({
       campsiteDetails,
       loading: false,
@@ -38,41 +40,36 @@ export class Campsite extends Component {
   render() {
     const { campsiteDetails, loading } = this.state;
     let displayChoosenCampsite;
-    let campgroundName;
-    let importantCampInfo;
-    let campDetails;
 
     if (loading) {
       displayChoosenCampsite = <div>Loading...</div>;
     } else {
-      campgroundName = campsiteDetails[0].attributes.facility;
-      campDetails = campsiteDetails[0].attributes.importantInformation;
-      importantCampInfo = campsiteDetails[0].attributes.note;
-      displayChoosenCampsite = campsiteDetails[0].elements.map(
-        (site, index) => {
-          return (
-            <div key={`${site}-${index}`}>
-              <p>
-                {site.attributes.streetAddress} {site.attributes.zip}
-              </p>
-              <p>
-                {site.attributes.city} {site.attributes.state}
-              </p>
-              <p>{site.attributes.number}</p>
-              <p>{site.attributes.name}</p>
-            </div>
-          );
-        }
+      const {
+        facility,
+        importantInformation,
+        note
+      } = campsiteDetails.attributes;
+      const campgroundName = facility;
+      const campDetails = importantInformation;
+      const importantCampInfo = note;
+      const streetAddress =
+        campsiteDetails.elements[0].attributes.streetAddress;
+
+      displayChoosenCampsite = (
+        <div>
+          <p>{campgroundName}</p>
+          <p>{streetAddress}</p>
+          <p>{campDetails}</p>
+          <p>{importantCampInfo}</p>
+        </div>
       );
     }
     return (
       <div>
         <div>
           <h2>Campsite Info</h2>
-          <h3>{campgroundName}</h3>
+
           <section>{displayChoosenCampsite}</section>
-          <p>{campDetails}</p>
-          <p>{importantCampInfo}</p>
         </div>
         <div>
           <WeatherCard
