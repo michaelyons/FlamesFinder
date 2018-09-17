@@ -3,6 +3,7 @@ import { getCampsite } from '../../helper/apiCalls';
 import PropTypes from 'prop-types';
 
 import './index.css';
+import { WeatherCard } from '../../components/WeatherCard';
 
 export class Campsite extends Component {
   constructor() {
@@ -53,11 +54,16 @@ export class Campsite extends Component {
     }
     return (
       <div>
-        <h2>Campsite Info</h2>
-        <h3>{campgroundName}</h3>
-        <p>{importantCampInfo}</p>
-        <section>{displayChoosenCampsite}</section>
-        <p>{campDetails}</p>
+        <div>
+          <h2>Campsite Info</h2>
+          <h3>{campgroundName}</h3>
+          <p>{importantCampInfo}</p>
+          <section>{displayChoosenCampsite}</section>
+          <p>{campDetails}</p>
+        </div>
+        <div>
+          <WeatherCard />
+        </div>
       </div>
     );
   }

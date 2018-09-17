@@ -5,8 +5,6 @@ import {
   tenDayWeatherCleaner
 } from './cleaners';
 
-// import { convert } from 'xml-js';
-
 export const allWeatherData = async location => {
   const currentWeatherPromise = cleanCurrentWeather(location);
   const tenHourPromise = cleanTenHourWeather(location);
@@ -32,22 +30,22 @@ export const cleanTenDayWeather = async location => {
   return tenDayWeatherCleaner(tenDayWeather);
 };
 
-export const getCurrentWeatherData = async location => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location},us&units=imperial&APPID=${key}`;
+export const getCurrentWeatherData = async (lat, long) => {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long},us&units=imperial&APPID=${key}`;
   const response = await fetch(url);
   const currentCityWeather = await response.json();
   return currentCityWeather;
 };
 
-export const getTenHourWeatherData = async location => {
-  const url = `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/${location}.json`;
+export const getTenHourWeatherData = async (lat, long) => {
+  const url = `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/${lat},${long}.json`;
   const response = await fetch(url);
   const tenHourWeather = await response.json();
   return tenHourWeather;
 };
 
-export const getTenDayWeatherData = async location => {
-  const url = `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/${location}.json`;
+export const getTenDayWeatherData = async (lat, long) => {
+  const url = `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/${lat},${long}.json`;
   const response = await fetch(url);
   const tenDayWeather = await response.json();
   return tenDayWeather;
