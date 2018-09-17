@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../components/WeatherCard.css';
 
 const uuidv1 = require('uuid/v1');
 
@@ -15,20 +16,18 @@ export class WeatherCard extends Component {
       displayCurrentWeather = <p className="loading-fetch">Loading...</p>;
     } else {
       displayCurrentWeather = (
-        <section>
-          <p>{this.props.currentWeather.location}</p>
+        <section className="current-weather-card">
+          <p>Current Weather</p>
           <p>{this.props.currentWeather.currentTemp}</p>
-          <p>{this.props.currentWeather.humidity}</p>
-          <p>{this.props.currentWeather.highTemp}</p>
-          <p>{this.props.currentWeather.lowTemp}</p>
-          <p>{this.props.currentWeather.windSpeed}</p>
-          <p>{this.props.currentWeather.sunrise}</p>
-          <p>{this.props.currentWeather.sunset}</p>
-          <p>{this.props.currentWeather.windDirection}</p>
-          <p>{this.props.currentWeather.visibility}</p>
           <p>{this.props.currentWeather.currentConditions}</p>
-          <p>{this.props.currentWeather.latitude}</p>
-          <p>{this.props.currentWeather.longitude}</p>
+          <p>Humidity: {this.props.currentWeather.humidity}</p>
+          <p>High: {this.props.currentWeather.highTemp}</p>
+          <p>Low: {this.props.currentWeather.lowTemp}</p>
+          <p>Wind Speed: {this.props.currentWeather.windSpeed}</p>
+          <p>Sunrise: {this.props.currentWeather.sunrise}</p>
+          <p>Sunset: {this.props.currentWeather.sunset}</p>
+          <p>Wind Direction: {this.props.currentWeather.windDirection}</p>
+          <p>Visibility: {this.props.currentWeather.visibility}</p>
         </section>
       );
     }

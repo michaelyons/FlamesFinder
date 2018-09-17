@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { getCampsite } from '../../helper/apiCalls';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { allWeatherData } from '../../helper/apiCalls';
+import { allWeatherData, getCampsite } from '../../helper/apiCalls';
 import {
   addCurrentWeather,
   addTenHourWeather,

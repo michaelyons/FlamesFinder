@@ -1,0 +1,6 @@
+.current-weather-card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 10rem;
+  justify-content: center;
+}
