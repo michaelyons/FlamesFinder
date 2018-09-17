@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 const uuidv1 = require('uuid/v1');
+
 export class WeatherCard extends Component {
   render() {
     let displayCurrentWeather;
@@ -72,3 +75,9 @@ export class WeatherCard extends Component {
     );
   }
 }
+
+WeatherCard.propTypes = {
+  currentWeather: PropTypes.object,
+  tenHourWeather: PropTypes.array,
+  tenDayWeather: PropTypes.array
+};

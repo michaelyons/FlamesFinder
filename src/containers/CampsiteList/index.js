@@ -34,7 +34,7 @@ export class CampsiteList extends Component {
 
 CampsiteList.propTypes = {
   populateCampsites: PropTypes.func,
-  campsites: PropTypes.object
+  campsites: PropTypes.array
 };
 
 const mapStateToProps = state => ({
