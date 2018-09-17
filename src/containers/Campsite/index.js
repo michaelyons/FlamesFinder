@@ -14,7 +14,6 @@ export class Campsite extends Component {
 
   async componentDidMount() {
     const campsiteDetails = await getCampsite(this.props.facilityID);
-    console.log(campsiteDetails);
     this.setState({
       campsiteDetails,
       loading: false
@@ -36,7 +35,6 @@ export class Campsite extends Component {
       campDetails = campsiteDetails[0].attributes.importantInformation;
       displayChoosenCampsite = campsiteDetails[0].elements.map(
         (site, index) => {
-          console.log(site);
           return (
             <div key={`${site}-${index}`}>
               <p>

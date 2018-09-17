@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getCampsiteData } from '../../helper/apiCalls';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { populateCampsites } from '../../actions/campsiteActions';
 
@@ -30,6 +31,11 @@ export class CampsiteList extends Component {
     );
   }
 }
+
+CampsiteList.propTypes = {
+  populateCampsites: PropTypes.func,
+  campsites: PropTypes.object
+};
 
 const mapStateToProps = state => ({
   campsites: state.campsites
