@@ -68,7 +68,7 @@ export class WeatherCard extends Component {
       <div>
         <div>{displayCurrentWeather1}</div>
         <div className="ten-hour-container">{displayTenHourWeather}</div>
-        <div>{displayTenDayWeather}</div>
+        <div className="ten-day-container">{displayTenDayWeather}</div>
         <div>{displayCurrentWeather2}</div>
       </div>
     );
