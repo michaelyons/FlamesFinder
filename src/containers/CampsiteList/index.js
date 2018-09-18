@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import { getCampsiteData } from '../../helper/apiCalls';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { populateCampsites } from '../../actions/campsiteActions';
-import LoadingFire from '../../components/LoadingFire/LoadingFire';
 
+import { populateCampsites } from '../../actions/campsiteActions';
+import { getCampsiteData, googleMap } from '../../helper/apiCalls';
+
+import LoadingFire from '../../components/LoadingFire/LoadingFire';
+import './fire.gif';
 import './index.css';
 
 export class CampsiteList extends Component {
   constructor() {
     super();
     this.state = {
-      loading: true
+      loading: true,
+      mapsImage: ''
     };
   }
   async componentDidMount() {
     const campsites = await getCampsiteData();
     this.props.populateCampsites(campsites);
+    const maps = await googleMap();
     this.setState({
-      loading: false
+      loading: false,
+      mapsImage: maps
     });
   }
 
@@ -48,6 +53,7 @@ export class CampsiteList extends Component {
       <div>
         <h2>Nearby Campgrounds</h2>
         <div className="campground-list">{displayCampsites}</div>
+        <img src={this.state.mapsImage} />
       </div>
     );
   }
