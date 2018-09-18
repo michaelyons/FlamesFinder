@@ -5,3 +5,10 @@ div {
 .campinfo-header {
   padding-top: 3rem;
 }
+
+.fire-gif {
+  width: 200px;
+  margin: auto;
+  display: block;
+  padding-top: 10rem;
+}
