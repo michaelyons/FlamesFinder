@@ -87,7 +87,7 @@ export class Campsite extends Component {
     }
     return (
       <div>
-        <h2>Campsite Info</h2>
+        <h2 className="campinfo-header">Campground Information</h2>
         <section>{displayChoosenCampsite}</section>
         <WeatherCard
           currentWeather={this.props.currentWeather}
