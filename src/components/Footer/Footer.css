@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  height: 3rem;
+  bottom: 0;
+  width: 100vw;
+  background: slategrey;
+}
+
+.home-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: aqua;
+  cursor: pointer;
+}

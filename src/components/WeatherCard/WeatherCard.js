@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../components/WeatherCard.css';
+import '../WeatherCard/WeatherCard.css';
 
 const uuidv1 = require('uuid/v1');
 
@@ -9,7 +9,6 @@ export class WeatherCard extends Component {
     let displayCurrentWeather1;
     let displayCurrentWeather2;
     let displayTenHourWeather;
-
     let displayTenDayWeather;
 
     if (!this.props.currentWeather) {

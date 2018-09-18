@@ -6,13 +6,37 @@ import {
   addTenHourWeather,
   addTenDayWeather
 } from '../../actions/weatherActions';
+import {
+  currentWeatherMock,
+  facilityIDMock,
+  contractIDMock,
+  tenDayWeatherMock,
+  tenHourWeatherMock
+} from './mockCampsiteData';
 
 describe('Campsite Container', () => {
-  // let wrapper;
-  // it('should match the snapshot', () => {
-  //   wrapper = shallow(<Campsite />);
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  let wrapper;
+  let addCurrentWeatherMock = jest.fn();
+  let addTenHourWeatherMock = jest.fn();
+  let addTenDayWeatherMock = jest.fn();
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <Campsite
+        currentWeather={currentWeatherMock}
+        tenHourWeather={tenHourWeatherMock}
+        tenDayWeather={tenDayWeatherMock}
+        addCurrentWeather={addCurrentWeatherMock}
+        addTenDayWeather={addTenDayWeatherMock}
+        addTenHourWeather={addTenHourWeatherMock}
+        facilityID={facilityIDMock}
+        contractID={contractIDMock}
+      />
+    );
+  });
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
   describe('mapStateToProps', () => {
     it('should return a current object, a tenHour array, and a tenDay array', () => {
       const mockState = {
