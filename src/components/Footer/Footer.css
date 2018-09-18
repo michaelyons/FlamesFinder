@@ -1,0 +1,17 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background: #fff;
+}
+
+.home-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: aqua;
+}
