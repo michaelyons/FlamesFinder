@@ -7579,7 +7579,7 @@ export const campObjectMock = {
       ]
     }
   ]
-}
+};
 
 export const getCampsiteDataMock = [
   {

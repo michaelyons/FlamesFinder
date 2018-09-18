@@ -25,6 +25,7 @@ export class Campsite extends Component {
       this.props.contractID,
       this.props.facilityID
     );
+    console.log(campsiteDetails);
     const { latitude, longitude } = campsiteDetails.attributes;
     const allWeatherDataArray = await allWeatherData(latitude, longitude);
     this.props.addCurrentWeather(allWeatherDataArray[0]);
@@ -40,7 +41,6 @@ export class Campsite extends Component {
   render() {
     const { campsiteDetails, loading } = this.state;
     let displayChoosenCampsite;
-
     if (loading) {
       displayChoosenCampsite = <div>Loading...</div>;
     } else {
@@ -49,35 +49,48 @@ export class Campsite extends Component {
         importantInformation,
         note
       } = campsiteDetails.attributes;
+      const {
+        streetAddress,
+        city,
+        zip,
+        state
+      } = campsiteDetails.elements[0].attributes;
       const campgroundName = facility;
       const campDetails = importantInformation;
       const importantCampInfo = note;
-      const streetAddress =
-        campsiteDetails.elements[0].attributes.streetAddress;
+      const address = streetAddress;
+      const zipCode = zip;
+      const cityName = city;
+      const stateName = state;
+      const amenities = campsiteDetails.elements
+        .slice(7, campsiteDetails.elements.length - 1)
+        .map(amenity => amenity.attributes.name);
+      console.log(amenities);
 
       displayChoosenCampsite = (
         <div>
           <p>{campgroundName}</p>
-          <p>{streetAddress}</p>
+          <p>
+            {address} {zipCode}
+          </p>
+          <p>
+            {cityName} {stateName}
+          </p>
           <p>{campDetails}</p>
           <p>{importantCampInfo}</p>
+          <p>{amenities}</p>
         </div>
       );
     }
     return (
       <div>
-        <div>
-          <h2>Campsite Info</h2>
-
-          <section>{displayChoosenCampsite}</section>
-        </div>
-        <div>
-          <WeatherCard
-            currentWeather={this.props.currentWeather}
-            tenHourWeather={this.props.tenHourWeather}
-            tenDayWeather={this.props.tenDayWeather}
-          />
-        </div>
+        <h2>Campsite Info</h2>
+        <section>{displayChoosenCampsite}</section>
+        <WeatherCard
+          currentWeather={this.props.currentWeather}
+          tenHourWeather={this.props.tenHourWeather}
+          tenDayWeather={this.props.tenDayWeather}
+        />
       </div>
     );
   }
@@ -90,7 +103,8 @@ Campsite.propTypes = {
   addTenDayWeather: PropTypes.func,
   currentWeather: PropTypes.object,
   tenDayWeather: PropTypes.array,
-  tenHourWeather: PropTypes.array
+  tenHourWeather: PropTypes.array,
+  contractID: PropTypes.string
 };
 
 export const mapStateToProps = state => ({

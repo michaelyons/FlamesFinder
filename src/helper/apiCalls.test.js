@@ -70,7 +70,7 @@ describe('API calls', () => {
     });
   });
 
-  describe('getCampsite fetch', () => {
+  describe.skip('getCampsite fetch', () => {
     beforeEach(() => {
       getCampsiteDataMock;
       window.fetch = jest.fn().mockImplementation(() =>
