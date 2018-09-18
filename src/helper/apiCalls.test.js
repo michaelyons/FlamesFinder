@@ -3,6 +3,7 @@ import {
   getTenHourWeatherData,
   getTenDayWeatherData,
   getCampsite,
+  getCampsiteData,
   googleMap,
   cleanCurrentWeather,
   cleanTenHourWeather,
@@ -20,8 +21,15 @@ import {
   mockResponseBlob
 } from './mockFetchData';
 
+import {
+  contractIDMock,
+  facilityIDMock
+} from '../containers/Campsite/mockCampsiteData';
+
 import { key, key2, key3, key4 } from '../variables';
 jest.mock('./imgCleaner');
+import { getCurrentPosition } from '../helper/getPosition/getPosition';
+jest.mock('../helper/getPosition/getPosition');
 
 describe('API calls', () => {
   describe('getCurrentWeatherData', () => {
@@ -80,8 +88,6 @@ describe('API calls', () => {
 
   describe('getCampsite fetch', () => {
     beforeEach(() => {
-      getCampsiteDataMock;
-      mockText;
       window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
           json: () => Promise.resolve(campObjectMock),
@@ -90,9 +96,32 @@ describe('API calls', () => {
       );
     });
     it('should make a fetch with the correct params', () => {
-      getCampsite();
+      getCampsite(contractIDMock, facilityIDMock);
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.amp.active.com/camping/campground/details?contractCode=undefined&parkId=undefined&api_key=${key3}`
+        `http://api.amp.active.com/camping/campground/details?contractCode=NRSO&parkId=148541&api_key=${key3}`
+      );
+    });
+  });
+
+  describe('getCampsiteData fetch', () => {
+    beforeEach(() => {
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(getCampsiteDataMock),
+          text: () => Promise.resolve(mockText)
+        })
+      );
+    });
+
+    it('should call currentPosition', () => {
+      getCampsiteData();
+      expect(getCurrentPosition).toHaveBeenCalled();
+    });
+
+    it('should make a fetch with the correct params', async () => {
+      await getCampsiteData();
+      expect(window.fetch).toHaveBeenCalledWith(
+        `http://api.amp.active.com/camping/campgrounds?contractCode=CO&landmarkName=true&landmarkLat=39&landmarkLong=-104&xml=true&api_key=${key3}`
       );
     });
   });

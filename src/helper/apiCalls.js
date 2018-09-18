@@ -6,6 +6,7 @@ import {
 } from './cleaners';
 
 import { cleanLocationImage } from './imgCleaner';
+import { getCurrentPosition } from '../helper/getPosition/getPosition';
 
 export const allWeatherData = async (lat, long) => {
   const currentWeatherPromise = cleanCurrentWeather(lat, long);
@@ -64,12 +65,6 @@ export const getCampsiteData = async () => {
   const campObject = convert.xml2json(xml, { compact: false, spaces: 2 });
   const parsedCampObject = JSON.parse(campObject);
   return parsedCampObject.elements[0].elements;
-};
-
-export const getCurrentPosition = () => {
-  return new Promise((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(resolve, reject);
-  });
 };
 
 export const getCampsite = async (contractID, facilityID) => {
