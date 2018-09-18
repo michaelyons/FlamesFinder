@@ -26,6 +26,10 @@ export const currentWeatherMock = {
   cod: 200
 };
 
+export const cleanLocationImage = () => {
+  return mockImage;
+};
+
 export const tenHourWeatherMock = {
   response: {
     version: '0.1',
@@ -5788,6 +5792,15 @@ export const tenDayWeatherMock = {
       mslp: { english: '29.73', metric: '1007' }
     }
   ]
+};
+
+export const mockResponseBlob = {
+  type: 'cors',
+  url:
+    'https://maps.googleapis.com/maps/api/staticmap?cen….3944&key=AIzaSyBtTwcdpPJueSO5IdNwNIF5bhk8kw7aUeo',
+  redirected: false,
+  status: 200,
+  ok: true
 };
 
 export const mockImage = {

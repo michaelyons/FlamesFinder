@@ -16,10 +16,12 @@ import {
   getCampsiteDataMock,
   campObjectMock,
   mockImage,
-  mockText
+  mockText,
+  mockResponseBlob
 } from './mockFetchData';
 
 import { key, key2, key3, key4 } from '../variables';
+jest.mock('./imgCleaner');
 
 describe('API calls', () => {
   describe('getCurrentWeatherData', () => {
@@ -95,14 +97,16 @@ describe('API calls', () => {
     });
   });
 
-  describe.skip('googleMap fetch', () => {
+  describe('googleMap fetch', () => {
     beforeEach(() => {
+      mockResponseBlob;
       mockImage;
-      window.fetch = jest.fn().mockImplementation(() => {
+      window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
-          blob: () => Promise.resolve(mockImage)
-        });
-      });
+          blob: () => Promise.resolve(mockImage),
+          URL: { createObjectURL: () => mockImage }
+        })
+      );
     });
     it('should make a fetch with the corret params', () => {
       googleMap();

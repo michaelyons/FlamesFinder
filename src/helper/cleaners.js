@@ -85,8 +85,3 @@ export const tenDayWeatherCleaner = data => {
     };
   });
 };
-
-export const cleanLocationImage = imgResponse => {
-  const url = URL.createObjectURL(imgResponse);
-  return url;
-};

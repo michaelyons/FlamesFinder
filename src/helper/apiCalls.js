@@ -2,9 +2,10 @@ import { key, key2, key3, key4 } from '../variables';
 import {
   currentWeatherCleaner,
   tenHourWeatherCleaner,
-  tenDayWeatherCleaner,
-  cleanLocationImage
+  tenDayWeatherCleaner
 } from './cleaners';
+
+import { cleanLocationImage } from './imgCleaner';
 
 export const allWeatherData = async (lat, long) => {
   const currentWeatherPromise = cleanCurrentWeather(lat, long);
