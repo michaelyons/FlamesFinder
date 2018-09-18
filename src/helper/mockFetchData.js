@@ -26,7 +26,6 @@ export const currentWeatherMock = {
   cod: 200
 };
 
-
 export const tenHourWeatherMock = {
   response: {
     version: '0.1',
@@ -5789,4 +5788,9 @@ export const tenDayWeatherMock = {
       mslp: { english: '29.73', metric: '1007' }
     }
   ]
+};
+
+export const mockImage = {
+  size: 26717,
+  type: 'image/png'
 };
