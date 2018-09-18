@@ -5,14 +5,14 @@
   top: 0;
   height: 3rem;
   width: 100vw;
-  background: rgba(112, 128, 144, 0.774);
+  background: rgb(41, 44, 48);
   color: azure;
 }
 
 .go-back {
   position: absolute;
   font-size: 2rem;
-  margin-left: 0.4rem;
+  margin-left: 0.75rem;
   color: aliceblue;
   cursor: pointer;
 }

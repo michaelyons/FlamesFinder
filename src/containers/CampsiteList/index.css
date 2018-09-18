@@ -1,7 +1,7 @@
 h2 {
   color: aliceblue;
   padding-top: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-size: 3rem;
 }
 
@@ -17,18 +17,24 @@ a {
   font-size: 1.3rem;
   overflow-y: scroll;
   height: 30%;
+  padding-top: 0.75rem;
   padding-bottom: 5rem;
 }
 
 .campsite-list {
   color: #020202;
-  background-color: rgba(0, 0, 0, 0.445);
+  background-color: rgba(0, 0, 0, 0.856);
 
   -webkit-box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
-  padding-right: 0.4rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
   margin-bottom: 0.4rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  letter-spacing: 0.1rem;
 }
 
 .campsite-list a {

@@ -10,6 +10,8 @@ import {
 } from '../../actions/weatherActions';
 import './index.css';
 import { WeatherCard } from '../../components/WeatherCard/WeatherCard';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export class Campsite extends Component {
   constructor() {
@@ -87,6 +89,7 @@ export class Campsite extends Component {
     }
     return (
       <div>
+        <Header />
         <h2 className="campinfo-header">Campground Information</h2>
         <section>{displayChoosenCampsite}</section>
         <WeatherCard
@@ -94,6 +97,7 @@ export class Campsite extends Component {
           tenHourWeather={this.props.tenHourWeather}
           tenDayWeather={this.props.tenDayWeather}
         />
+        <Footer />
       </div>
     );
   }

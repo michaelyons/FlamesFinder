@@ -3,8 +3,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import CampsiteList from '../CampsiteList';
 import Campsite from '../Campsite';
 import Home from '../Home';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
 
 export class Routes extends Component {
   render() {
@@ -12,7 +10,6 @@ export class Routes extends Component {
       <div>
         <BrowserRouter>
           <div className="App">
-            <Header />
             <Route exact path="/" component={Home} />
             <Route exact path="/campsites" component={CampsiteList} />
             <Route
@@ -27,7 +24,6 @@ export class Routes extends Component {
                 );
               }}
             />
-            <Footer />
           </div>
         </BrowserRouter>
       </div>
