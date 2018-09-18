@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import LoadingFire from '../../components/LoadingFire/LoadingFire';
+import LoadingFire2 from '../../components/LoadingFire/LoadingFire2';
 import { allWeatherData, getCampsite } from '../../helper/apiCalls';
 import {
   addCurrentWeather,
@@ -46,7 +46,7 @@ export class Campsite extends Component {
     const { campsiteDetails, loading } = this.state;
     let displayChoosenCampsite;
     if (loading) {
-      displayChoosenCampsite = <LoadingFire />;
+      displayChoosenCampsite = <LoadingFire2 />;
     } else {
       const {
         facility,

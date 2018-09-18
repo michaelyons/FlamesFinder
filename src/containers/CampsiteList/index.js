@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { populateCampsites } from '../../actions/campsiteActions';
-import LoadingFire from '../../components/LoadingFire/LoadingFire';
+import LoadingFire2 from '../../components/LoadingFire/LoadingFire2';
 
 import './index.css';
 
@@ -28,9 +28,9 @@ export class CampsiteList extends Component {
     const { loading } = this.state;
     let displayCampsites;
     if (loading) {
-      displayCampsites = <LoadingFire />;
+      displayCampsites = <LoadingFire2 />;
     } else {
-      displayCampsites = campsites.slice(1, 30).map((campsite, index) => {
+      displayCampsites = campsites.slice(4, 30).map((campsite, index) => {
         const { facilityID, contractID, facilityName } = campsite.attributes;
         const cleanName =
           facilityName.charAt(0).toUpperCase() +
