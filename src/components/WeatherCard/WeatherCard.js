@@ -4,7 +4,7 @@ import '../WeatherCard/WeatherCard.css';
 
 const uuidv1 = require('uuid/v1');
 
-export class WeatherCard extends Component {
+export default class WeatherCard extends Component {
   render() {
     let displayCurrentWeather1;
     let displayCurrentWeather2;
