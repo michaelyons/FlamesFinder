@@ -5,12 +5,10 @@ import {
   tenDayWeatherCleaner
 } from './cleaners';
 
-// import { convert } from 'xml-js';
-
-export const allWeatherData = async location => {
-  const currentWeatherPromise = cleanCurrentWeather(location);
-  const tenHourPromise = cleanTenHourWeather(location);
-  const tenDayPromise = cleanTenDayWeather(location);
+export const allWeatherData = async (lat, long) => {
+  const currentWeatherPromise = cleanCurrentWeather(lat, long);
+  const tenHourPromise = cleanTenHourWeather(lat, long);
+  const tenDayPromise = cleanTenDayWeather(lat, long);
   return await Promise.all([
     currentWeatherPromise,
     tenHourPromise,
@@ -18,36 +16,36 @@ export const allWeatherData = async location => {
   ]);
 };
 
-export const cleanCurrentWeather = async location => {
-  const currentWeather = await getCurrentWeatherData(location);
+export const cleanCurrentWeather = async (lat, long) => {
+  const currentWeather = await getCurrentWeatherData(lat, long);
   return currentWeatherCleaner(currentWeather);
 };
 
-export const cleanTenHourWeather = async location => {
-  const tenHourWeather = await getTenHourWeatherData(location);
+export const cleanTenHourWeather = async (lat, long) => {
+  const tenHourWeather = await getTenHourWeatherData(lat, long);
   return tenHourWeatherCleaner(tenHourWeather);
 };
-export const cleanTenDayWeather = async location => {
-  const tenDayWeather = await getTenDayWeatherData(location);
+export const cleanTenDayWeather = async (lat, long) => {
+  const tenDayWeather = await getTenDayWeatherData(lat, long);
   return tenDayWeatherCleaner(tenDayWeather);
 };
 
-export const getCurrentWeatherData = async location => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location},us&units=imperial&APPID=${key}`;
+export const getCurrentWeatherData = async (lat, long) => {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&us&units=imperial&APPID=${key}`;
   const response = await fetch(url);
   const currentCityWeather = await response.json();
   return currentCityWeather;
 };
 
-export const getTenHourWeatherData = async location => {
-  const url = `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/${location}.json`;
+export const getTenHourWeatherData = async (lat, long) => {
+  const url = `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/${lat},${long}.json`;
   const response = await fetch(url);
   const tenHourWeather = await response.json();
   return tenHourWeather;
 };
 
-export const getTenDayWeatherData = async location => {
-  const url = `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/${location}.json`;
+export const getTenDayWeatherData = async (lat, long) => {
+  const url = `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/${lat},${long}.json`;
   const response = await fetch(url);
   const tenDayWeather = await response.json();
   return tenDayWeather;
@@ -56,7 +54,7 @@ export const getTenDayWeatherData = async location => {
 export const getCampsiteData = async () => {
   const position = await getCurrentPosition();
   const { latitude, longitude } = position.coords;
-  const url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&api_key=${key3}`;
+  const url = `http://api.amp.active.com/camping/campgrounds?contractCode=CO&landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
@@ -72,8 +70,8 @@ export const getCurrentPosition = () => {
   });
 };
 
-export const getCampsite = async facilityID => {
-  const url = `http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=${facilityID}&api_key=${key3}`;
+export const getCampsite = async (contractID, facilityID) => {
+  const url = `http://api.amp.active.com/camping/campground/details?contractCode=${contractID}&parkId=${facilityID}&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
@@ -82,5 +80,5 @@ export const getCampsite = async facilityID => {
     spaces: 4
   });
   const parsedCampObject = JSON.parse(campObject);
-  return parsedCampObject.elements;
+  return parsedCampObject.elements[0];
 };

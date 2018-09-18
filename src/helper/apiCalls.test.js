@@ -1,16 +1,19 @@
 import {
   getCurrentWeatherData,
   getTenHourWeatherData,
-  getTenDayWeatherData
+  getTenDayWeatherData,
+  getCampsite
 } from './apiCalls';
 
 import {
   currentWeatherMock,
   tenHourWeatherMock,
-  tenDayWeatherMock
+  tenDayWeatherMock,
+  getCampsiteDataMock,
+  campObjectMock
 } from './mockFetchData';
 
-import { key, key2 } from '../variables';
+import { key, key2, key3 } from '../variables';
 
 describe('API calls', () => {
   describe('getCurrentWeatherData', () => {
@@ -26,7 +29,7 @@ describe('API calls', () => {
     it('should make a fetch call with the correct params', () => {
       getCurrentWeatherData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `https://api.openweathermap.org/data/2.5/weather?q=undefined,us&units=imperial&APPID=${key}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=undefined&lon=undefined&us&units=imperial&APPID=${key}`
       );
     });
   });
@@ -44,7 +47,7 @@ describe('API calls', () => {
     it('should make a fetch call with the correct params', () => {
       getTenHourWeatherData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/undefined.json`
+        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/undefined,undefined.json`
       );
     });
   });
@@ -62,7 +65,24 @@ describe('API calls', () => {
     it('should make a fetch with the correct params', () => {
       getTenDayWeatherData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/undefined.json`
+        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/undefined,undefined.json`
+      );
+    });
+  });
+
+  describe.skip('getCampsite fetch', () => {
+    beforeEach(() => {
+      getCampsiteDataMock;
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(campObjectMock)
+        })
+      );
+    });
+    it('should make a fetch with the correct params', () => {
+      getCampsite();
+      expect(window.fetch).toHaveBeenCalledWith(
+        `http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=undefined&api_key=${key3}`
       );
     });
   });

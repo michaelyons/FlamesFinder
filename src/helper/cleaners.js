@@ -48,9 +48,7 @@ export const currentWeatherCleaner = data => {
       .toLowerCase()
       .split(' ')
       .map(letter => letter.charAt(0).toUpperCase() + letter.substring(1))
-      .join(' '),
-    latitude: data.coord.lat + '°',
-    longitude: data.coord.lon + '°'
+      .join(' ')
   };
 };
 
