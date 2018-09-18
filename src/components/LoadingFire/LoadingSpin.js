@@ -1,5 +1,5 @@
 import React from 'react';
-import fire from './fire.gif';
+import fire from '../LoadingFire/fire.gif';
 
 const fireLoad = () => {
   return (
@@ -7,7 +7,12 @@ const fireLoad = () => {
       <img
         src={fire}
         alt="fire loading gif"
-        style={{ width: '200px', margin: 'auto', display: 'block' }}
+        style={{
+          width: '200px',
+          margin: 'auto',
+          display: 'block',
+          paddingTop: '12rem'
+        }}
       />
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../components/WeatherCard.css';
+import '../WeatherCard/WeatherCard.css';
 
 const uuidv1 = require('uuid/v1');
 

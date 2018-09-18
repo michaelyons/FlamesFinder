@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import LoadingSpin from '../../components/LoadingSpin';
+import LoadingSpin from '../../components/LoadingFire/LoadingSpin';
 import { allWeatherData, getCampsite } from '../../helper/apiCalls';
 import {
   addCurrentWeather,
@@ -9,7 +9,7 @@ import {
   addTenDayWeather
 } from '../../actions/weatherActions';
 import './index.css';
-import { WeatherCard } from '../../components/WeatherCard';
+import { WeatherCard } from '../../components/WeatherCard/WeatherCard';
 
 export class Campsite extends Component {
   constructor() {
@@ -22,6 +22,10 @@ export class Campsite extends Component {
   }
 
   async componentDidMount() {
+    await this.populateCampsiteState();
+  }
+
+  populateCampsiteState = async () => {
     const campsiteDetails = await getCampsite(
       this.props.contractID,
       this.props.facilityID
@@ -36,7 +40,7 @@ export class Campsite extends Component {
       loading: false,
       allWeatherDataArray
     });
-  }
+  };
 
   render() {
     const { campsiteDetails, loading } = this.state;

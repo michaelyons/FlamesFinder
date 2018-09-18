@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { populateCampsites } from '../../actions/campsiteActions';
-import LoadingSpin from '../../components/LoadingSpin';
+import LoadingSpin from '../../components/LoadingFire/LoadingSpin';
 
 import './index.css';
 
@@ -30,7 +30,7 @@ export class CampsiteList extends Component {
     if (loading) {
       displayCampsites = <LoadingSpin />;
     } else {
-      displayCampsites = campsites.map((campsite, index) => {
+      displayCampsites = campsites.slice(1, 30).map((campsite, index) => {
         const { facilityID, contractID, facilityName } = campsite.attributes;
         return (
           <div key={`${facilityID}-${index}`} className="campsite-list">
