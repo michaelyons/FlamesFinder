@@ -44,7 +44,8 @@
       "!src/registerServiceWorker.js",
       "!src/variables.js",
       "!src/citiesList.js",
-      "!src/helper/mockFetchData.js"
+      "!src/helper/mockFetchData.js",
+      "!src/helper/imgCleaner.js"
     ]
   }
 }
