@@ -1,8 +1,9 @@
-import { key, key2, key3 } from '../variables';
+import { key, key2, key3, key4 } from '../variables';
 import {
   currentWeatherCleaner,
   tenHourWeatherCleaner,
-  tenDayWeatherCleaner
+  tenDayWeatherCleaner,
+  cleanLocationImage
 } from './cleaners';
 
 export const allWeatherData = async (lat, long) => {
@@ -81,4 +82,12 @@ export const getCampsite = async (contractID, facilityID) => {
   });
   const parsedCampObject = JSON.parse(campObject);
   return parsedCampObject.elements[0];
+};
+
+export const googleMap = async () => {
+  const url = `https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&key=${key4}`;
+  const response = await fetch(url);
+  const data = await response.blob();
+  const cleanImage = await cleanLocationImage(data);
+  return cleanImage;
 };
