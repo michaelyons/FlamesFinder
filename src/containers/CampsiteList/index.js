@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getCampsiteData } from '../../helper/apiCalls';
+import { getCampsiteData, googleMap } from '../../helper/apiCalls';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -12,14 +12,17 @@ export class CampsiteList extends Component {
   constructor() {
     super();
     this.state = {
-      loading: true
+      loading: true,
+      mapsImage: ''
     };
   }
   async componentDidMount() {
     const campsites = await getCampsiteData();
     this.props.populateCampsites(campsites);
+    const maps = await googleMap();
     this.setState({
-      loading: false
+      loading: false,
+      mapsImage: maps
     });
   }
 
@@ -47,6 +50,7 @@ export class CampsiteList extends Component {
     return (
       <div>
         <h2>Nearby Campgrounds</h2>
+        <img src={this.state.mapsImage} alt="" />
         <div className="campground-list">{displayCampsites}</div>
       </div>
     );

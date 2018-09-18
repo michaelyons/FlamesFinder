@@ -1,8 +1,9 @@
-import { key, key2, key3 } from '../variables';
+import { key, key2, key3, key4 } from '../variables';
 import {
   currentWeatherCleaner,
   tenHourWeatherCleaner,
-  tenDayWeatherCleaner
+  tenDayWeatherCleaner,
+  cleanLocationImage
 } from './cleaners';
 
 export const allWeatherData = async (lat, long) => {
@@ -81,4 +82,12 @@ export const getCampsite = async (contractID, facilityID) => {
   });
   const parsedCampObject = JSON.parse(campObject);
   return parsedCampObject.elements[0];
+};
+
+export const googleMap = async () => {
+  const url = `https://maps.googleapis.com/maps/api/staticmap?center=Denver,CO&zoom=8&size=350x350&markers=color:red%7Clabel:%7C39.7508006,-104.9987834&markers=color:blue%7Clabel:1%7C39.6287,-104.8418&markers=color:blue%7Clabel:2%7C39.5431,-105.0648&markers=color:blue%7Clabel:3%7C39.8414,-105.4198&markers=color:blue%7Clabel:4%7C39.39167,-105.10889&markers=color:blue%7Clabel:5%7C39.67889,-105.49278&key=${key4}`;
+  const response = await fetch(url);
+  const data = await response.blob();
+  const cleanImage = await cleanLocationImage(data);
+  return cleanImage;
 };
