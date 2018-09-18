@@ -5794,3 +5794,63 @@ export const mockImage = {
   size: 26717,
   type: 'image/png'
 };
+
+export const mockText = `<detailDescription alert="Colorado Parks and Wildlife reserves the right, when necessary, to modify any reservation policies." contractID="CO" description="  Handicap sites #53HD and #138HD are only reservable through the call center. These sites require a handicap sticker, plate or placard.      Fire danger is high. Contact the park for more details.    Cherry Creek State Park offers a great getaway from the daily grind, with recreation opportunities anchored around a 880 surface-acre lake. Visitors can view birds in their natural habitat. Fun seekers visit the park to enjoy boating, jet and water skiing, sailing, fishing, swimming, biking, horseback riding, and more. It provides the convenience of close-in camping at its 125 sites located on the east side of the reservoir.   For current conditions and more information, please visit the Cherry Creek website: http://cpw.state.co.us/placestogo/Parks/cherrycreek" drivingDirection="One mile south of I-225 on Parker Rd., adjacent to Southeast Denver." facilitiesDescription="" facility="Cherry Creek State Park" facilityID="50022" favorite="N" fullReservationUrl="https://www.reserveamerica.com/campsiteSearch.do?contractCode=CO&amp;parkId=50022" importantInformation="Camping fees do not include the cost of a park pass. There are three group camping loops available to rent. The loops are the Arapahoe, Cherokee, and Chief Ouray. To make reservations for any of the group loops only, please contact the Campground Office at 303-693-3957. To make reservations for individual camp sites, please call 303-470-1144 or 1-800-244-5613. Please do not call the Cherry Creek State Park Campground to make reservations. For additional information ( NOT related to reservations ) please visit our website at www.colorado.gov/parks or call the Campground Registration Office at 303-693-3957. Please use www.cpwshop.com to make, cancel, or change reservations or make any license, pass, or retail purchases. ReserveAmerica.com has limited functionality for CPW customers." latitude="39.6286111" listingOnly="N" longitude="-104.8305556" nearbyAttrctionDescription="" note="Cherry Creek State Park experiences high use May through October. Delays may occur when entering the park or accessing park facilities during this time, especially on weekends and holidays." orientationDescription="" recreationDescription="" regionName="Northeast Region" reservationUrl="/campsiteSearch.do?contractCode=CO&amp;parkId=50022" webURL="">
+<address city="Aurora" country="United States" shortName="CHCR" state="Colorado" streetAddress="4201 S. Parker Rd." zip="80014"/>
+<photo realUrl="/webphotos/CO/pid50022/0/180x120.jpg" url="&lt;img width=&quot;180&quot; height=&quot;120&quot; src=&quot;/webphotos/CO/pid50022/0/180x120.jpg&quot; class=&quot;PopBoxImageSmall&quot; pbsrc=&quot;/webphotos/CO/pid50022/0/540x360.jpg&quot; onclick=&quot;PopPhoto(this,50,'PopBoxImageLarge');&quot;   /&gt;"/>
+<photo realUrl="/webphotos/CO/pid50022/1/180x120.jpg" url="&lt;img width=&quot;180&quot; height=&quot;120&quot; src=&quot;/webphotos/CO/pid50022/1/180x120.jpg&quot; class=&quot;PopBoxImageSmall&quot; pbsrc=&quot;/webphotos/CO/pid50022/1/540x360.jpg&quot; onclick=&quot;PopPhoto(this,50,'PopBoxImageLarge');&quot;   /&gt;"/>
+<photo realUrl="/webphotos/CO/pid50022/2/180x120.jpg" url="&lt;img width=&quot;180&quot; height=&quot;120&quot; src=&quot;/webphotos/CO/pid50022/2/180x120.jpg&quot; class=&quot;PopBoxImageSmall&quot; pbsrc=&quot;/webphotos/CO/pid50022/2/540x360.jpg&quot; onclick=&quot;PopPhoto(this,50,'PopBoxImageLarge');&quot;   /&gt;"/>
+<informationLink link="" title=""/>
+<contact name="Direct Line" number=""/>
+<contact name="Ranger Station" number=""/>
+<amenity distance="Within Facility" name="ADA Access"/>
+<amenity distance="Within Facility" name="ADA Fish. Access"/>
+<amenity distance="Within Facility" name="Amphitheater"/>
+<amenity distance="Within Facility" name="Beach (Swimming)"/>
+<amenity distance="Within Facility" name="Biking"/>
+<amenity distance="Within Facility" name="Bird Watching"/>
+<amenity distance="Within Facility" name="Boat Ramp"/>
+<amenity distance="Within Facility" name="Boat Rental"/>
+<amenity distance="Within Facility" name="Boating"/>
+<amenity distance="Within Facility" name="Camper Services Bldg"/>
+<amenity distance="Within Facility" name="Comfort Station"/>
+<amenity distance="Within Facility" name="Dog Training Area"/>
+<amenity distance="Within Facility" name="Dump Station"/>
+<amenity distance="Within Facility" name="Firewood Available"/>
+<amenity distance="Within Facility" name="Fishing"/>
+<amenity distance="Within Facility" name="Group Campground"/>
+<amenity distance="Within Facility" name="Group Camping"/>
+<amenity distance="Within Facility" name="Group Pavilions Available"/>
+<amenity distance="Within Facility" name="Group Picnic Area"/>
+<amenity distance="Within Facility" name="Group Picnicking"/>
+<amenity distance="Within Facility" name="Hiking"/>
+<amenity distance="Within Facility" name="Historical Site(S)"/>
+<amenity distance="Within Facility" name="Horseback Riding"/>
+<amenity distance="Within Facility" name="Ice Fishing"/>
+<amenity distance="Within Facility" name="Interpretitive Programs"/>
+<amenity distance="Within Facility" name="Jet Ski Rental"/>
+<amenity distance="Within Facility" name="Jet Skiing"/>
+<amenity distance="Within Facility" name="Laundry"/>
+<amenity distance="Within Facility" name="Laundry Facilities"/>
+<amenity distance="Within Facility" name="Marina"/>
+<amenity distance="Within Facility" name="Model Airplane Field"/>
+<amenity distance="Within Facility" name="Model Airplane Flying"/>
+<amenity distance="Within Facility" name="Natural Shade"/>
+<amenity distance="Within Facility" name="Nature Study Exhibits"/>
+<amenity distance="Within Facility" name="Pay Phones Available"/>
+<amenity distance="Within Facility" name="Photography"/>
+<amenity distance="Within Facility" name="Picnicking"/>
+<amenity distance="Within Facility" name="Ranger Station"/>
+<amenity distance="Within Facility" name="Sailing And Sailboarding"/>
+<amenity distance="Within Facility" name="Shooting Ranges"/>
+<amenity distance="Within Facility" name="Showers"/>
+<amenity distance="Within Facility" name="Snack Br Concession"/>
+<amenity distance="Within Facility" name="Stables"/>
+<amenity distance="Within Facility" name="Swimming"/>
+<amenity distance="Within Facility" name="Telephone"/>
+<amenity distance="Within Facility" name="Volleyball"/>
+<amenity distance="Within Facility" name="Water Skiing"/>
+<amenity distance="Within Facility" name="Wi-Fi Connection"/>
+<amenity distance="Within Facility" name="Wildlife Watching Opportunity"/>
+<bulletin description="&amp;lt;p&amp;gt;Attention Colorado Parks and Wildlife Customers: please use &amp;lt;a href=&amp;quot;https://www.cpwshop.com/home.page&amp;quot;&amp;gt;www.cpwshop.com&amp;lt;/a&amp;gt; to make, cancel, or change reservations or make any license, pass, or retail purchases. &amp;lt;a href=&amp;quot;https://www.reserveamerica.com/&amp;quot;&amp;gt;ReserveAmerica.com&amp;lt;/a&amp;gt; has limited functionality for CPW customers.&amp;lt;/p&amp;gt;" headline="Attention"/>
+</detailDescription>`;

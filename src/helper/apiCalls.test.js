@@ -15,7 +15,8 @@ import {
   tenDayWeatherMock,
   getCampsiteDataMock,
   campObjectMock,
-  mockImage
+  mockImage,
+  mockText
 } from './mockFetchData';
 
 import { key, key2, key3, key4 } from '../variables';
@@ -75,19 +76,21 @@ describe('API calls', () => {
     });
   });
 
-  describe.skip('getCampsite fetch', () => {
+  describe('getCampsite fetch', () => {
     beforeEach(() => {
       getCampsiteDataMock;
+      mockText;
       window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
-          json: () => Promise.resolve(campObjectMock)
+          json: () => Promise.resolve(campObjectMock),
+          text: () => Promise.resolve(mockText)
         })
       );
     });
-    it.skip('should make a fetch with the correct params', () => {
+    it('should make a fetch with the correct params', () => {
       getCampsite();
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=undefined&api_key=${key3}`
+        `http://api.amp.active.com/camping/campground/details?contractCode=undefined&parkId=undefined&api_key=${key3}`
       );
     });
   });
