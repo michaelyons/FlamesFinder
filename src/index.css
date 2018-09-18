@@ -11,4 +11,5 @@ body {
   -o-background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  font-family: 'Shadows Into Light', cursive;
 }
