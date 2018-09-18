@@ -9,7 +9,6 @@ export class WeatherCard extends Component {
     let displayCurrentWeather1;
     let displayCurrentWeather2;
     let displayTenHourWeather;
-
     let displayTenDayWeather;
 
     if (!this.props.currentWeather) {
