@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
-import './Header.css';
+import './index.css';
 
 const Header = ({ currentPage, history }) => {
   return (
@@ -13,6 +13,11 @@ const Header = ({ currentPage, history }) => {
       <h3>{currentPage}</h3>
     </div>
   );
+};
+
+Header.propTypes = {
+  currentPage: PropTypes.string,
+  history: PropTypes.object
 };
 
 export default withRouter(Header);
