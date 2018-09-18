@@ -9,7 +9,7 @@ import {
   addTenDayWeather
 } from '../../actions/weatherActions';
 import './index.css';
-import { WeatherCard } from '../../components/WeatherCard/WeatherCard';
+import WeatherCard from '../../components/WeatherCard/WeatherCard';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
