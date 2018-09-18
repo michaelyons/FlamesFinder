@@ -1,0 +1,18 @@
+.heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 3rem;
+  width: 100vw;
+  background: slategray;
+  color: azure;
+}
+
+.go-back {
+  position: absolute;
+  font-size: 2rem;
+  color: aqua;
+  cursor: pointer;
+}
