@@ -1,18 +1,18 @@
 .heading {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   position: fixed;
   top: 0;
   height: 3rem;
   width: 100vw;
-  background: slategray;
+  background: rgba(112, 128, 144, 0.774);
   color: azure;
 }
 
 .go-back {
   position: absolute;
   font-size: 2rem;
-  color: aqua;
+  margin-left: 0.4rem;
+  color: aliceblue;
   cursor: pointer;
 }

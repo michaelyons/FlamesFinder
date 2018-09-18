@@ -6,7 +6,7 @@ footer {
   height: 3rem;
   bottom: 0;
   width: 100vw;
-  background: slategrey;
+  background: rgba(112, 128, 144, 0.774);
 }
 
 .home-link {
@@ -14,6 +14,6 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: aqua;
+  color: aliceblue;
   cursor: pointer;
 }

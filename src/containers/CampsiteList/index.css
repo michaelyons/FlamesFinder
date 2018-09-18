@@ -1,6 +1,7 @@
 h2 {
   color: aliceblue;
   padding-top: 2rem;
+  margin-bottom: 0.5rem;
   font-size: 3rem;
 }
 
@@ -17,6 +18,21 @@ a {
   overflow-y: scroll;
   height: 30%;
   padding-bottom: 5rem;
+}
+
+.campsite-list {
+  color: #020202;
+  background-color: rgba(0, 0, 0, 0.445);
+
+  -webkit-box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
+  padding-right: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.campsite-list a {
+  text-decoration: none;
 }
 
 .fire-gif2 {
