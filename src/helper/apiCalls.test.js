@@ -246,4 +246,107 @@ describe('API calls', () => {
       expect(result).toEqual(expected);
     });
   });
+  describe('cleanTenHourWeather', () => {
+    it('should return a tenHourWeather object', async () => {
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(tenDayWeatherMock)
+        })
+      );
+      const expected = [
+        {
+          averageWind: 'ESE 6 MPH',
+          conditions: 'Partly Cloudy',
+          date: '9/10/2018',
+          day: 'Monday',
+          high: '87°F',
+          icon: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
+          low: '63°F'
+        },
+        {
+          averageWind: 'W 6 MPH',
+          conditions: 'Clear',
+          date: '9/11/2018',
+          day: 'Tuesday',
+          high: '88°F',
+          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
+          low: '62°F'
+        },
+        {
+          averageWind: 'SSW 7 MPH',
+          conditions: 'Clear',
+          date: '9/12/2018',
+          day: 'Wednesday',
+          high: '91°F',
+          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
+          low: '59°F'
+        },
+        {
+          averageWind: 'SSE 7 MPH',
+          conditions: 'Clear',
+          date: '9/13/2018',
+          day: 'Thursday',
+          high: '90°F',
+          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
+          low: '59°F'
+        },
+        {
+          averageWind: 'SE 9 MPH',
+          conditions: 'Clear',
+          date: '9/14/2018',
+          day: 'Friday',
+          high: '89°F',
+          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
+          low: '59°F'
+        },
+        {
+          averageWind: 'ENE 8 MPH',
+          conditions: 'Clear',
+          date: '9/15/2018',
+          day: 'Saturday',
+          high: '89°F',
+          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
+          low: '59°F'
+        },
+        {
+          averageWind: 'NE 8 MPH',
+          conditions: 'Clear',
+          date: '9/16/2018',
+          day: 'Sunday',
+          high: '81°F',
+          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
+          low: '58°F'
+        },
+        {
+          averageWind: 'NE 7 MPH',
+          conditions: 'Partly Cloudy',
+          date: '9/17/2018',
+          day: 'Monday',
+          high: '81°F',
+          icon: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
+          low: '55°F'
+        },
+        {
+          averageWind: 'NE 7 MPH',
+          conditions: 'Partly Cloudy',
+          date: '9/18/2018',
+          day: 'Tuesday',
+          high: '77°F',
+          icon: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
+          low: '53°F'
+        },
+        {
+          averageWind: 'NNE 7 MPH',
+          conditions: 'Clear',
+          date: '9/19/2018',
+          day: 'Wednesday',
+          high: '73°F',
+          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
+          low: '51°F'
+        }
+      ];
+      const result = await cleanTenDayWeather(39.65, -105.19);
+      expect(result).toEqual(expected);
+    });
+  });
 });
