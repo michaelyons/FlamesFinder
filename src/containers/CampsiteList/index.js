@@ -18,7 +18,12 @@ export class CampsiteList extends Component {
       mapsImage: ''
     };
   }
+
   async componentDidMount() {
+    await this.populateCampData();
+  }
+
+  populateCampData = async () => {
     const campsites = await getCampsiteData();
     this.props.populateCampsites(campsites);
     const maps = await googleMap();
@@ -26,7 +31,7 @@ export class CampsiteList extends Component {
       loading: false,
       mapsImage: maps
     });
-  }
+  };
 
   render() {
     const { campsites } = this.props;
@@ -66,11 +71,11 @@ CampsiteList.propTypes = {
   campsites: PropTypes.array
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   campsites: state.campsites
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   populateCampsites: campsite => dispatch(populateCampsites(campsite))
 });
 
