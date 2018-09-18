@@ -4,27 +4,43 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { populateCampsites } from '../../actions/campsiteActions';
+import LoadingSpin from '../../components/LoadingSpin';
 
 import './index.css';
 
 export class CampsiteList extends Component {
+  constructor() {
+    super();
+    this.state = {
+      loading: true
+    };
+  }
   async componentDidMount() {
     const campsites = await getCampsiteData();
     this.props.populateCampsites(campsites);
+    this.setState({
+      loading: false
+    });
   }
 
   render() {
     const { campsites } = this.props;
-    const displayCampsites = campsites.map((campsite, index) => {
-      const { facilityID, contractID, facilityName } = campsite.attributes;
-      return (
-        <div key={`${facilityID}-${index}`} className="campsite-list">
-          <Link to={`/campsites/${contractID}/${facilityID}/`}>
-            {facilityName}
-          </Link>
-        </div>
-      );
-    });
+    const { loading } = this.state;
+    let displayCampsites;
+    if (loading) {
+      displayCampsites = <LoadingSpin />;
+    } else {
+      displayCampsites = campsites.map((campsite, index) => {
+        const { facilityID, contractID, facilityName } = campsite.attributes;
+        return (
+          <div key={`${facilityID}-${index}`} className="campsite-list">
+            <Link to={`/campsites/${contractID}/${facilityID}/`}>
+              {facilityName}
+            </Link>
+          </div>
+        );
+      });
+    }
     return (
       <div>
         <h2>Nearby Campgrounds</h2>

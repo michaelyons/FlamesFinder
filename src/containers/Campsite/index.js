@@ -65,7 +65,6 @@ export class Campsite extends Component {
       const amenities = campsiteDetails.elements
         .slice(7, campsiteDetails.elements.length - 1)
         .map(amenity => amenity.attributes.name);
-      console.log(amenities);
 
       displayChoosenCampsite = (
         <div>
