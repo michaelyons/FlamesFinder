@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { populateCampsites } from '../../actions/campsiteActions';
-import LoadingSpin from '../../components/LoadingFire/LoadingSpin';
+import LoadingFire from '../../components/LoadingFire/LoadingFire';
 
 import './index.css';
 
@@ -28,14 +28,17 @@ export class CampsiteList extends Component {
     const { loading } = this.state;
     let displayCampsites;
     if (loading) {
-      displayCampsites = <LoadingSpin />;
+      displayCampsites = <LoadingFire />;
     } else {
       displayCampsites = campsites.slice(1, 30).map((campsite, index) => {
         const { facilityID, contractID, facilityName } = campsite.attributes;
+        const cleanName =
+          facilityName.charAt(0).toUpperCase() +
+          facilityName.substr(1).toLowerCase();
         return (
           <div key={`${facilityID}-${index}`} className="campsite-list">
             <Link to={`/campsites/${contractID}/${facilityID}/`}>
-              {facilityName}
+              {cleanName}
             </Link>
           </div>
         );
@@ -44,7 +47,7 @@ export class CampsiteList extends Component {
     return (
       <div>
         <h2>Nearby Campgrounds</h2>
-        <div>{displayCampsites}</div>
+        <div className="campground-list">{displayCampsites}</div>
       </div>
     );
   }

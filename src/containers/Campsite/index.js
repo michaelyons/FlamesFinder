@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import LoadingSpin from '../../components/LoadingFire/LoadingSpin';
+import LoadingFire from '../../components/LoadingFire/LoadingFire';
 import { allWeatherData, getCampsite } from '../../helper/apiCalls';
 import {
   addCurrentWeather,
@@ -46,7 +46,7 @@ export class Campsite extends Component {
     const { campsiteDetails, loading } = this.state;
     let displayChoosenCampsite;
     if (loading) {
-      displayChoosenCampsite = <LoadingSpin />;
+      displayChoosenCampsite = <LoadingFire />;
     } else {
       const {
         facility,
