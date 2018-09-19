@@ -154,16 +154,17 @@ describe('API calls', () => {
       );
       const expected = {
         currentConditions: 'Clear Sky',
-        currentTemp: '56°F',
-        highTemp: '61°F',
-        humidity: '69%',
-        location: 'Sheridan',
-        lowTemp: '51°F',
-        sunrise: '6:37:49 AM',
-        sunset: '7:16:27 PM',
-        visibility: '10.00 Miles',
-        windDirection: 'WSW',
-        windSpeed: '4.97 MPH'
+        currentTemp: '80°F',
+        currentWeather: 'Current Weather',
+        highTemp: 'High 83°F',
+        humidity: 'Humidity 29%',
+        location: 'Dove Valley',
+        lowTemp: 'Low 79°F',
+        sunrise: 'Sunrise 6:44:55 AM',
+        sunset: 'Sunset 6:59:57 PM',
+        visibility: 'Visibility 10.00 Miles',
+        windDirection: 'Wind Direction NE',
+        windSpeed: 'Wind Speed 10.29 MPH'
       };
       const result = await cleanCurrentWeather(39.65, -105.19);
       expect(result).toEqual(expected);
@@ -178,103 +179,103 @@ describe('API calls', () => {
       );
       const expected = [
         {
-          averageHumidity: '24%',
-          averageWind: 'ENE 3',
-          condition: 'Partly Cloudy',
-          feelsLike: '74°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          temp: '74°F',
-          time: '10:00 AM',
-          uvIndex: '3/10'
-        },
-        {
-          averageHumidity: '21%',
-          averageWind: 'E 4',
-          condition: 'Partly Cloudy',
-          feelsLike: '78°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          temp: '78°F',
-          time: '11:00 AM',
-          uvIndex: '5/10'
-        },
-        {
           averageHumidity: '18%',
-          averageWind: 'E 5',
-          condition: 'Partly Cloudy',
-          feelsLike: '81°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          temp: '81°F',
+          averageWind: 'ENE 10',
+          condition: 'Mostly Cloudy',
+          feelsLike: '85°F',
+          icon: 'mostlycloudy',
+          temp: '85°F',
           time: '12:00 PM',
-          uvIndex: '7/10'
+          uvIndex: '5/10'
         },
         {
           averageHumidity: '16%',
-          averageWind: 'E 5',
-          condition: 'Partly Cloudy',
-          feelsLike: '83°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          temp: '83°F',
+          averageWind: 'ENE 12',
+          condition: 'Mostly Cloudy',
+          feelsLike: '86°F',
+          icon: 'mostlycloudy',
+          temp: '86°F',
           time: '1:00 PM',
-          uvIndex: '7/10'
-        },
-        {
-          averageHumidity: '14%',
-          averageWind: 'E 5',
-          condition: 'Partly Cloudy',
-          feelsLike: '84°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          temp: '84°F',
-          time: '2:00 PM',
-          uvIndex: '7/10'
-        },
-        {
-          averageHumidity: '14%',
-          averageWind: 'E 5',
-          condition: 'Partly Cloudy',
-          feelsLike: '85°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          temp: '85°F',
-          time: '3:00 PM',
           uvIndex: '5/10'
         },
         {
           averageHumidity: '15%',
-          averageWind: 'SE 6',
-          condition: 'Partly Cloudy',
-          feelsLike: '84°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          temp: '84°F',
-          time: '4:00 PM',
-          uvIndex: '3/10'
+          averageWind: 'ENE 13',
+          condition: 'Overcast',
+          feelsLike: '88°F',
+          icon: 'cloudy',
+          temp: '88°F',
+          time: '2:00 PM',
+          uvIndex: '4/10'
         },
         {
-          averageHumidity: '15%',
-          averageWind: 'SE 6',
-          condition: 'Partly Cloudy',
-          feelsLike: '85°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          temp: '85°F',
-          time: '5:00 PM',
+          averageHumidity: '17%',
+          averageWind: 'E 13',
+          condition: 'Overcast',
+          feelsLike: '87°F',
+          icon: 'cloudy',
+          temp: '87°F',
+          time: '3:00 PM',
           uvIndex: '2/10'
         },
         {
-          averageHumidity: '16%',
-          averageWind: 'SSE 7',
-          condition: 'Partly Cloudy',
-          feelsLike: '83°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          temp: '83°F',
+          averageHumidity: '20%',
+          averageWind: 'E 12',
+          condition: 'Overcast',
+          feelsLike: '84°F',
+          icon: 'cloudy',
+          temp: '84°F',
+          time: '4:00 PM',
+          uvIndex: '2/10'
+        },
+        {
+          averageHumidity: '25%',
+          averageWind: 'ENE 11',
+          condition: 'Chance of a Thunderstorm',
+          feelsLike: '82°F',
+          icon: 'chancetstorms',
+          temp: '82°F',
+          time: '5:00 PM',
+          uvIndex: '1/10'
+        },
+        {
+          averageHumidity: '30%',
+          averageWind: 'ENE 13',
+          condition: 'Chance of a Thunderstorm',
+          feelsLike: '79°F',
+          icon: 'chancetstorms',
+          temp: '79°F',
           time: '6:00 PM',
           uvIndex: '0/10'
         },
         {
-          averageHumidity: '18%',
-          averageWind: 'S 6',
-          condition: 'Clear',
-          feelsLike: '80°F',
-          icon_url: 'http://icons.wxug.com/i/c/k/clear.gif',
-          temp: '80°F',
+          averageHumidity: '36%',
+          averageWind: 'ENE 9',
+          condition: 'Chance of a Thunderstorm',
+          feelsLike: '75°F',
+          icon: 'chancetstorms',
+          temp: '75°F',
           time: '7:00 PM',
+          uvIndex: '0/10'
+        },
+        {
+          averageHumidity: '41%',
+          averageWind: 'N 9',
+          condition: 'Chance of a Thunderstorm',
+          feelsLike: '72°F',
+          icon: 'chancetstorms',
+          temp: '72°F',
+          time: '8:00 PM',
+          uvIndex: '0/10'
+        },
+        {
+          averageHumidity: '57%',
+          averageWind: 'N 9',
+          condition: 'Chance of a Thunderstorm',
+          feelsLike: '68°F',
+          icon: 'chancetstorms',
+          temp: '68°F',
+          time: '9:00 PM',
           uvIndex: '0/10'
         }
       ];
@@ -282,7 +283,7 @@ describe('API calls', () => {
       expect(result).toEqual(expected);
     });
   });
-  describe('cleanTenHourWeather', () => {
+  describe('cleanTenDayWeather', () => {
     it('should return a tenHourWeather object', async () => {
       window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
@@ -291,94 +292,94 @@ describe('API calls', () => {
       );
       const expected = [
         {
-          averageWind: 'ESE 6 MPH',
-          conditions: 'Partly Cloudy',
-          date: '9/10/2018',
-          day: 'Monday',
-          high: '87°F',
-          icon: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          low: '63°F'
-        },
-        {
-          averageWind: 'W 6 MPH',
-          conditions: 'Clear',
-          date: '9/11/2018',
-          day: 'Tuesday',
-          high: '88°F',
-          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
-          low: '62°F'
-        },
-        {
-          averageWind: 'SSW 7 MPH',
-          conditions: 'Clear',
-          date: '9/12/2018',
+          averageWind: 'ENE 13 MPH',
+          conditions: 'Chance of a Thunderstorm',
+          date: '9/19/2018',
           day: 'Wednesday',
-          high: '91°F',
-          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
+          high: '88°F',
+          icon: 'chancetstorms',
           low: '59°F'
         },
         {
-          averageWind: 'SSE 7 MPH',
-          conditions: 'Clear',
-          date: '9/13/2018',
+          averageWind: 'NW 11 MPH',
+          conditions: 'Partly Cloudy',
+          date: '9/20/2018',
           day: 'Thursday',
-          high: '90°F',
-          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
-          low: '59°F'
+          high: '82°F',
+          icon: 'partlycloudy',
+          low: '49°F'
+        },
+        {
+          averageWind: 'SE 18 MPH',
+          conditions: 'Clear',
+          date: '9/21/2018',
+          day: 'Friday',
+          high: '73°F',
+          icon: 'clear',
+          low: '51°F'
+        },
+        {
+          averageWind: 'SE 10 MPH',
+          conditions: 'Clear',
+          date: '9/22/2018',
+          day: 'Saturday',
+          high: '83°F',
+          icon: 'clear',
+          low: '55°F'
         },
         {
           averageWind: 'SE 9 MPH',
           conditions: 'Clear',
-          date: '9/14/2018',
-          day: 'Friday',
-          high: '89°F',
-          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
-          low: '59°F'
-        },
-        {
-          averageWind: 'ENE 8 MPH',
-          conditions: 'Clear',
-          date: '9/15/2018',
-          day: 'Saturday',
-          high: '89°F',
-          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
-          low: '59°F'
-        },
-        {
-          averageWind: 'NE 8 MPH',
-          conditions: 'Clear',
-          date: '9/16/2018',
+          date: '9/23/2018',
           day: 'Sunday',
-          high: '81°F',
-          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
-          low: '58°F'
-        },
-        {
-          averageWind: 'NE 7 MPH',
-          conditions: 'Partly Cloudy',
-          date: '9/17/2018',
-          day: 'Monday',
-          high: '81°F',
-          icon: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
+          high: '85°F',
+          icon: 'clear',
           low: '55°F'
         },
         {
-          averageWind: 'NE 7 MPH',
-          conditions: 'Partly Cloudy',
-          date: '9/18/2018',
-          day: 'Tuesday',
-          high: '77°F',
-          icon: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
-          low: '53°F'
+          averageWind: 'NNW 10 MPH',
+          conditions: 'Clear',
+          date: '9/24/2018',
+          day: 'Monday',
+          high: '81°F',
+          icon: 'clear',
+          low: '48°F'
         },
         {
-          averageWind: 'NNE 7 MPH',
+          averageWind: 'SE 11 MPH',
           conditions: 'Clear',
-          date: '9/19/2018',
+          date: '9/25/2018',
+          day: 'Tuesday',
+          high: '68°F',
+          icon: 'clear',
+          low: '45°F'
+        },
+        {
+          averageWind: 'E 11 MPH',
+          conditions: 'Clear',
+          date: '9/26/2018',
           day: 'Wednesday',
-          high: '73°F',
-          icon: 'http://icons.wxug.com/i/c/k/clear.gif',
-          low: '51°F'
+          high: '69°F',
+          icon: 'clear',
+          low: '43°F'
+        },
+        {
+          averageWind: 'SE 10 MPH',
+          conditions: 'Clear',
+          date: '9/27/2018',
+          day: 'Thursday',
+          high: '71°F',
+          icon: 'clear',
+          low: '43°F'
+        },
+        {
+          averageWind: 'SE 11 MPH',
+          conditions: 'Clear',
+          date: '9/28/2018',
+          day: 'Friday',
+          high: '70°F',
+          icon: 'clear',
+          low: '44°F'
         }
       ];
       const result = await cleanTenDayWeather(39.65, -105.19);
