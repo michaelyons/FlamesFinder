@@ -6,6 +6,10 @@ FlamesFinder is dynamic application that allows for users to find nearby campgro
 (note: you will likely need keys for googleMaps API, OpenWeather Maps API, WeatherUnderground API, and Active API to run this application locally)
 
 ![alt text](https://github.com/michaelyons/flames-finder-client/blob/master/FlamesFinder%20Landing%20Page.png)
+![alt text](https://github.com/michaelyons/flames-finder-client/blob/master/NearbyCampground%20Loading.png)
+![alt text](https://github.com/michaelyons/flames-finder-client/blob/master/Campground%20List%20with%20Map.png)
+![alt text](https://github.com/michaelyons/flames-finder-client/blob/master/Campsite%20Details.png)
+![alt text](https://github.com/michaelyons/flames-finder-client/blob/master/Campsite%20Weather.png)
 
 
 ### To get started, run:
