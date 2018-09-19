@@ -37,6 +37,7 @@ export default class WeatherCard extends Component {
           <section key={uuidv1()} className="hour-weather-card">
             <p>{`${weather1.time}`}</p>
             <p>{`${weather1.temp}`}</p>
+
             <img
               src={require(`../../images/${weather1.icon}.png`)}
               alt="weather icon"
@@ -54,6 +55,7 @@ export default class WeatherCard extends Component {
             <p>{`${weather2.day}`}</p>
             <p>{`${weather2.high}`}</p>
             <p>{`${weather2.low}`}</p>
+
             <img
               src={require(`../../images/${weather2.icon}.png`)}
               alt="weather icon"

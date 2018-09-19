@@ -4,7 +4,7 @@ import {
   currentWeatherMock,
   tenHourWeatherMock,
   tenDayWeatherMock
-} from '../../containers/Campsite/mockCampsiteData';
+} from './mockWeatherCardData';
 
 import WeatherCard from './WeatherCard';
 
@@ -22,10 +22,6 @@ describe('WeatherCard', () => {
   });
 
   it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should match the snapshot when no data available', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -6,919 +6,215 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <WeatherCard
     currentWeather={
         Object {
-            "base": "stations",
-            "clouds": Object {
-              "all": 1,
-            },
-            "cod": 200,
-            "coord": Object {
-              "lat": 39.65,
-              "lon": -105.19,
-            },
-            "dt": 1536582960,
-            "id": 420005679,
-            "main": Object {
-              "humidity": 69,
-              "pressure": 1020,
-              "temp": 55.92,
-              "temp_max": 60.8,
-              "temp_min": 50.72,
-            },
-            "name": "Sheridan",
-            "sys": Object {
-              "country": "US",
-              "id": 602,
-              "message": 0.0155,
-              "sunrise": 1536583069,
-              "sunset": 1536628587,
-              "type": 1,
-            },
-            "visibility": 16093,
-            "weather": Array [
-              Object {
-                "description": "clear sky",
-                "icon": "01n",
-                "id": 800,
-                "main": "Clear",
-              },
-            ],
-            "wind": Object {
-              "deg": 255.5,
-              "speed": 4.97,
-            },
+            "currentConditions": "Broken Clouds",
+            "currentTemp": "80°F",
+            "currentWeather": "Current Weather",
+            "highTemp": "High 85°F",
+            "humidity": "Humidity 25%",
+            "location": "Dove Valley",
+            "lowTemp": "Low 78°F",
+            "sunrise": "Sunrise 6:44:56 AM",
+            "sunset": "Sunset 6:59:55 PM",
+            "visibility": "Visibility 10.00 Miles",
+            "windDirection": "Wind Direction NE",
+            "windSpeed": "Wind Speed 13.87 MPH",
           }
     }
     tenDayWeather={
         Array [
             Object {
-              "location": Object {
-                "city": "Denver",
-                "country": "US",
-                "country_iso3166": "US",
-                "country_name": "USA",
-                "l": "/q/zmw:80228.1.99999",
-                "lat": "39.68999863",
-                "lon": "-105.13999939",
-                "magic": "1",
-                "nearby_weather_stations": Object {
-                  "airport": Object {
-                    "station": Array [
-                      Object {
-                        "city": "Broomfield",
-                        "country": "US",
-                        "icao": "KBJC",
-                        "lat": "39.90999985",
-                        "lon": "-105.12000275",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver Centennial",
-                        "country": "US",
-                        "icao": "KAPA",
-                        "lat": "39.56999969",
-                        "lon": "-104.84999847",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Aurora",
-                        "country": "US",
-                        "icao": "KBKF",
-                        "lat": "39.70000076",
-                        "lon": "-104.75000000",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Erie",
-                        "country": "US",
-                        "icao": "KEIK",
-                        "lat": "40.00999832",
-                        "lon": "-105.05000305",
-                        "state": "CO",
-                      },
-                    ],
-                  },
-                  "pws": Object {
-                    "station": Array [
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 0,
-                        "distance_mi": 0,
-                        "id": "KCODENVE325",
-                        "lat": 39.692314,
-                        "lon": -105.142639,
-                        "neighborhood": "Green Mountain 5972",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 0,
-                        "distance_mi": 0,
-                        "id": "KCODENVE446",
-                        "lat": 39.687904,
-                        "lon": -105.143372,
-                        "neighborhood": "Beech Park Green Mountain",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 0,
-                        "distance_mi": 0,
-                        "id": "KCOLAKEW19",
-                        "lat": 39.687763,
-                        "lon": -105.135139,
-                        "neighborhood": "",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 0,
-                        "distance_mi": 0,
-                        "id": "KCODENVE428",
-                        "lat": 39.695068,
-                        "lon": -105.137642,
-                        "neighborhood": "DJM-Green Mountain, LKWD, CO",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCODENVE367",
-                        "lat": 39.681778,
-                        "lon": -105.133858,
-                        "neighborhood": "lakewood",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCODENVE432",
-                        "lat": 39.684708,
-                        "lon": -105.150627,
-                        "neighborhood": "Hutchenson",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCODENVE650",
-                        "lat": 39.701702,
-                        "lon": -105.144836,
-                        "neighborhood": "Green Mountain",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCODENVE421",
-                        "lat": 39.700127,
-                        "lon": -105.129784,
-                        "neighborhood": "Green Mountain Village",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCOLAKEW51",
-                        "lat": 39.701107,
-                        "lon": -105.150124,
-                        "neighborhood": "Green Mountain Estates",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 1,
-                        "id": "KCODENVE551",
-                        "lat": 39.703163,
-                        "lon": -105.128189,
-                        "neighborhood": "Green Mountain Village 1",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 1,
-                        "id": "KCODENVE430",
-                        "lat": 39.703781,
-                        "lon": -105.128807,
-                        "neighborhood": "Green Mountain Village",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE36",
-                        "lat": 39.672138,
-                        "lon": -105.149742,
-                        "neighborhood": "Green Mountain",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCOLAKEW32",
-                        "lat": 39.710178,
-                        "lon": -105.146347,
-                        "neighborhood": "Green Mountain Vistas",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE651",
-                        "lat": 39.69846,
-                        "lon": -105.113327,
-                        "neighborhood": "Gennwood Heights",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE459",
-                        "lat": 39.677643,
-                        "lon": -105.165207,
-                        "neighborhood": "Green Mountain Summit",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE454",
-                        "lat": 39.678627,
-                        "lon": -105.111572,
-                        "neighborhood": "Carmody",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Morrison",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCOMORRI6",
-                        "lat": 39.670704,
-                        "lon": -105.16256,
-                        "neighborhood": "Green Mountain/Morrison",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE517",
-                        "lat": 39.686764,
-                        "lon": -105.105743,
-                        "neighborhood": "Kendrick Lake",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE49",
-                        "lat": 39.698856,
-                        "lon": -105.107384,
-                        "neighborhood": "Lakewood",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE655",
-                        "lat": 39.706345,
-                        "lon": -105.112556,
-                        "neighborhood": "Glennon Heights",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 1,
-                        "id": "KCOLAKEW46",
-                        "lat": 39.672474,
-                        "lon": -105.113182,
-                        "neighborhood": "Overlook at Bear Creek",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Golden",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 1,
-                        "id": "KCOGOLDE223",
-                        "lat": 39.713905,
-                        "lon": -105.15773,
-                        "neighborhood": "Six Avenue West",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Golden",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 1,
-                        "id": "KCOGOLDE47",
-                        "lat": 39.715759,
-                        "lon": -105.154388,
-                        "neighborhood": "6th Ave W Estates",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Morrison",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOMORRI42",
-                        "lat": 39.671936,
-                        "lon": -105.173492,
-                        "neighborhood": "Jeffs Lacrosse S84060 Solterra",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOLAKEW48",
-                        "lat": 39.66235,
-                        "lon": -105.119766,
-                        "neighborhood": "Bear Creek - Fox",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Golden",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOGOLDE109",
-                        "lat": 39.721748,
-                        "lon": -105.155739,
-                        "neighborhood": "6th Ave West",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOLAKEW65",
-                        "lat": 39.658585,
-                        "lon": -105.121513,
-                        "neighborhood": "Bear Creek Ranchettes",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Golden",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOGOLDE82",
-                        "lat": 39.722626,
-                        "lon": -105.155022,
-                        "neighborhood": "6th Ave. West",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCODENVE525",
-                        "lat": 39.700123,
-                        "lon": -105.096626,
-                        "neighborhood": "Lakewood",
-                        "state": "CO",
-                      },
-                    ],
-                  },
-                },
-                "requesturl": "US/CO/Denver.html",
-                "state": "CO",
-                "type": "CITY",
-                "tz_long": "America/Denver",
-                "tz_short": "MDT",
-                "wmo": "99999",
-                "wuiurl": "https://www.wunderground.com/US/CO/Denver.html",
-                "zip": "80228",
-              },
-              "response": Object {
-                "features": Object {
-                  "conditions": 1,
-                  "forecast10day": 1,
-                  "geolookup": 1,
-                  "hourly": 1,
-                },
-                "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
-                "version": "0.1",
-              },
+              "averageWind": "ENE 13 MPH",
+              "conditions": "Chance of a Thunderstorm",
+              "date": "9/19/2018",
+              "day": "Wednesday",
+              "high": "87°F",
+              "icon": "chancetstorms",
+              "low": "59°F",
+            },
+            Object {
+              "averageWind": "NNW 11 MPH",
+              "conditions": "Partly Cloudy",
+              "date": "9/20/2018",
+              "day": "Thursday",
+              "high": "81°F",
+              "icon": "partlycloudy",
+              "low": "49°F",
+            },
+            Object {
+              "averageWind": "SE 18 MPH",
+              "conditions": "Clear",
+              "date": "9/21/2018",
+              "day": "Friday",
+              "high": "72°F",
+              "icon": "clear",
+              "low": "50°F",
+            },
+            Object {
+              "averageWind": "SE 10 MPH",
+              "conditions": "Clear",
+              "date": "9/22/2018",
+              "day": "Saturday",
+              "high": "82°F",
+              "icon": "clear",
+              "low": "54°F",
+            },
+            Object {
+              "averageWind": "SE 9 MPH",
+              "conditions": "Clear",
+              "date": "9/23/2018",
+              "day": "Sunday",
+              "high": "84°F",
+              "icon": "clear",
+              "low": "54°F",
+            },
+            Object {
+              "averageWind": "N 10 MPH",
+              "conditions": "Clear",
+              "date": "9/24/2018",
+              "day": "Monday",
+              "high": "79°F",
+              "icon": "clear",
+              "low": "48°F",
+            },
+            Object {
+              "averageWind": "ESE 11 MPH",
+              "conditions": "Clear",
+              "date": "9/25/2018",
+              "day": "Tuesday",
+              "high": "67°F",
+              "icon": "clear",
+              "low": "44°F",
+            },
+            Object {
+              "averageWind": "E 10 MPH",
+              "conditions": "Partly Cloudy",
+              "date": "9/26/2018",
+              "day": "Wednesday",
+              "high": "66°F",
+              "icon": "partlycloudy",
+              "low": "42°F",
+            },
+            Object {
+              "averageWind": "SE 10 MPH",
+              "conditions": "Clear",
+              "date": "9/27/2018",
+              "day": "Thursday",
+              "high": "71°F",
+              "icon": "clear",
+              "low": "43°F",
+            },
+            Object {
+              "averageWind": "ESE 10 MPH",
+              "conditions": "Clear",
+              "date": "9/28/2018",
+              "day": "Friday",
+              "high": "70°F",
+              "icon": "clear",
+              "low": "44°F",
             },
           ]
     }
     tenHourWeather={
         Array [
             Object {
-              "current_observation": Object {
-                "UV": "3",
-                "dewpoint_c": 8,
-                "dewpoint_f": 47,
-                "dewpoint_string": "47 F (8 C)",
-                "display_location": Object {
-                  "city": "Denver",
-                  "country": "US",
-                  "country_iso3166": "US",
-                  "elevation": "1795.0",
-                  "full": "Denver, CO",
-                  "latitude": "39.68999863",
-                  "longitude": "-105.13999939",
-                  "magic": "1",
-                  "state": "CO",
-                  "state_name": "Colorado",
-                  "wmo": "99999",
-                  "zip": "80228",
-                },
-                "estimated": Object {},
-                "feelslike_c": "23.5",
-                "feelslike_f": "74.3",
-                "feelslike_string": "74.3 F (23.5 C)",
-                "forecast_url": "http://www.wunderground.com/US/CO/Denver.html",
-                "heat_index_c": "NA",
-                "heat_index_f": "NA",
-                "heat_index_string": "NA",
-                "history_url": "http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KCODENVE325",
-                "icon": "partlycloudy",
-                "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
-                "image": Object {
-                  "link": "http://www.wunderground.com",
-                  "title": "Weather Underground",
-                  "url": "http://icons.wxug.com/graphics/wu2/logo_130x80.png",
-                },
-                "local_epoch": "1536594575",
-                "local_time_rfc822": "Mon, 10 Sep 2018 09:49:35 -0600",
-                "local_tz_long": "America/Denver",
-                "local_tz_offset": "-0600",
-                "local_tz_short": "MDT",
-                "nowcast": "",
-                "ob_url": "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=39.692314,-105.142639",
-                "observation_epoch": "1536594567",
-                "observation_location": Object {
-                  "city": "Broomfield",
-                  "country": "US",
-                  "country_iso3166": "US",
-                  "elevation": "5972 ft",
-                  "full": "Broomfield, Colorado",
-                  "latitude": "39.69",
-                  "longitude": "-105.14",
-                  "state": "Colorado",
-                },
-                "observation_time": "Last Updated on September 10, 9:49 AM MDT",
-                "observation_time_rfc822": "Mon, 10 Sep 2018 09:49:27 -0600",
-                "precip_1hr_in": "0.00",
-                "precip_1hr_metric": " 0",
-                "precip_1hr_string": "0.00 in ( 0 mm)",
-                "precip_today_in": "0.00",
-                "precip_today_metric": "0",
-                "precip_today_string": "0.00 in (0 mm)",
-                "pressure_in": "30.36",
-                "pressure_mb": "1028",
-                "pressure_trend": "0",
-                "relative_humidity": "38%",
-                "solarradiation": "--",
-                "station_id": "KCODENVE325",
-                "temp_c": 23.5,
-                "temp_f": 74.3,
-                "temperature_string": "74.3 F (23.5 C)",
-                "visibility_km": "80.4",
-                "visibility_mi": "50.0",
-                "weather": "Partly Cloudy",
-                "wind_degrees": 90,
-                "wind_dir": "East",
-                "wind_gust_kph": "3.2",
-                "wind_gust_mph": "2.0",
-                "wind_kph": 3.2,
-                "wind_mph": 2,
-                "wind_string": "From the East at 2 MPH Gusting to 2.0 MPH",
-                "windchill_c": "NA",
-                "windchill_f": "NA",
-                "windchill_string": "NA",
-              },
-              "location": Object {
-                "city": "Denver",
-                "country": "US",
-                "country_iso3166": "US",
-                "country_name": "USA",
-                "l": "/q/zmw:80228.1.99999",
-                "lat": "39.68999863",
-                "lon": "-105.13999939",
-                "magic": "1",
-                "nearby_weather_stations": Object {
-                  "airport": Object {
-                    "station": Array [
-                      Object {
-                        "city": "Broomfield",
-                        "country": "US",
-                        "icao": "KBJC",
-                        "lat": "39.90999985",
-                        "lon": "-105.12000275",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver Centennial",
-                        "country": "US",
-                        "icao": "KAPA",
-                        "lat": "39.56999969",
-                        "lon": "-104.84999847",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Aurora",
-                        "country": "US",
-                        "icao": "KBKF",
-                        "lat": "39.70000076",
-                        "lon": "-104.75000000",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Erie",
-                        "country": "US",
-                        "icao": "KEIK",
-                        "lat": "40.00999832",
-                        "lon": "-105.05000305",
-                        "state": "CO",
-                      },
-                    ],
-                  },
-                  "pws": Object {
-                    "station": Array [
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 0,
-                        "distance_mi": 0,
-                        "id": "KCODENVE325",
-                        "lat": 39.692314,
-                        "lon": -105.142639,
-                        "neighborhood": "Green Mountain 5972",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 0,
-                        "distance_mi": 0,
-                        "id": "KCODENVE446",
-                        "lat": 39.687904,
-                        "lon": -105.143372,
-                        "neighborhood": "Beech Park Green Mountain",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 0,
-                        "distance_mi": 0,
-                        "id": "KCOLAKEW19",
-                        "lat": 39.687763,
-                        "lon": -105.135139,
-                        "neighborhood": "",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 0,
-                        "distance_mi": 0,
-                        "id": "KCODENVE428",
-                        "lat": 39.695068,
-                        "lon": -105.137642,
-                        "neighborhood": "DJM-Green Mountain, LKWD, CO",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCODENVE367",
-                        "lat": 39.681778,
-                        "lon": -105.133858,
-                        "neighborhood": "lakewood",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCODENVE432",
-                        "lat": 39.684708,
-                        "lon": -105.150627,
-                        "neighborhood": "Hutchenson",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCODENVE650",
-                        "lat": 39.701702,
-                        "lon": -105.144836,
-                        "neighborhood": "Green Mountain",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCODENVE421",
-                        "lat": 39.700127,
-                        "lon": -105.129784,
-                        "neighborhood": "Green Mountain Village",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 0,
-                        "id": "KCOLAKEW51",
-                        "lat": 39.701107,
-                        "lon": -105.150124,
-                        "neighborhood": "Green Mountain Estates",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 1,
-                        "id": "KCODENVE551",
-                        "lat": 39.703163,
-                        "lon": -105.128189,
-                        "neighborhood": "Green Mountain Village 1",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 1,
-                        "distance_mi": 1,
-                        "id": "KCODENVE430",
-                        "lat": 39.703781,
-                        "lon": -105.128807,
-                        "neighborhood": "Green Mountain Village",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE36",
-                        "lat": 39.672138,
-                        "lon": -105.149742,
-                        "neighborhood": "Green Mountain",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCOLAKEW32",
-                        "lat": 39.710178,
-                        "lon": -105.146347,
-                        "neighborhood": "Green Mountain Vistas",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE651",
-                        "lat": 39.69846,
-                        "lon": -105.113327,
-                        "neighborhood": "Gennwood Heights",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE459",
-                        "lat": 39.677643,
-                        "lon": -105.165207,
-                        "neighborhood": "Green Mountain Summit",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE454",
-                        "lat": 39.678627,
-                        "lon": -105.111572,
-                        "neighborhood": "Carmody",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Morrison",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCOMORRI6",
-                        "lat": 39.670704,
-                        "lon": -105.16256,
-                        "neighborhood": "Green Mountain/Morrison",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE517",
-                        "lat": 39.686764,
-                        "lon": -105.105743,
-                        "neighborhood": "Kendrick Lake",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE49",
-                        "lat": 39.698856,
-                        "lon": -105.107384,
-                        "neighborhood": "Lakewood",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 2,
-                        "distance_mi": 1,
-                        "id": "KCODENVE655",
-                        "lat": 39.706345,
-                        "lon": -105.112556,
-                        "neighborhood": "Glennon Heights",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 1,
-                        "id": "KCOLAKEW46",
-                        "lat": 39.672474,
-                        "lon": -105.113182,
-                        "neighborhood": "Overlook at Bear Creek",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Golden",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 1,
-                        "id": "KCOGOLDE223",
-                        "lat": 39.713905,
-                        "lon": -105.15773,
-                        "neighborhood": "Six Avenue West",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Golden",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 1,
-                        "id": "KCOGOLDE47",
-                        "lat": 39.715759,
-                        "lon": -105.154388,
-                        "neighborhood": "6th Ave W Estates",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Morrison",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOMORRI42",
-                        "lat": 39.671936,
-                        "lon": -105.173492,
-                        "neighborhood": "Jeffs Lacrosse S84060 Solterra",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOLAKEW48",
-                        "lat": 39.66235,
-                        "lon": -105.119766,
-                        "neighborhood": "Bear Creek - Fox",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Golden",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOGOLDE109",
-                        "lat": 39.721748,
-                        "lon": -105.155739,
-                        "neighborhood": "6th Ave West",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Lakewood",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOLAKEW65",
-                        "lat": 39.658585,
-                        "lon": -105.121513,
-                        "neighborhood": "Bear Creek Ranchettes",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Golden",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCOGOLDE82",
-                        "lat": 39.722626,
-                        "lon": -105.155022,
-                        "neighborhood": "6th Ave. West",
-                        "state": "CO",
-                      },
-                      Object {
-                        "city": "Denver",
-                        "country": "US",
-                        "distance_km": 3,
-                        "distance_mi": 2,
-                        "id": "KCODENVE525",
-                        "lat": 39.700123,
-                        "lon": -105.096626,
-                        "neighborhood": "Lakewood",
-                        "state": "CO",
-                      },
-                    ],
-                  },
-                },
-                "requesturl": "US/CO/Denver.html",
-                "state": "CO",
-                "type": "CITY",
-                "tz_long": "America/Denver",
-                "tz_short": "MDT",
-                "wmo": "99999",
-                "wuiurl": "https://www.wunderground.com/US/CO/Denver.html",
-                "zip": "80228",
-              },
-              "response": Object {
-                "features": Object {
-                  "conditions": 1,
-                  "forecast10day": 1,
-                  "geolookup": 1,
-                  "hourly": 1,
-                },
-                "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
-                "version": "0.1",
-              },
+              "averageHumidity": "15%",
+              "averageWind": "ENE 12",
+              "condition": "Mostly Cloudy",
+              "feelsLike": "87°F",
+              "icon": "mostlycloudy",
+              "temp": "87°F",
+              "time": "1:00 PM",
+              "uvIndex": "5/10",
+            },
+            Object {
+              "averageHumidity": "15%",
+              "averageWind": "ENE 13",
+              "condition": "Overcast",
+              "feelsLike": "88°F",
+              "icon": "cloudy",
+              "temp": "88°F",
+              "time": "2:00 PM",
+              "uvIndex": "4/10",
+            },
+            Object {
+              "averageHumidity": "17%",
+              "averageWind": "E 13",
+              "condition": "Overcast",
+              "feelsLike": "87°F",
+              "icon": "cloudy",
+              "temp": "87°F",
+              "time": "3:00 PM",
+              "uvIndex": "2/10",
+            },
+            Object {
+              "averageHumidity": "20%",
+              "averageWind": "E 12",
+              "condition": "Overcast",
+              "feelsLike": "84°F",
+              "icon": "cloudy",
+              "temp": "84°F",
+              "time": "4:00 PM",
+              "uvIndex": "2/10",
+            },
+            Object {
+              "averageHumidity": "25%",
+              "averageWind": "ENE 11",
+              "condition": "Chance of a Thunderstorm",
+              "feelsLike": "82°F",
+              "icon": "chancetstorms",
+              "temp": "82°F",
+              "time": "5:00 PM",
+              "uvIndex": "1/10",
+            },
+            Object {
+              "averageHumidity": "30%",
+              "averageWind": "ENE 13",
+              "condition": "Chance of a Thunderstorm",
+              "feelsLike": "79°F",
+              "icon": "chancetstorms",
+              "temp": "79°F",
+              "time": "6:00 PM",
+              "uvIndex": "0/10",
+            },
+            Object {
+              "averageHumidity": "36%",
+              "averageWind": "NE 9",
+              "condition": "Chance of a Thunderstorm",
+              "feelsLike": "75°F",
+              "icon": "chancetstorms",
+              "temp": "75°F",
+              "time": "7:00 PM",
+              "uvIndex": "0/10",
+            },
+            Object {
+              "averageHumidity": "41%",
+              "averageWind": "N 8",
+              "condition": "Chance of a Thunderstorm",
+              "feelsLike": "72°F",
+              "icon": "chancetstorms",
+              "temp": "72°F",
+              "time": "8:00 PM",
+              "uvIndex": "0/10",
+            },
+            Object {
+              "averageHumidity": "53%",
+              "averageWind": "NNW 9",
+              "condition": "Chance of a Thunderstorm",
+              "feelsLike": "68°F",
+              "icon": "chancetstorms",
+              "temp": "68°F",
+              "time": "9:00 PM",
+              "uvIndex": "0/10",
+            },
+            Object {
+              "averageHumidity": "63%",
+              "averageWind": "ENE 7",
+              "condition": "Chance of a Thunderstorm",
+              "feelsLike": "65°F",
+              "icon": "chancetstorms",
+              "temp": "65°F",
+              "time": "10:00 PM",
+              "uvIndex": "0/10",
             },
           ]
     }
@@ -944,8 +240,36 @@ ShallowWrapper {
                     <p>
                               Current Weather
                     </p>
-                    <p />
-                    <p />
+                    <p>
+                              80°F
+                    </p>
+                    <p>
+                              Broken Clouds
+                    </p>
+                    <p>
+                              Humidity 25%
+                    </p>
+                    <p>
+                              High 85°F
+                    </p>
+                    <p>
+                              Low 78°F
+                    </p>
+                    <p>
+                              Wind Speed 13.87 MPH
+                    </p>
+                    <p>
+                              Sunrise 6:44:56 AM
+                    </p>
+                    <p>
+                              Sunset 6:59:55 PM
+                    </p>
+                    <p>
+                              Wind Direction NE
+                    </p>
+                    <p>
+                              Visibility 10.00 Miles
+                    </p>
           </section>
 </div>,
         <div
@@ -955,14 +279,141 @@ ShallowWrapper {
                     className="hour-weather-card"
           >
                     <p>
-                              undefined
+                              1:00 PM
                     </p>
                     <p>
-                              undefined
+                              87°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="mostlycloudy.png"
+                    />
+          </section>
+          <section
+                    className="hour-weather-card"
+          >
+                    <p>
+                              2:00 PM
                     </p>
                     <p>
-                              undefined
+                              88°F
                     </p>
+                    <img
+                              alt="weather icon"
+                              src="cloudy.png"
+                    />
+          </section>
+          <section
+                    className="hour-weather-card"
+          >
+                    <p>
+                              3:00 PM
+                    </p>
+                    <p>
+                              87°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="cloudy.png"
+                    />
+          </section>
+          <section
+                    className="hour-weather-card"
+          >
+                    <p>
+                              4:00 PM
+                    </p>
+                    <p>
+                              84°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="cloudy.png"
+                    />
+          </section>
+          <section
+                    className="hour-weather-card"
+          >
+                    <p>
+                              5:00 PM
+                    </p>
+                    <p>
+                              82°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="chancetstorms.png"
+                    />
+          </section>
+          <section
+                    className="hour-weather-card"
+          >
+                    <p>
+                              6:00 PM
+                    </p>
+                    <p>
+                              79°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="chancetstorms.png"
+                    />
+          </section>
+          <section
+                    className="hour-weather-card"
+          >
+                    <p>
+                              7:00 PM
+                    </p>
+                    <p>
+                              75°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="chancetstorms.png"
+                    />
+          </section>
+          <section
+                    className="hour-weather-card"
+          >
+                    <p>
+                              8:00 PM
+                    </p>
+                    <p>
+                              72°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="chancetstorms.png"
+                    />
+          </section>
+          <section
+                    className="hour-weather-card"
+          >
+                    <p>
+                              9:00 PM
+                    </p>
+                    <p>
+                              68°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="chancetstorms.png"
+                    />
+          </section>
+          <section
+                    className="hour-weather-card"
+          >
+                    <p>
+                              10:00 PM
+                    </p>
+                    <p>
+                              65°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="chancetstorms.png"
+                    />
           </section>
 </div>,
         <div
@@ -972,49 +423,171 @@ ShallowWrapper {
                     className="day-weather-card"
           >
                     <p>
-                              undefined
+                              Wednesday
                     </p>
                     <p>
-                              undefined
+                              87°F
                     </p>
                     <p>
-                              undefined
+                              59°F
                     </p>
-                    <p>
-                              undefined
-                    </p>
-                    <p>
-                              undefined
-                    </p>
+                    <img
+                              alt="weather icon"
+                              src="chancetstorms.png"
+                    />
           </section>
-</div>,
-        <div>
-          <section>
+          <section
+                    className="day-weather-card"
+          >
                     <p>
-                              Humidity: 
+                              Thursday
                     </p>
                     <p>
-                              High: 
+                              81°F
                     </p>
                     <p>
-                              Low: 
+                              49°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="partlycloudy.png"
+                    />
+          </section>
+          <section
+                    className="day-weather-card"
+          >
+                    <p>
+                              Friday
                     </p>
                     <p>
-                              Wind Speed: 
+                              72°F
                     </p>
                     <p>
-                              Sunrise: 
+                              50°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="clear.png"
+                    />
+          </section>
+          <section
+                    className="day-weather-card"
+          >
+                    <p>
+                              Saturday
                     </p>
                     <p>
-                              Sunset: 
+                              82°F
                     </p>
                     <p>
-                              Wind Direction: 
+                              54°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="clear.png"
+                    />
+          </section>
+          <section
+                    className="day-weather-card"
+          >
+                    <p>
+                              Sunday
                     </p>
                     <p>
-                              Visibility: 
-                              16093
+                              84°F
                     </p>
+                    <p>
+                              54°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="clear.png"
+                    />
+          </section>
+          <section
+                    className="day-weather-card"
+          >
+                    <p>
+                              Monday
+                    </p>
+                    <p>
+                              79°F
+                    </p>
+                    <p>
+                              48°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="clear.png"
+                    />
+          </section>
+          <section
+                    className="day-weather-card"
+          >
+                    <p>
+                              Tuesday
+                    </p>
+                    <p>
+                              67°F
+                    </p>
+                    <p>
+                              44°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="clear.png"
+                    />
+          </section>
+          <section
+                    className="day-weather-card"
+          >
+                    <p>
+                              Wednesday
+                    </p>
+                    <p>
+                              66°F
+                    </p>
+                    <p>
+                              42°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="partlycloudy.png"
+                    />
+          </section>
+          <section
+                    className="day-weather-card"
+          >
+                    <p>
+                              Thursday
+                    </p>
+                    <p>
+                              71°F
+                    </p>
+                    <p>
+                              43°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="clear.png"
+                    />
+          </section>
+          <section
+                    className="day-weather-card"
+          >
+                    <p>
+                              Friday
+                    </p>
+                    <p>
+                              70°F
+                    </p>
+                    <p>
+                              44°F
+                    </p>
+                    <img
+                              alt="weather icon"
+                              src="clear.png"
+                    />
           </section>
 </div>,
       ],
@@ -1032,8 +605,36 @@ ShallowWrapper {
             <p>
                         Current Weather
             </p>
-            <p />
-            <p />
+            <p>
+                        80°F
+            </p>
+            <p>
+                        Broken Clouds
+            </p>
+            <p>
+                        Humidity 25%
+            </p>
+            <p>
+                        High 85°F
+            </p>
+            <p>
+                        Low 78°F
+            </p>
+            <p>
+                        Wind Speed 13.87 MPH
+            </p>
+            <p>
+                        Sunrise 6:44:56 AM
+            </p>
+            <p>
+                        Sunset 6:59:55 PM
+            </p>
+            <p>
+                        Wind Direction NE
+            </p>
+            <p>
+                        Visibility 10.00 Miles
+            </p>
 </section>,
         },
         "ref": null,
@@ -1046,8 +647,36 @@ ShallowWrapper {
               <p>
                 Current Weather
 </p>,
-              <p />,
-              <p />,
+              <p>
+                80°F
+</p>,
+              <p>
+                Broken Clouds
+</p>,
+              <p>
+                Humidity 25%
+</p>,
+              <p>
+                High 85°F
+</p>,
+              <p>
+                Low 78°F
+</p>,
+              <p>
+                Wind Speed 13.87 MPH
+</p>,
+              <p>
+                Sunrise 6:44:56 AM
+</p>,
+              <p>
+                Sunset 6:59:55 PM
+</p>,
+              <p>
+                Wind Direction NE
+</p>,
+              <p>
+                Visibility 10.00 Miles
+</p>,
             ],
             "className": "current-weather-card",
           },
@@ -1069,10 +698,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "80°F",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "80°F",
               "type": "p",
             },
             Object {
@@ -1080,10 +709,98 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "Broken Clouds",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "Broken Clouds",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Humidity 25%",
+              },
+              "ref": null,
+              "rendered": "Humidity 25%",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "High 85°F",
+              },
+              "ref": null,
+              "rendered": "High 85°F",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Low 78°F",
+              },
+              "ref": null,
+              "rendered": "Low 78°F",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Wind Speed 13.87 MPH",
+              },
+              "ref": null,
+              "rendered": "Wind Speed 13.87 MPH",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sunrise 6:44:56 AM",
+              },
+              "ref": null,
+              "rendered": "Sunrise 6:44:56 AM",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sunset 6:59:55 PM",
+              },
+              "ref": null,
+              "rendered": "Sunset 6:59:55 PM",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Wind Direction NE",
+              },
+              "ref": null,
+              "rendered": "Wind Direction NE",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Visibility 10.00 Miles",
+              },
+              "ref": null,
+              "rendered": "Visibility 10.00 Miles",
               "type": "p",
             },
           ],
@@ -1101,14 +818,141 @@ ShallowWrapper {
               className="hour-weather-card"
 >
               <p>
-                            undefined
+                            1:00 PM
               </p>
               <p>
-                            undefined
+                            87°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="mostlycloudy.png"
+              />
+</section>,
+            <section
+              className="hour-weather-card"
+>
+              <p>
+                            2:00 PM
               </p>
               <p>
-                            undefined
+                            88°F
               </p>
+              <img
+                            alt="weather icon"
+                            src="cloudy.png"
+              />
+</section>,
+            <section
+              className="hour-weather-card"
+>
+              <p>
+                            3:00 PM
+              </p>
+              <p>
+                            87°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="cloudy.png"
+              />
+</section>,
+            <section
+              className="hour-weather-card"
+>
+              <p>
+                            4:00 PM
+              </p>
+              <p>
+                            84°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="cloudy.png"
+              />
+</section>,
+            <section
+              className="hour-weather-card"
+>
+              <p>
+                            5:00 PM
+              </p>
+              <p>
+                            82°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="chancetstorms.png"
+              />
+</section>,
+            <section
+              className="hour-weather-card"
+>
+              <p>
+                            6:00 PM
+              </p>
+              <p>
+                            79°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="chancetstorms.png"
+              />
+</section>,
+            <section
+              className="hour-weather-card"
+>
+              <p>
+                            7:00 PM
+              </p>
+              <p>
+                            75°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="chancetstorms.png"
+              />
+</section>,
+            <section
+              className="hour-weather-card"
+>
+              <p>
+                            8:00 PM
+              </p>
+              <p>
+                            72°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="chancetstorms.png"
+              />
+</section>,
+            <section
+              className="hour-weather-card"
+>
+              <p>
+                            9:00 PM
+              </p>
+              <p>
+                            68°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="chancetstorms.png"
+              />
+</section>,
+            <section
+              className="hour-weather-card"
+>
+              <p>
+                            10:00 PM
+              </p>
+              <p>
+                            65°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="chancetstorms.png"
+              />
 </section>,
           ],
           "className": "ten-hour-container",
@@ -1117,19 +961,20 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "41d8ee60-bc0e-11e8-8b39-fd4742afd598",
+            "key": "09b75e10-bc39-11e8-8d29-478bc0f5a529",
             "nodeType": "host",
             "props": Object {
               "children": Array [
                 <p>
-                  undefined
+                  1:00 PM
 </p>,
                 <p>
-                  undefined
+                  87°F
 </p>,
-                <p>
-                  undefined
-</p>,
+                <img
+                  alt="weather icon"
+                  src="mostlycloudy.png"
+/>,
               ],
               "className": "hour-weather-card",
             },
@@ -1140,10 +985,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "undefined",
+                  "children": "1:00 PM",
                 },
                 "ref": null,
-                "rendered": "undefined",
+                "rendered": "1:00 PM",
                 "type": "p",
               },
               Object {
@@ -1151,10 +996,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "undefined",
+                  "children": "87°F",
                 },
                 "ref": null,
-                "rendered": "undefined",
+                "rendered": "87°F",
                 "type": "p",
               },
               Object {
@@ -1162,11 +1007,534 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "undefined",
+                  "alt": "weather icon",
+                  "src": "mostlycloudy.png",
                 },
                 "ref": null,
-                "rendered": "undefined",
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bed820-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  2:00 PM
+</p>,
+                <p>
+                  88°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="cloudy.png"
+/>,
+              ],
+              "className": "hour-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2:00 PM",
+                },
+                "ref": null,
+                "rendered": "2:00 PM",
                 "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "88°F",
+                },
+                "ref": null,
+                "rendered": "88°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "cloudy.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09beff30-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  3:00 PM
+</p>,
+                <p>
+                  87°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="cloudy.png"
+/>,
+              ],
+              "className": "hour-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "3:00 PM",
+                },
+                "ref": null,
+                "rendered": "3:00 PM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "87°F",
+                },
+                "ref": null,
+                "rendered": "87°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "cloudy.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09beff31-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  4:00 PM
+</p>,
+                <p>
+                  84°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="cloudy.png"
+/>,
+              ],
+              "className": "hour-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "4:00 PM",
+                },
+                "ref": null,
+                "rendered": "4:00 PM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "84°F",
+                },
+                "ref": null,
+                "rendered": "84°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "cloudy.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09beff32-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  5:00 PM
+</p>,
+                <p>
+                  82°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="chancetstorms.png"
+/>,
+              ],
+              "className": "hour-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "5:00 PM",
+                },
+                "ref": null,
+                "rendered": "5:00 PM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "82°F",
+                },
+                "ref": null,
+                "rendered": "82°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "chancetstorms.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bf4d50-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  6:00 PM
+</p>,
+                <p>
+                  79°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="chancetstorms.png"
+/>,
+              ],
+              "className": "hour-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "6:00 PM",
+                },
+                "ref": null,
+                "rendered": "6:00 PM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "79°F",
+                },
+                "ref": null,
+                "rendered": "79°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "chancetstorms.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bf4d51-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  7:00 PM
+</p>,
+                <p>
+                  75°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="chancetstorms.png"
+/>,
+              ],
+              "className": "hour-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "7:00 PM",
+                },
+                "ref": null,
+                "rendered": "7:00 PM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "75°F",
+                },
+                "ref": null,
+                "rendered": "75°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "chancetstorms.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bf4d52-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  8:00 PM
+</p>,
+                <p>
+                  72°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="chancetstorms.png"
+/>,
+              ],
+              "className": "hour-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "8:00 PM",
+                },
+                "ref": null,
+                "rendered": "8:00 PM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "72°F",
+                },
+                "ref": null,
+                "rendered": "72°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "chancetstorms.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bf4d53-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  9:00 PM
+</p>,
+                <p>
+                  68°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="chancetstorms.png"
+/>,
+              ],
+              "className": "hour-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "9:00 PM",
+                },
+                "ref": null,
+                "rendered": "9:00 PM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "68°F",
+                },
+                "ref": null,
+                "rendered": "68°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "chancetstorms.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bf4d54-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  10:00 PM
+</p>,
+                <p>
+                  65°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="chancetstorms.png"
+/>,
+              ],
+              "className": "hour-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "10:00 PM",
+                },
+                "ref": null,
+                "rendered": "10:00 PM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "65°F",
+                },
+                "ref": null,
+                "rendered": "65°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "chancetstorms.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
               },
             ],
             "type": "section",
@@ -1184,20 +1552,171 @@ ShallowWrapper {
               className="day-weather-card"
 >
               <p>
-                            undefined
+                            Wednesday
               </p>
               <p>
-                            undefined
+                            87°F
               </p>
               <p>
-                            undefined
+                            59°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="chancetstorms.png"
+              />
+</section>,
+            <section
+              className="day-weather-card"
+>
+              <p>
+                            Thursday
               </p>
               <p>
-                            undefined
+                            81°F
               </p>
               <p>
-                            undefined
+                            49°F
               </p>
+              <img
+                            alt="weather icon"
+                            src="partlycloudy.png"
+              />
+</section>,
+            <section
+              className="day-weather-card"
+>
+              <p>
+                            Friday
+              </p>
+              <p>
+                            72°F
+              </p>
+              <p>
+                            50°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="clear.png"
+              />
+</section>,
+            <section
+              className="day-weather-card"
+>
+              <p>
+                            Saturday
+              </p>
+              <p>
+                            82°F
+              </p>
+              <p>
+                            54°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="clear.png"
+              />
+</section>,
+            <section
+              className="day-weather-card"
+>
+              <p>
+                            Sunday
+              </p>
+              <p>
+                            84°F
+              </p>
+              <p>
+                            54°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="clear.png"
+              />
+</section>,
+            <section
+              className="day-weather-card"
+>
+              <p>
+                            Monday
+              </p>
+              <p>
+                            79°F
+              </p>
+              <p>
+                            48°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="clear.png"
+              />
+</section>,
+            <section
+              className="day-weather-card"
+>
+              <p>
+                            Tuesday
+              </p>
+              <p>
+                            67°F
+              </p>
+              <p>
+                            44°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="clear.png"
+              />
+</section>,
+            <section
+              className="day-weather-card"
+>
+              <p>
+                            Wednesday
+              </p>
+              <p>
+                            66°F
+              </p>
+              <p>
+                            42°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="partlycloudy.png"
+              />
+</section>,
+            <section
+              className="day-weather-card"
+>
+              <p>
+                            Thursday
+              </p>
+              <p>
+                            71°F
+              </p>
+              <p>
+                            43°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="clear.png"
+              />
+</section>,
+            <section
+              className="day-weather-card"
+>
+              <p>
+                            Friday
+              </p>
+              <p>
+                            70°F
+              </p>
+              <p>
+                            44°F
+              </p>
+              <img
+                            alt="weather icon"
+                            src="clear.png"
+              />
 </section>,
           ],
           "className": "ten-day-container",
@@ -1206,25 +1725,23 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "41d91570-bc0e-11e8-8b39-fd4742afd598",
+            "key": "09bf4d55-bc39-11e8-8d29-478bc0f5a529",
             "nodeType": "host",
             "props": Object {
               "children": Array [
                 <p>
-                  undefined
+                  Wednesday
 </p>,
                 <p>
-                  undefined
+                  87°F
 </p>,
                 <p>
-                  undefined
+                  59°F
 </p>,
-                <p>
-                  undefined
-</p>,
-                <p>
-                  undefined
-</p>,
+                <img
+                  alt="weather icon"
+                  src="chancetstorms.png"
+/>,
               ],
               "className": "day-weather-card",
             },
@@ -1235,10 +1752,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "undefined",
+                  "children": "Wednesday",
                 },
                 "ref": null,
-                "rendered": "undefined",
+                "rendered": "Wednesday",
                 "type": "p",
               },
               Object {
@@ -1246,10 +1763,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "undefined",
+                  "children": "87°F",
                 },
                 "ref": null,
-                "rendered": "undefined",
+                "rendered": "87°F",
                 "type": "p",
               },
               Object {
@@ -1257,10 +1774,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "undefined",
+                  "children": "59°F",
                 },
                 "ref": null,
-                "rendered": "undefined",
+                "rendered": "59°F",
                 "type": "p",
               },
               Object {
@@ -1268,10 +1785,49 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "undefined",
+                  "alt": "weather icon",
+                  "src": "chancetstorms.png",
                 },
                 "ref": null,
-                "rendered": "undefined",
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bf4d56-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Thursday
+</p>,
+                <p>
+                  81°F
+</p>,
+                <p>
+                  49°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="partlycloudy.png"
+/>,
+              ],
+              "className": "day-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Thursday",
+                },
+                "ref": null,
+                "rendered": "Thursday",
                 "type": "p",
               },
               Object {
@@ -1279,226 +1835,615 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "undefined",
+                  "children": "81°F",
                 },
                 "ref": null,
-                "rendered": "undefined",
+                "rendered": "81°F",
                 "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "49°F",
+                },
+                "ref": null,
+                "rendered": "49°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "partlycloudy.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bf7460-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Friday
+</p>,
+                <p>
+                  72°F
+</p>,
+                <p>
+                  50°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="clear.png"
+/>,
+              ],
+              "className": "day-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Friday",
+                },
+                "ref": null,
+                "rendered": "Friday",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "72°F",
+                },
+                "ref": null,
+                "rendered": "72°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "50°F",
+                },
+                "ref": null,
+                "rendered": "50°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "clear.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bf9b70-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Saturday
+</p>,
+                <p>
+                  82°F
+</p>,
+                <p>
+                  54°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="clear.png"
+/>,
+              ],
+              "className": "day-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Saturday",
+                },
+                "ref": null,
+                "rendered": "Saturday",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "82°F",
+                },
+                "ref": null,
+                "rendered": "82°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "54°F",
+                },
+                "ref": null,
+                "rendered": "54°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "clear.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bf9b71-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Sunday
+</p>,
+                <p>
+                  84°F
+</p>,
+                <p>
+                  54°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="clear.png"
+/>,
+              ],
+              "className": "day-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Sunday",
+                },
+                "ref": null,
+                "rendered": "Sunday",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "84°F",
+                },
+                "ref": null,
+                "rendered": "84°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "54°F",
+                },
+                "ref": null,
+                "rendered": "54°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "clear.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bfc280-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Monday
+</p>,
+                <p>
+                  79°F
+</p>,
+                <p>
+                  48°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="clear.png"
+/>,
+              ],
+              "className": "day-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Monday",
+                },
+                "ref": null,
+                "rendered": "Monday",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "79°F",
+                },
+                "ref": null,
+                "rendered": "79°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "48°F",
+                },
+                "ref": null,
+                "rendered": "48°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "clear.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bfc281-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Tuesday
+</p>,
+                <p>
+                  67°F
+</p>,
+                <p>
+                  44°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="clear.png"
+/>,
+              ],
+              "className": "day-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Tuesday",
+                },
+                "ref": null,
+                "rendered": "Tuesday",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "67°F",
+                },
+                "ref": null,
+                "rendered": "67°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "44°F",
+                },
+                "ref": null,
+                "rendered": "44°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "clear.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bfc282-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Wednesday
+</p>,
+                <p>
+                  66°F
+</p>,
+                <p>
+                  42°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="partlycloudy.png"
+/>,
+              ],
+              "className": "day-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Wednesday",
+                },
+                "ref": null,
+                "rendered": "Wednesday",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "66°F",
+                },
+                "ref": null,
+                "rendered": "66°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "42°F",
+                },
+                "ref": null,
+                "rendered": "42°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "partlycloudy.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bfc283-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Thursday
+</p>,
+                <p>
+                  71°F
+</p>,
+                <p>
+                  43°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="clear.png"
+/>,
+              ],
+              "className": "day-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Thursday",
+                },
+                "ref": null,
+                "rendered": "Thursday",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "71°F",
+                },
+                "ref": null,
+                "rendered": "71°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "43°F",
+                },
+                "ref": null,
+                "rendered": "43°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "clear.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": "09bfc284-bc39-11e8-8d29-478bc0f5a529",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Friday
+</p>,
+                <p>
+                  70°F
+</p>,
+                <p>
+                  44°F
+</p>,
+                <img
+                  alt="weather icon"
+                  src="clear.png"
+/>,
+              ],
+              "className": "day-weather-card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Friday",
+                },
+                "ref": null,
+                "rendered": "Friday",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "70°F",
+                },
+                "ref": null,
+                "rendered": "70°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "44°F",
+                },
+                "ref": null,
+                "rendered": "44°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "weather icon",
+                  "src": "clear.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
               },
             ],
             "type": "section",
           },
         ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <section>
-            <p>
-                        Humidity: 
-            </p>
-            <p>
-                        High: 
-            </p>
-            <p>
-                        Low: 
-            </p>
-            <p>
-                        Wind Speed: 
-            </p>
-            <p>
-                        Sunrise: 
-            </p>
-            <p>
-                        Sunset: 
-            </p>
-            <p>
-                        Wind Direction: 
-            </p>
-            <p>
-                        Visibility: 
-                        16093
-            </p>
-</section>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p>
-                Humidity: 
-</p>,
-              <p>
-                High: 
-</p>,
-              <p>
-                Low: 
-</p>,
-              <p>
-                Wind Speed: 
-</p>,
-              <p>
-                Sunrise: 
-</p>,
-              <p>
-                Sunset: 
-</p>,
-              <p>
-                Wind Direction: 
-</p>,
-              <p>
-                Visibility: 
-                16093
-</p>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Humidity: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Humidity: ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "High: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "High: ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Low: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Low: ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Wind Speed: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Wind Speed: ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Sunrise: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Sunrise: ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Sunset: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Sunset: ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Wind Direction: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Wind Direction: ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Visibility: ",
-                  16093,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Visibility: ",
-                16093,
-              ],
-              "type": "p",
-            },
-          ],
-          "type": "section",
-        },
         "type": "div",
       },
     ],
@@ -1518,8 +2463,36 @@ ShallowWrapper {
                         <p>
                                     Current Weather
                         </p>
-                        <p />
-                        <p />
+                        <p>
+                                    80°F
+                        </p>
+                        <p>
+                                    Broken Clouds
+                        </p>
+                        <p>
+                                    Humidity 25%
+                        </p>
+                        <p>
+                                    High 85°F
+                        </p>
+                        <p>
+                                    Low 78°F
+                        </p>
+                        <p>
+                                    Wind Speed 13.87 MPH
+                        </p>
+                        <p>
+                                    Sunrise 6:44:56 AM
+                        </p>
+                        <p>
+                                    Sunset 6:59:55 PM
+                        </p>
+                        <p>
+                                    Wind Direction NE
+                        </p>
+                        <p>
+                                    Visibility 10.00 Miles
+                        </p>
             </section>
 </div>,
           <div
@@ -1529,14 +2502,141 @@ ShallowWrapper {
                         className="hour-weather-card"
             >
                         <p>
-                                    undefined
+                                    1:00 PM
                         </p>
                         <p>
-                                    undefined
+                                    87°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="mostlycloudy.png"
+                        />
+            </section>
+            <section
+                        className="hour-weather-card"
+            >
+                        <p>
+                                    2:00 PM
                         </p>
                         <p>
-                                    undefined
+                                    88°F
                         </p>
+                        <img
+                                    alt="weather icon"
+                                    src="cloudy.png"
+                        />
+            </section>
+            <section
+                        className="hour-weather-card"
+            >
+                        <p>
+                                    3:00 PM
+                        </p>
+                        <p>
+                                    87°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="cloudy.png"
+                        />
+            </section>
+            <section
+                        className="hour-weather-card"
+            >
+                        <p>
+                                    4:00 PM
+                        </p>
+                        <p>
+                                    84°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="cloudy.png"
+                        />
+            </section>
+            <section
+                        className="hour-weather-card"
+            >
+                        <p>
+                                    5:00 PM
+                        </p>
+                        <p>
+                                    82°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="chancetstorms.png"
+                        />
+            </section>
+            <section
+                        className="hour-weather-card"
+            >
+                        <p>
+                                    6:00 PM
+                        </p>
+                        <p>
+                                    79°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="chancetstorms.png"
+                        />
+            </section>
+            <section
+                        className="hour-weather-card"
+            >
+                        <p>
+                                    7:00 PM
+                        </p>
+                        <p>
+                                    75°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="chancetstorms.png"
+                        />
+            </section>
+            <section
+                        className="hour-weather-card"
+            >
+                        <p>
+                                    8:00 PM
+                        </p>
+                        <p>
+                                    72°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="chancetstorms.png"
+                        />
+            </section>
+            <section
+                        className="hour-weather-card"
+            >
+                        <p>
+                                    9:00 PM
+                        </p>
+                        <p>
+                                    68°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="chancetstorms.png"
+                        />
+            </section>
+            <section
+                        className="hour-weather-card"
+            >
+                        <p>
+                                    10:00 PM
+                        </p>
+                        <p>
+                                    65°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="chancetstorms.png"
+                        />
             </section>
 </div>,
           <div
@@ -1546,49 +2646,171 @@ ShallowWrapper {
                         className="day-weather-card"
             >
                         <p>
-                                    undefined
+                                    Wednesday
                         </p>
                         <p>
-                                    undefined
+                                    87°F
                         </p>
                         <p>
-                                    undefined
+                                    59°F
                         </p>
-                        <p>
-                                    undefined
-                        </p>
-                        <p>
-                                    undefined
-                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="chancetstorms.png"
+                        />
             </section>
-</div>,
-          <div>
-            <section>
+            <section
+                        className="day-weather-card"
+            >
                         <p>
-                                    Humidity: 
+                                    Thursday
                         </p>
                         <p>
-                                    High: 
+                                    81°F
                         </p>
                         <p>
-                                    Low: 
+                                    49°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="partlycloudy.png"
+                        />
+            </section>
+            <section
+                        className="day-weather-card"
+            >
+                        <p>
+                                    Friday
                         </p>
                         <p>
-                                    Wind Speed: 
+                                    72°F
                         </p>
                         <p>
-                                    Sunrise: 
+                                    50°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="clear.png"
+                        />
+            </section>
+            <section
+                        className="day-weather-card"
+            >
+                        <p>
+                                    Saturday
                         </p>
                         <p>
-                                    Sunset: 
+                                    82°F
                         </p>
                         <p>
-                                    Wind Direction: 
+                                    54°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="clear.png"
+                        />
+            </section>
+            <section
+                        className="day-weather-card"
+            >
+                        <p>
+                                    Sunday
                         </p>
                         <p>
-                                    Visibility: 
-                                    16093
+                                    84°F
                         </p>
+                        <p>
+                                    54°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="clear.png"
+                        />
+            </section>
+            <section
+                        className="day-weather-card"
+            >
+                        <p>
+                                    Monday
+                        </p>
+                        <p>
+                                    79°F
+                        </p>
+                        <p>
+                                    48°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="clear.png"
+                        />
+            </section>
+            <section
+                        className="day-weather-card"
+            >
+                        <p>
+                                    Tuesday
+                        </p>
+                        <p>
+                                    67°F
+                        </p>
+                        <p>
+                                    44°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="clear.png"
+                        />
+            </section>
+            <section
+                        className="day-weather-card"
+            >
+                        <p>
+                                    Wednesday
+                        </p>
+                        <p>
+                                    66°F
+                        </p>
+                        <p>
+                                    42°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="partlycloudy.png"
+                        />
+            </section>
+            <section
+                        className="day-weather-card"
+            >
+                        <p>
+                                    Thursday
+                        </p>
+                        <p>
+                                    71°F
+                        </p>
+                        <p>
+                                    43°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="clear.png"
+                        />
+            </section>
+            <section
+                        className="day-weather-card"
+            >
+                        <p>
+                                    Friday
+                        </p>
+                        <p>
+                                    70°F
+                        </p>
+                        <p>
+                                    44°F
+                        </p>
+                        <img
+                                    alt="weather icon"
+                                    src="clear.png"
+                        />
             </section>
 </div>,
         ],
@@ -1606,8 +2828,36 @@ ShallowWrapper {
               <p>
                             Current Weather
               </p>
-              <p />
-              <p />
+              <p>
+                            80°F
+              </p>
+              <p>
+                            Broken Clouds
+              </p>
+              <p>
+                            Humidity 25%
+              </p>
+              <p>
+                            High 85°F
+              </p>
+              <p>
+                            Low 78°F
+              </p>
+              <p>
+                            Wind Speed 13.87 MPH
+              </p>
+              <p>
+                            Sunrise 6:44:56 AM
+              </p>
+              <p>
+                            Sunset 6:59:55 PM
+              </p>
+              <p>
+                            Wind Direction NE
+              </p>
+              <p>
+                            Visibility 10.00 Miles
+              </p>
 </section>,
           },
           "ref": null,
@@ -1620,8 +2870,36 @@ ShallowWrapper {
                 <p>
                   Current Weather
 </p>,
-                <p />,
-                <p />,
+                <p>
+                  80°F
+</p>,
+                <p>
+                  Broken Clouds
+</p>,
+                <p>
+                  Humidity 25%
+</p>,
+                <p>
+                  High 85°F
+</p>,
+                <p>
+                  Low 78°F
+</p>,
+                <p>
+                  Wind Speed 13.87 MPH
+</p>,
+                <p>
+                  Sunrise 6:44:56 AM
+</p>,
+                <p>
+                  Sunset 6:59:55 PM
+</p>,
+                <p>
+                  Wind Direction NE
+</p>,
+                <p>
+                  Visibility 10.00 Miles
+</p>,
               ],
               "className": "current-weather-card",
             },
@@ -1643,10 +2921,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": undefined,
+                  "children": "80°F",
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": "80°F",
                 "type": "p",
               },
               Object {
@@ -1654,10 +2932,98 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": undefined,
+                  "children": "Broken Clouds",
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": "Broken Clouds",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Humidity 25%",
+                },
+                "ref": null,
+                "rendered": "Humidity 25%",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "High 85°F",
+                },
+                "ref": null,
+                "rendered": "High 85°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Low 78°F",
+                },
+                "ref": null,
+                "rendered": "Low 78°F",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Wind Speed 13.87 MPH",
+                },
+                "ref": null,
+                "rendered": "Wind Speed 13.87 MPH",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Sunrise 6:44:56 AM",
+                },
+                "ref": null,
+                "rendered": "Sunrise 6:44:56 AM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Sunset 6:59:55 PM",
+                },
+                "ref": null,
+                "rendered": "Sunset 6:59:55 PM",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Wind Direction NE",
+                },
+                "ref": null,
+                "rendered": "Wind Direction NE",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Visibility 10.00 Miles",
+                },
+                "ref": null,
+                "rendered": "Visibility 10.00 Miles",
                 "type": "p",
               },
             ],
@@ -1675,14 +3041,141 @@ ShallowWrapper {
                 className="hour-weather-card"
 >
                 <p>
-                                undefined
+                                1:00 PM
                 </p>
                 <p>
-                                undefined
+                                87°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="mostlycloudy.png"
+                />
+</section>,
+              <section
+                className="hour-weather-card"
+>
+                <p>
+                                2:00 PM
                 </p>
                 <p>
-                                undefined
+                                88°F
                 </p>
+                <img
+                                alt="weather icon"
+                                src="cloudy.png"
+                />
+</section>,
+              <section
+                className="hour-weather-card"
+>
+                <p>
+                                3:00 PM
+                </p>
+                <p>
+                                87°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="cloudy.png"
+                />
+</section>,
+              <section
+                className="hour-weather-card"
+>
+                <p>
+                                4:00 PM
+                </p>
+                <p>
+                                84°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="cloudy.png"
+                />
+</section>,
+              <section
+                className="hour-weather-card"
+>
+                <p>
+                                5:00 PM
+                </p>
+                <p>
+                                82°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="chancetstorms.png"
+                />
+</section>,
+              <section
+                className="hour-weather-card"
+>
+                <p>
+                                6:00 PM
+                </p>
+                <p>
+                                79°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="chancetstorms.png"
+                />
+</section>,
+              <section
+                className="hour-weather-card"
+>
+                <p>
+                                7:00 PM
+                </p>
+                <p>
+                                75°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="chancetstorms.png"
+                />
+</section>,
+              <section
+                className="hour-weather-card"
+>
+                <p>
+                                8:00 PM
+                </p>
+                <p>
+                                72°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="chancetstorms.png"
+                />
+</section>,
+              <section
+                className="hour-weather-card"
+>
+                <p>
+                                9:00 PM
+                </p>
+                <p>
+                                68°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="chancetstorms.png"
+                />
+</section>,
+              <section
+                className="hour-weather-card"
+>
+                <p>
+                                10:00 PM
+                </p>
+                <p>
+                                65°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="chancetstorms.png"
+                />
 </section>,
             ],
             "className": "ten-hour-container",
@@ -1691,19 +3184,20 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "41d8ee60-bc0e-11e8-8b39-fd4742afd598",
+              "key": "09b75e10-bc39-11e8-8d29-478bc0f5a529",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   <p>
-                    undefined
+                    1:00 PM
 </p>,
                   <p>
-                    undefined
+                    87°F
 </p>,
-                  <p>
-                    undefined
-</p>,
+                  <img
+                    alt="weather icon"
+                    src="mostlycloudy.png"
+/>,
                 ],
                 "className": "hour-weather-card",
               },
@@ -1714,10 +3208,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "undefined",
+                    "children": "1:00 PM",
                   },
                   "ref": null,
-                  "rendered": "undefined",
+                  "rendered": "1:00 PM",
                   "type": "p",
                 },
                 Object {
@@ -1725,10 +3219,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "undefined",
+                    "children": "87°F",
                   },
                   "ref": null,
-                  "rendered": "undefined",
+                  "rendered": "87°F",
                   "type": "p",
                 },
                 Object {
@@ -1736,11 +3230,534 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "undefined",
+                    "alt": "weather icon",
+                    "src": "mostlycloudy.png",
                   },
                   "ref": null,
-                  "rendered": "undefined",
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bed820-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    2:00 PM
+</p>,
+                  <p>
+                    88°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="cloudy.png"
+/>,
+                ],
+                "className": "hour-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2:00 PM",
+                  },
+                  "ref": null,
+                  "rendered": "2:00 PM",
                   "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "88°F",
+                  },
+                  "ref": null,
+                  "rendered": "88°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "cloudy.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09beff30-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    3:00 PM
+</p>,
+                  <p>
+                    87°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="cloudy.png"
+/>,
+                ],
+                "className": "hour-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "3:00 PM",
+                  },
+                  "ref": null,
+                  "rendered": "3:00 PM",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "87°F",
+                  },
+                  "ref": null,
+                  "rendered": "87°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "cloudy.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09beff31-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    4:00 PM
+</p>,
+                  <p>
+                    84°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="cloudy.png"
+/>,
+                ],
+                "className": "hour-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "4:00 PM",
+                  },
+                  "ref": null,
+                  "rendered": "4:00 PM",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "84°F",
+                  },
+                  "ref": null,
+                  "rendered": "84°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "cloudy.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09beff32-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    5:00 PM
+</p>,
+                  <p>
+                    82°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="chancetstorms.png"
+/>,
+                ],
+                "className": "hour-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "5:00 PM",
+                  },
+                  "ref": null,
+                  "rendered": "5:00 PM",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "82°F",
+                  },
+                  "ref": null,
+                  "rendered": "82°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "chancetstorms.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bf4d50-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    6:00 PM
+</p>,
+                  <p>
+                    79°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="chancetstorms.png"
+/>,
+                ],
+                "className": "hour-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "6:00 PM",
+                  },
+                  "ref": null,
+                  "rendered": "6:00 PM",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "79°F",
+                  },
+                  "ref": null,
+                  "rendered": "79°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "chancetstorms.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bf4d51-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    7:00 PM
+</p>,
+                  <p>
+                    75°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="chancetstorms.png"
+/>,
+                ],
+                "className": "hour-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "7:00 PM",
+                  },
+                  "ref": null,
+                  "rendered": "7:00 PM",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "75°F",
+                  },
+                  "ref": null,
+                  "rendered": "75°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "chancetstorms.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bf4d52-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    8:00 PM
+</p>,
+                  <p>
+                    72°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="chancetstorms.png"
+/>,
+                ],
+                "className": "hour-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "8:00 PM",
+                  },
+                  "ref": null,
+                  "rendered": "8:00 PM",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "72°F",
+                  },
+                  "ref": null,
+                  "rendered": "72°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "chancetstorms.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bf4d53-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    9:00 PM
+</p>,
+                  <p>
+                    68°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="chancetstorms.png"
+/>,
+                ],
+                "className": "hour-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "9:00 PM",
+                  },
+                  "ref": null,
+                  "rendered": "9:00 PM",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "68°F",
+                  },
+                  "ref": null,
+                  "rendered": "68°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "chancetstorms.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bf4d54-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    10:00 PM
+</p>,
+                  <p>
+                    65°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="chancetstorms.png"
+/>,
+                ],
+                "className": "hour-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "10:00 PM",
+                  },
+                  "ref": null,
+                  "rendered": "10:00 PM",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "65°F",
+                  },
+                  "ref": null,
+                  "rendered": "65°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "chancetstorms.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
                 },
               ],
               "type": "section",
@@ -1758,20 +3775,171 @@ ShallowWrapper {
                 className="day-weather-card"
 >
                 <p>
-                                undefined
+                                Wednesday
                 </p>
                 <p>
-                                undefined
+                                87°F
                 </p>
                 <p>
-                                undefined
+                                59°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="chancetstorms.png"
+                />
+</section>,
+              <section
+                className="day-weather-card"
+>
+                <p>
+                                Thursday
                 </p>
                 <p>
-                                undefined
+                                81°F
                 </p>
                 <p>
-                                undefined
+                                49°F
                 </p>
+                <img
+                                alt="weather icon"
+                                src="partlycloudy.png"
+                />
+</section>,
+              <section
+                className="day-weather-card"
+>
+                <p>
+                                Friday
+                </p>
+                <p>
+                                72°F
+                </p>
+                <p>
+                                50°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="clear.png"
+                />
+</section>,
+              <section
+                className="day-weather-card"
+>
+                <p>
+                                Saturday
+                </p>
+                <p>
+                                82°F
+                </p>
+                <p>
+                                54°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="clear.png"
+                />
+</section>,
+              <section
+                className="day-weather-card"
+>
+                <p>
+                                Sunday
+                </p>
+                <p>
+                                84°F
+                </p>
+                <p>
+                                54°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="clear.png"
+                />
+</section>,
+              <section
+                className="day-weather-card"
+>
+                <p>
+                                Monday
+                </p>
+                <p>
+                                79°F
+                </p>
+                <p>
+                                48°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="clear.png"
+                />
+</section>,
+              <section
+                className="day-weather-card"
+>
+                <p>
+                                Tuesday
+                </p>
+                <p>
+                                67°F
+                </p>
+                <p>
+                                44°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="clear.png"
+                />
+</section>,
+              <section
+                className="day-weather-card"
+>
+                <p>
+                                Wednesday
+                </p>
+                <p>
+                                66°F
+                </p>
+                <p>
+                                42°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="partlycloudy.png"
+                />
+</section>,
+              <section
+                className="day-weather-card"
+>
+                <p>
+                                Thursday
+                </p>
+                <p>
+                                71°F
+                </p>
+                <p>
+                                43°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="clear.png"
+                />
+</section>,
+              <section
+                className="day-weather-card"
+>
+                <p>
+                                Friday
+                </p>
+                <p>
+                                70°F
+                </p>
+                <p>
+                                44°F
+                </p>
+                <img
+                                alt="weather icon"
+                                src="clear.png"
+                />
 </section>,
             ],
             "className": "ten-day-container",
@@ -1780,25 +3948,23 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "41d91570-bc0e-11e8-8b39-fd4742afd598",
+              "key": "09bf4d55-bc39-11e8-8d29-478bc0f5a529",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   <p>
-                    undefined
+                    Wednesday
 </p>,
                   <p>
-                    undefined
+                    87°F
 </p>,
                   <p>
-                    undefined
+                    59°F
 </p>,
-                  <p>
-                    undefined
-</p>,
-                  <p>
-                    undefined
-</p>,
+                  <img
+                    alt="weather icon"
+                    src="chancetstorms.png"
+/>,
                 ],
                 "className": "day-weather-card",
               },
@@ -1809,10 +3975,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "undefined",
+                    "children": "Wednesday",
                   },
                   "ref": null,
-                  "rendered": "undefined",
+                  "rendered": "Wednesday",
                   "type": "p",
                 },
                 Object {
@@ -1820,10 +3986,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "undefined",
+                    "children": "87°F",
                   },
                   "ref": null,
-                  "rendered": "undefined",
+                  "rendered": "87°F",
                   "type": "p",
                 },
                 Object {
@@ -1831,10 +3997,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "undefined",
+                    "children": "59°F",
                   },
                   "ref": null,
-                  "rendered": "undefined",
+                  "rendered": "59°F",
                   "type": "p",
                 },
                 Object {
@@ -1842,10 +4008,49 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "undefined",
+                    "alt": "weather icon",
+                    "src": "chancetstorms.png",
                   },
                   "ref": null,
-                  "rendered": "undefined",
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bf4d56-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Thursday
+</p>,
+                  <p>
+                    81°F
+</p>,
+                  <p>
+                    49°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="partlycloudy.png"
+/>,
+                ],
+                "className": "day-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Thursday",
+                  },
+                  "ref": null,
+                  "rendered": "Thursday",
                   "type": "p",
                 },
                 Object {
@@ -1853,226 +4058,615 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "undefined",
+                    "children": "81°F",
                   },
                   "ref": null,
-                  "rendered": "undefined",
+                  "rendered": "81°F",
                   "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "49°F",
+                  },
+                  "ref": null,
+                  "rendered": "49°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "partlycloudy.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bf7460-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Friday
+</p>,
+                  <p>
+                    72°F
+</p>,
+                  <p>
+                    50°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="clear.png"
+/>,
+                ],
+                "className": "day-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Friday",
+                  },
+                  "ref": null,
+                  "rendered": "Friday",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "72°F",
+                  },
+                  "ref": null,
+                  "rendered": "72°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "50°F",
+                  },
+                  "ref": null,
+                  "rendered": "50°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "clear.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bf9b70-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Saturday
+</p>,
+                  <p>
+                    82°F
+</p>,
+                  <p>
+                    54°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="clear.png"
+/>,
+                ],
+                "className": "day-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Saturday",
+                  },
+                  "ref": null,
+                  "rendered": "Saturday",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "82°F",
+                  },
+                  "ref": null,
+                  "rendered": "82°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "54°F",
+                  },
+                  "ref": null,
+                  "rendered": "54°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "clear.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bf9b71-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Sunday
+</p>,
+                  <p>
+                    84°F
+</p>,
+                  <p>
+                    54°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="clear.png"
+/>,
+                ],
+                "className": "day-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Sunday",
+                  },
+                  "ref": null,
+                  "rendered": "Sunday",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "84°F",
+                  },
+                  "ref": null,
+                  "rendered": "84°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "54°F",
+                  },
+                  "ref": null,
+                  "rendered": "54°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "clear.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bfc280-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Monday
+</p>,
+                  <p>
+                    79°F
+</p>,
+                  <p>
+                    48°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="clear.png"
+/>,
+                ],
+                "className": "day-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Monday",
+                  },
+                  "ref": null,
+                  "rendered": "Monday",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "79°F",
+                  },
+                  "ref": null,
+                  "rendered": "79°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "48°F",
+                  },
+                  "ref": null,
+                  "rendered": "48°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "clear.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bfc281-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Tuesday
+</p>,
+                  <p>
+                    67°F
+</p>,
+                  <p>
+                    44°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="clear.png"
+/>,
+                ],
+                "className": "day-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Tuesday",
+                  },
+                  "ref": null,
+                  "rendered": "Tuesday",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "67°F",
+                  },
+                  "ref": null,
+                  "rendered": "67°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "44°F",
+                  },
+                  "ref": null,
+                  "rendered": "44°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "clear.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bfc282-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Wednesday
+</p>,
+                  <p>
+                    66°F
+</p>,
+                  <p>
+                    42°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="partlycloudy.png"
+/>,
+                ],
+                "className": "day-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Wednesday",
+                  },
+                  "ref": null,
+                  "rendered": "Wednesday",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "66°F",
+                  },
+                  "ref": null,
+                  "rendered": "66°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "42°F",
+                  },
+                  "ref": null,
+                  "rendered": "42°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "partlycloudy.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bfc283-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Thursday
+</p>,
+                  <p>
+                    71°F
+</p>,
+                  <p>
+                    43°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="clear.png"
+/>,
+                ],
+                "className": "day-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Thursday",
+                  },
+                  "ref": null,
+                  "rendered": "Thursday",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "71°F",
+                  },
+                  "ref": null,
+                  "rendered": "71°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "43°F",
+                  },
+                  "ref": null,
+                  "rendered": "43°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "clear.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+              ],
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": "09bfc284-bc39-11e8-8d29-478bc0f5a529",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Friday
+</p>,
+                  <p>
+                    70°F
+</p>,
+                  <p>
+                    44°F
+</p>,
+                  <img
+                    alt="weather icon"
+                    src="clear.png"
+/>,
+                ],
+                "className": "day-weather-card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Friday",
+                  },
+                  "ref": null,
+                  "rendered": "Friday",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "70°F",
+                  },
+                  "ref": null,
+                  "rendered": "70°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "44°F",
+                  },
+                  "ref": null,
+                  "rendered": "44°F",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "weather icon",
+                    "src": "clear.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
                 },
               ],
               "type": "section",
             },
           ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <section>
-              <p>
-                            Humidity: 
-              </p>
-              <p>
-                            High: 
-              </p>
-              <p>
-                            Low: 
-              </p>
-              <p>
-                            Wind Speed: 
-              </p>
-              <p>
-                            Sunrise: 
-              </p>
-              <p>
-                            Sunset: 
-              </p>
-              <p>
-                            Wind Direction: 
-              </p>
-              <p>
-                            Visibility: 
-                            16093
-              </p>
-</section>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <p>
-                  Humidity: 
-</p>,
-                <p>
-                  High: 
-</p>,
-                <p>
-                  Low: 
-</p>,
-                <p>
-                  Wind Speed: 
-</p>,
-                <p>
-                  Sunrise: 
-</p>,
-                <p>
-                  Sunset: 
-</p>,
-                <p>
-                  Wind Direction: 
-</p>,
-                <p>
-                  Visibility: 
-                  16093
-</p>,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "Humidity: ",
-                    undefined,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Humidity: ",
-                  undefined,
-                ],
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "High: ",
-                    undefined,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "High: ",
-                  undefined,
-                ],
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "Low: ",
-                    undefined,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Low: ",
-                  undefined,
-                ],
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "Wind Speed: ",
-                    undefined,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Wind Speed: ",
-                  undefined,
-                ],
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "Sunrise: ",
-                    undefined,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Sunrise: ",
-                  undefined,
-                ],
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "Sunset: ",
-                    undefined,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Sunset: ",
-                  undefined,
-                ],
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "Wind Direction: ",
-                    undefined,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Wind Direction: ",
-                  undefined,
-                ],
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    "Visibility: ",
-                    16093,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Visibility: ",
-                  16093,
-                ],
-                "type": "p",
-              },
-            ],
-            "type": "section",
-          },
           "type": "div",
         },
       ],

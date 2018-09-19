@@ -1,31 +1,46 @@
 export const currentWeatherMock = {
-  coord: { lon: -105.19, lat: 39.65 },
-  weather: [{ id: 800, main: 'Clear', description: 'clear sky', icon: '01n' }],
+  coord: {
+    lon: -104.83,
+    lat: 39.63
+  },
+  weather: [
+    {
+      id: 800,
+      main: 'Clear',
+      description: 'clear sky',
+      icon: '01d'
+    }
+  ],
   base: 'stations',
   main: {
-    temp: 55.92,
-    pressure: 1020,
-    humidity: 69,
-    temp_min: 50.72,
-    temp_max: 60.8
+    temp: 79.97,
+    pressure: 1016,
+    humidity: 29,
+    temp_min: 78.8,
+    temp_max: 82.94
   },
   visibility: 16093,
-  wind: { speed: 4.97, deg: 255.5 },
-  clouds: { all: 1 },
-  dt: 1536582960,
+  wind: {
+    speed: 10.29,
+    deg: 40,
+    gust: 7.2
+  },
+  clouds: {
+    all: 1
+  },
+  dt: 1537378500,
   sys: {
     type: 1,
     id: 602,
-    message: 0.0155,
+    message: 0.0038,
     country: 'US',
-    sunrise: 1536583069,
-    sunset: 1536628587
+    sunrise: 1537361095,
+    sunset: 1537405197
   },
-  id: 420005679,
-  name: 'Sheridan',
+  id: 7729501,
+  name: 'Dove Valley',
   cod: 200
 };
-
 export const tenHourWeatherMock = [
   {
     response: {
