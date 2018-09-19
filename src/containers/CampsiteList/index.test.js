@@ -6,25 +6,20 @@ import { CampsiteList } from './index';
 import { campObjectMock, mockText } from '../Campsite/mockCampsiteData';
 import { mapStateToProps, mapDispatchToProps } from '../CampsiteList';
 jest.mock('../../helper/getPosition/getPosition');
+jest.mock('../../helper/apiCalls');
 
 describe('CampsiteList', () => {
   let wrapper;
   let populateCampsitesMock = jest.fn();
 
-  // beforeEach(() => {
-  //   wrapper = shallow(
-  //     <CampsiteList
-  //       populateCampsites={populateCampsitesMock}
-  //       campsites={mockCampsites}
-  //     />
-  //   );
-  //   window.fetch = jest.fn().mockImplementation(() =>
-  //     Promise.resolve({
-  //       json: () => Promise.resolve(mockCampsites),
-  //       text: () => Promise.resolve(mockText)
-  //     })
-  //   );
-  // });
+  beforeEach(() => {
+    wrapper = shallow(
+      <CampsiteList
+        populateCampsites={populateCampsitesMock}
+        campsites={mockCampsites}
+      />
+    );
+  });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();

@@ -16,3 +16,7 @@ export const allWeatherData = jest.fn().mockImplementation(() =>
 export const getCampsite = jest
   .fn()
   .mockImplementation(() => Promise.resolve(mockGetCampsiteReturn));
+
+export const getCampsiteData = jest
+  .fn()
+  .mockImplementation(() => Promise.resolve(mockGetCampsiteListReturn));
