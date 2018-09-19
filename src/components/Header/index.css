@@ -1,6 +1,6 @@
 .heading {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   height: 3rem;
@@ -10,9 +10,13 @@
 }
 
 .go-back {
-  position: absolute;
   font-size: 2rem;
   margin-left: 0.75rem;
   color: aliceblue;
   cursor: pointer;
+}
+
+.header-title {
+  margin: 0;
+  padding-right: 0.4rem;
 }

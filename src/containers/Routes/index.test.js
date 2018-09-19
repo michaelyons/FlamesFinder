@@ -3,7 +3,6 @@ import { shallow, render } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 
 import { Routes } from './index';
-import { wrap } from 'module';
 
 describe('Footer', () => {
   let wrapper;

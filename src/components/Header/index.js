@@ -6,10 +6,13 @@ import './index.css';
 
 export const Header = ({ currentPage, history }) => {
   return (
-    <div className="heading">
-      <span onClick={history.goBack} className="go-back">
-        <i className="fas fa-arrow-left" />
-      </span>
+    <div>
+      <div className="heading">
+        <span onClick={history.goBack} className="go-back">
+          <i className="fas fa-arrow-left" />
+        </span>
+        <h1 className="header-title">FlamesFinder</h1>
+      </div>
       <h3>{currentPage}</h3>
     </div>
   );

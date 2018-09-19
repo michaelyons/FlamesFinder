@@ -74,16 +74,16 @@ export class Campsite extends Component {
 
       displayChoosenCampsite = (
         <div>
-          <p>{campgroundName}</p>
-          <p>
+          <p className="campground-name">{campgroundName}</p>
+          <p className="campground-zip">
             {address} {zipCode}
           </p>
-          <p>
+          <p className="campground-city">
             {cityName} {stateName}
           </p>
-          <p>{campDetails}</p>
-          <p>{importantCampInfo}</p>
-          <p>{amenities}</p>
+          <p className="camp-details">{amenities}</p>
+          <p className="camp-details">{campDetails}</p>
+          <p className="camp-details">{importantCampInfo}</p>
         </div>
       );
     }

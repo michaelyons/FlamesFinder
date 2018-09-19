@@ -2,8 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { mockCampsites } from './mockCampsiteListData';
 import { populateCampsites } from '../../actions/campsiteActions';
-import CampsiteList from './index';
+import { CampsiteList } from './index';
+import { campObjectMock, mockText } from '../Campsite/mockCampsiteData';
 import { mapStateToProps, mapDispatchToProps } from '../CampsiteList';
+jest.mock('../../helper/getPosition/getPosition');
 
 describe('CampsiteList', () => {
   let wrapper;
@@ -16,9 +18,15 @@ describe('CampsiteList', () => {
   //       campsites={mockCampsites}
   //     />
   //   );
+  //   window.fetch = jest.fn().mockImplementation(() =>
+  //     Promise.resolve({
+  //       json: () => Promise.resolve(mockCampsites),
+  //       text: () => Promise.resolve(mockText)
+  //     })
+  //   );
   // });
 
-  it.skip('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 

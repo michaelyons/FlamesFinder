@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { mapStateToProps, mapDispatchToProps, Campsite } from './index';
+import { getCampsite } from '../../helper/apiCalls';
 import {
   addCurrentWeather,
   addTenHourWeather,
@@ -11,7 +12,9 @@ import {
   facilityIDMock,
   contractIDMock,
   tenDayWeatherMock,
-  tenHourWeatherMock
+  tenHourWeatherMock,
+  campObjectMock,
+  mockText
 } from './mockCampsiteData';
 
 describe('Campsite Container', () => {
@@ -20,23 +23,28 @@ describe('Campsite Container', () => {
   let addTenHourWeatherMock = jest.fn();
   let addTenDayWeatherMock = jest.fn();
 
-  // beforeEach(() => {
-  //   wrapper = shallow(
-  //     <Campsite
-  //       currentWeather={currentWeatherMock}
-  //       tenHourWeather={tenHourWeatherMock}
-  //       tenDayWeather={tenDayWeatherMock}
-  //       addCurrentWeather={addCurrentWeatherMock}
-  //       addTenDayWeather={addTenDayWeatherMock}
-  //       addTenHourWeather={addTenHourWeatherMock}
-  //       facilityID={facilityIDMock}
-  //       contractID={contractIDMock}
-  //     />
-  //   );
-  //   window.fetch = jest.fn().mockImplementation(() =>
-  //     Promise.resolve()
-  //   )
-  // });
+  beforeEach(async () => {
+    campObjectMock;
+    mockText;
+    wrapper = shallow(
+      <Campsite
+        currentWeather={currentWeatherMock}
+        tenHourWeather={tenHourWeatherMock}
+        tenDayWeather={tenDayWeatherMock}
+        addCurrentWeather={addCurrentWeatherMock}
+        addTenDayWeather={addTenDayWeatherMock}
+        addTenHourWeather={addTenHourWeatherMock}
+        facilityID={facilityIDMock}
+        contractID={contractIDMock}
+      />
+    );
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(campObjectMock),
+        text: () => Promise.resolve(mockText)
+      })
+    );
+  });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
