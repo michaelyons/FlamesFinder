@@ -35,15 +35,16 @@ export const currentWeatherCleaner = data => {
   const weatherDescription = data.weather.find(des => des.description);
   return {
     location: data.name,
+    currentWeather: 'Current Weather',
     currentTemp: Math.round(data.main.temp) + '°F',
-    humidity: data.main.humidity + '%',
-    highTemp: Math.round(data.main.temp_max) + '°F',
-    lowTemp: Math.round(data.main.temp_min) + '°F',
-    windSpeed: data.wind.speed + ' MPH',
-    sunrise: formattedSunrise + ' AM',
-    sunset: formattedSunset + ' PM',
-    windDirection: wind,
-    visibility: visibilityUnrounded.toFixed(2) + ' Miles',
+    humidity: 'Humidity ' + data.main.humidity + '%',
+    highTemp: 'High ' + Math.round(data.main.temp_max) + '°F',
+    lowTemp: 'Low ' + Math.round(data.main.temp_min) + '°F',
+    windSpeed: 'Wind Speed ' + data.wind.speed + ' MPH',
+    sunrise: 'Sunrise ' + formattedSunrise + ' AM',
+    sunset: 'Sunset ' + formattedSunset + ' PM',
+    windDirection: 'Wind Direction ' + wind,
+    visibility: 'Visibility ' + visibilityUnrounded.toFixed(2) + ' Miles',
     currentConditions: weatherDescription.description
       .toLowerCase()
       .split(' ')
@@ -65,7 +66,7 @@ export const tenHourWeatherCleaner = response => {
           condition: hour.condition,
           averageWind: hour.wdir.dir + ' ' + hour.wspd.english,
           uvIndex: hour.uvi + '/10',
-          icon_url: hour.icon_url
+          icon: hour.icon
         });
       }
       return tenHour;
@@ -79,7 +80,7 @@ export const tenDayWeatherCleaner = data => {
       date: object.date.month + '/' + object.date.day + '/' + object.date.year,
       high: object.high.fahrenheit + '°F',
       low: object.low.fahrenheit + '°F',
-      icon: object.icon_url,
+      icon: object.icon,
       conditions: object.conditions,
       averageWind: object.avewind.dir + ' ' + object.avewind.mph + ' MPH'
     };
