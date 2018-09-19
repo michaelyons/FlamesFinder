@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import { mockCampsites } from './mockCampsiteListData';
 import { populateCampsites } from '../../actions/campsiteActions';
 import { CampsiteList } from './index';
-import { campObjectMock, mockText } from '../Campsite/mockCampsiteData';
 import { mapStateToProps, mapDispatchToProps } from '../CampsiteList';
 jest.mock('../../helper/getPosition/getPosition');
 jest.mock('../../helper/apiCalls');

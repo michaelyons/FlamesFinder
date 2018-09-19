@@ -2,7 +2,8 @@ import {
   currentWeatherMock,
   tenHourWeatherMock,
   tenDayWeatherMock,
-  mockGetCampsiteReturn
+  mockGetCampsiteReturn,
+  mockGetCampsiteListReturn
 } from '../mockFetchData';
 
 export const allWeatherData = jest.fn().mockImplementation(() =>
