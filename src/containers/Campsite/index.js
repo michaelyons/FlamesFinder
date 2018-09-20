@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import LoadingFire2 from '../../components/LoadingFire/LoadingFire2';
+import LoadingFire3 from '../../components/LoadingFire/LoadingFire3';
 import { allWeatherData, getCampsite } from '../../helper/apiCalls';
 import {
   addCurrentWeather,
@@ -11,7 +11,6 @@ import {
 import './index.css';
 import WeatherCard from '../../components/WeatherCard/WeatherCard';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 
 export class Campsite extends Component {
   constructor() {
@@ -48,7 +47,7 @@ export class Campsite extends Component {
     const { campsiteDetails, loading } = this.state;
     let displayChoosenCampsite;
     if (loading) {
-      displayChoosenCampsite = <LoadingFire2 />;
+      displayChoosenCampsite = <LoadingFire3 />;
     } else {
       const {
         facility,
@@ -70,8 +69,11 @@ export class Campsite extends Component {
       const stateName = state;
       const amenities = campsiteDetails.elements
         .slice(7, campsiteDetails.elements.length - 1)
-        .map(amenity => amenity.attributes.name);
-
+        .map((amenity, index) => (
+          <p key={`${amenity.attributes.name} - ${index}`}>
+            {amenity.attributes.name}
+          </p>
+        ));
       displayChoosenCampsite = (
         <div>
           <p className="campground-name">{campgroundName}</p>
@@ -81,9 +83,18 @@ export class Campsite extends Component {
           <p className="campground-city">
             {cityName} {stateName}
           </p>
-          <p className="camp-details">{amenities}</p>
-          <p className="camp-details">{campDetails}</p>
-          <p className="camp-details">{importantCampInfo}</p>
+          <p className="camp-details">
+            <h3>{campgroundName} Amenities </h3>
+            {amenities}
+          </p>
+          <p className="camp-details2">
+            <h3>{campgroundName} Details</h3>
+            {campDetails}
+          </p>
+          <p className="camp-details3">
+            <h3>{campgroundName} Bulletins</h3>
+            {importantCampInfo}
+          </p>
         </div>
       );
     }
@@ -92,12 +103,13 @@ export class Campsite extends Component {
         <Header />
         <h2 className="campinfo-header">Campground Information</h2>
         <section>{displayChoosenCampsite}</section>
-        <WeatherCard
-          currentWeather={this.props.currentWeather}
-          tenHourWeather={this.props.tenHourWeather}
-          tenDayWeather={this.props.tenDayWeather}
-        />
-        <Footer />
+        {this.state.allWeatherDataArray.length === 3 && (
+          <WeatherCard
+            currentWeather={this.props.currentWeather}
+            tenHourWeather={this.props.tenHourWeather}
+            tenDayWeather={this.props.tenDayWeather}
+          />
+        )}
       </div>
     );
   }

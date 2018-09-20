@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { populateCampsites } from '../../actions/campsiteActions';
 import LoadingFire2 from '../../components/LoadingFire/LoadingFire2';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 
 import './index.css';
 
@@ -60,7 +59,6 @@ export class CampsiteList extends Component {
         <h2>Nearby Campgrounds</h2>
         <img src={this.state.mapsImage} alt="" />
         <div className="campground-list">{displayCampsites}</div>
-        <Footer />
       </div>
     );
   }

@@ -23,8 +23,7 @@ a {
 
 .campsite-list {
   color: #020202;
-  background-color: rgba(0, 0, 0, 0.856);
-
+  background: rgb(41, 44, 48);
   -webkit-box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
@@ -42,8 +41,9 @@ a {
 }
 
 .fire-gif2 {
-  width: 200px;
+  width: 250px;
   margin: auto;
   display: block;
-  padding-top: 10rem;
+  padding-top: 7rem;
+  padding-left: 3.2rem;
 }
