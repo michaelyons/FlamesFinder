@@ -57,7 +57,7 @@ export const getTenDayWeatherData = async (lat, long) => {
 export const getCampsiteData = async () => {
   const position = await getCurrentPosition();
   const { latitude, longitude } = position.coords;
-  const url = `http://api.amp.active.com/camping/campgrounds?contractCode=CO&landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&api_key=${key3}`;
+  const url = `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campgrounds?contractCode=CO&landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
@@ -68,7 +68,7 @@ export const getCampsiteData = async () => {
 };
 
 export const getCampsite = async (contractID, facilityID) => {
-  const url = `http://api.amp.active.com/camping/campground/details?contractCode=${contractID}&parkId=${facilityID}&api_key=${key3}`;
+  const url = `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campground/details?contractCode=${contractID}&parkId=${facilityID}&api_key=${key3}`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
