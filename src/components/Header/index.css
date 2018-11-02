@@ -1,27 +1,23 @@
 .heading {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
+  align-items: center;
   top: 0;
   height: 3rem;
-  width: 100vw;
+  width: 375px;
   background: rgb(41, 44, 48, 0.75);
   color: azure;
 }
 
 .go-back {
   font-size: 2rem;
-  margin-left: 0.75rem;
   color: aliceblue;
   cursor: pointer;
+  position: absolute;
+  left: 8px;
 }
 
 .header-title {
-  margin: 0;
-  padding-right: 0.4rem;
   text-decoration: none;
-}
-
-.header-title h1 {
-  margin: 0;
 }

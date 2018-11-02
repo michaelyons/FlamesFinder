@@ -1,8 +1,11 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+  max-width: 375px;
+  height: 100vh;
 }
 
-.App-title {
+/* .App-title {
   font-size: 4rem;
   color: aliceblue;
   padding-top: 5rem;
@@ -12,4 +15,4 @@
 
 .loading-fetch {
   color: whitesmoke;
-}
+} */
