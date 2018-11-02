@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../WeatherCard/WeatherCard.css';
-const uuidv1 = require('uuid/v1');
+// const uuidv1 = require('uuid/v1');
 
 export default class WeatherCard extends Component {
   render() {
@@ -32,26 +32,28 @@ export default class WeatherCard extends Component {
     if (!this.props.tenHourWeather) {
       displayTenHourWeather = <p className="loading-fetch">Loading...</p>;
     } else {
-      displayTenHourWeather = this.props.tenHourWeather.map(weather1 => {
-        return (
-          <section key={uuidv1()} className="hour-weather-card">
-            <p>{`${weather1.time}`}</p>
-            <p>{`${weather1.temp}`}</p>
+      displayTenHourWeather = this.props.tenHourWeather.map(
+        (weather1, index) => {
+          return (
+            <section key={index} className="hour-weather-card">
+              <p>{`${weather1.time}`}</p>
+              <p>{`${weather1.temp}`}</p>
 
-            <img
-              src={require(`../../images/${weather1.icon}.png`)}
-              alt="weather icon"
-            />
-          </section>
-        );
-      });
+              <img
+                src={require(`../../images/${weather1.icon}.png`)}
+                alt="weather icon"
+              />
+            </section>
+          );
+        }
+      );
     }
     if (!this.props.tenDayWeather) {
       displayTenDayWeather = <p className="loading-fetch">Loading...</p>;
     } else {
-      displayTenDayWeather = this.props.tenDayWeather.map(weather2 => {
+      displayTenDayWeather = this.props.tenDayWeather.map((weather2, index) => {
         return (
-          <section key={uuidv1()} className="day-weather-card">
+          <section key={index} className="day-weather-card">
             <p>{`${weather2.day}`}</p>
             <p>{`${weather2.high}`}</p>
             <p>{`${weather2.low}`}</p>

@@ -11,9 +11,11 @@ export class Home extends Component {
         <header className="App-header">
           <h1 className="App-title">FlamesFinder</h1>
         </header>
-        <Link to={'/campsites'} className="findcamps-button">
-          Find Nearby Campsites
-        </Link>
+        <div className="find-btn">
+          <Link to={'/campsites'} className="findcamps-button">
+            Find Nearby Campsites
+          </Link>
+        </div>
         <LoadingFire />
       </div>
     );

@@ -1,6 +1,7 @@
 .findcamps-button {
   font-size: 2.4rem;
   text-decoration: none;
+  margin-top: 100rem;
   background: rgb(41, 44, 48, 0.75);
   -webkit-box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 62px -22px rgba(0, 0, 0, 0.75);
@@ -10,6 +11,10 @@
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+}
+
+.find-btn {
+  margin-top: 20rem;
 }
 
 .fire-gif {

@@ -98,7 +98,7 @@ describe('API calls', () => {
     it('should make a fetch with the correct params', () => {
       getCampsite(contractIDMock, facilityIDMock);
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.amp.active.com/camping/campground/details?contractCode=NRSO&parkId=148541&api_key=${key3}`
+        `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campground/details?contractCode=NRSO&parkId=148541&api_key=${key3}`
       );
     });
   });
@@ -121,7 +121,7 @@ describe('API calls', () => {
     it('should make a fetch with the correct params', async () => {
       await getCampsiteData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.amp.active.com/camping/campgrounds?contractCode=CO&landmarkName=true&landmarkLat=39&landmarkLong=-104&xml=true&api_key=${key3}`
+        `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campgrounds?contractCode=CO&landmarkName=true&landmarkLat=39&landmarkLong=-104&xml=true&api_key=${key3}`
       );
     });
   });
