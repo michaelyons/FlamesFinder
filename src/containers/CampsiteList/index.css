@@ -1,12 +1,17 @@
 h2 {
   color: aliceblue;
-  padding-top: 2rem;
-  margin-bottom: 0.75rem;
   font-size: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 0.5rem;
 }
 
 a {
   color: aliceblue;
+}
+
+.heading {
+  margin-top: -2rem;
+  position: fixed;
 }
 
 .campground-list {
@@ -16,9 +21,8 @@ a {
   margin-left: 1rem;
   font-size: 1.3rem;
   overflow-y: scroll;
-  height: 30%;
   padding-top: 0.75rem;
-  padding-bottom: 5rem;
+  height: 215px;
 }
 
 .campsite-list {

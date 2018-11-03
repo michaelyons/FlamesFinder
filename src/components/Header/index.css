@@ -1,21 +1,19 @@
 .heading {
   display: flex;
   justify-content: space-around;
-  position: fixed;
   align-items: center;
-  top: 0;
   height: 3rem;
   width: 375px;
   background: rgb(41, 44, 48, 0.75);
   color: azure;
+  padding-bottom: 0.4rem;
 }
 
 .go-back {
   font-size: 2rem;
   color: aliceblue;
   cursor: pointer;
-  position: absolute;
-  left: 8px;
+  padding-right: 6rem;
 }
 
 .header-title {

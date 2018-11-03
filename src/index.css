@@ -2,6 +2,7 @@ body {
   margin: 0 auto;
   padding: 0;
   margin-top: 6.5rem;
+  font-size: 1.5rem;
   background: linear-gradient(rgba(205, 0, 0, 0.45), rgba(0, 0, 0, 0.25)),
     url('./images/camping-photo.jpeg');
   font-family: 'Shadows Into Light', cursive;
@@ -9,5 +10,5 @@ body {
   background-size: 375px 812px;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center 100px;
+  background-position: center 70px;
 }
