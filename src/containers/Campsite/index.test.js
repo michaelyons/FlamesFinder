@@ -19,26 +19,9 @@ import {
 jest.mock('../../helper/apiCalls');
 
 describe('Campsite Container', () => {
-  let wrapper;
-  let addCurrentWeatherMock = jest.fn();
-  let addTenHourWeatherMock = jest.fn();
-  let addTenDayWeatherMock = jest.fn();
-
   beforeEach(async () => {
     campObjectMock;
     mockText;
-    wrapper = shallow(
-      <Campsite
-        currentWeather={currentWeatherMock}
-        tenHourWeather={tenHourWeatherMock}
-        tenDayWeather={tenDayWeatherMock}
-        addCurrentWeather={addCurrentWeatherMock}
-        addTenDayWeather={addTenDayWeatherMock}
-        addTenHourWeather={addTenHourWeatherMock}
-        facilityID={facilityIDMock}
-        contractID={contractIDMock}
-      />
-    );
   });
 
   describe('mapStateToProps', () => {
