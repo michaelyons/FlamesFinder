@@ -1,8 +1,9 @@
 h2 {
   color: aliceblue;
   font-size: 3rem;
-  padding-top: 2.5rem;
+  padding-top: 0;
   padding-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 a {
@@ -22,7 +23,7 @@ a {
   font-size: 1.3rem;
   overflow-y: scroll;
   padding-top: 0.75rem;
-  height: 215px;
+  height: 1215px;
 }
 
 .campsite-list {
@@ -48,6 +49,6 @@ a {
   width: 250px;
   margin: auto;
   display: block;
-  padding-top: 7rem;
+  padding-top: 2.5rem;
   padding-left: 3.2rem;
 }

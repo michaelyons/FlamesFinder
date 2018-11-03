@@ -1,9 +1,10 @@
 div {
   color: aliceblue;
+  overflow-y: auto;
 }
 
 .campinfo-header {
-  padding-top: 3rem;
+  padding-top: 0.5rem;
 }
 
 .fire-gif3 {
@@ -38,7 +39,7 @@ div {
   font-weight: bold;
   color: aliceblue;
   overflow-x: scroll;
-  height: 15rem;
+  height: 12rem;
   font-size: 1.4rem;
   background: rgb(41, 44, 48, 0.75);
   -webkit-border-radius: 10px;
@@ -53,7 +54,7 @@ div {
 .camp-details2 {
   color: aliceblue;
   overflow-x: scroll;
-  height: 15rem;
+  height: 12rem;
   font-size: 1.4rem;
   background: rgb(41, 44, 48, 0.75);
   -webkit-border-radius: 10px;

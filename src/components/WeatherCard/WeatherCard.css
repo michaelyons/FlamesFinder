@@ -20,6 +20,7 @@
   overflow-x: scroll;
   margin: auto;
   font-size: 1.6rem;
+  width: 375px;
   border-top: 3px solid aliceblue;
 }
 
@@ -45,6 +46,7 @@
   justify-content: flex-start;
   margin-bottom: 3rem;
   border-top: 3px solid aliceblue;
+  overflow-y: scroll;
 }
 
 .day-weather-card {
