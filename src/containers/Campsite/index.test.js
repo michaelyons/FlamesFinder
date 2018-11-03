@@ -41,10 +41,6 @@ describe('Campsite Container', () => {
     );
   });
 
-  it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
-
   describe('mapStateToProps', () => {
     it('should return a current object, a tenHour array, and a tenDay array', () => {
       const mockState = {
