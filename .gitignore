@@ -1,5 +1,6 @@
 # apiKeys
 /src/variables.js
+.env
 
 # dependencies
 /node_modules
