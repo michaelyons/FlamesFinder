@@ -18,8 +18,8 @@ FlamesFinder allows for users to find nearby campgrounds via geoLocation. Once a
 
 ### APIs
 
-[OpenWeatherMap](https://openweathermap.org/api)
-[WeatherUnderground API](https://www.wunderground.com/weather/api/)
-[GoogleMaps API](https://developers.google.com/maps/documentation/javascript/tutorial)
-[GeoLocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
-[Active Network API](http://developer.active.com/docs/read/Home)
+* [OpenWeatherMap](https://openweathermap.org/api)
+* [WeatherUnderground API](https://www.wunderground.com/weather/api/)
+* [GoogleMaps API](https://developers.google.com/maps/documentation/javascript/tutorial)
+* [GeoLocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+* [Active Network API](http://developer.active.com/docs/read/Home)
