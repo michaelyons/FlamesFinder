@@ -3,11 +3,12 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import CampsiteList from '../CampsiteList';
 import Campsite from '../Campsite';
 import Home from '../Home';
+import './index.css';
 
 export class Routes extends Component {
   render() {
     return (
-      <div>
+      <div className="main-wrap">
         <BrowserRouter>
           <div className="App">
             <Route exact path="/" component={Home} />
