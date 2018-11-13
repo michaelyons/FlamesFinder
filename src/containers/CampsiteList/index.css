@@ -3,7 +3,7 @@ h2 {
   font-size: 3rem;
   padding-top: 0;
   padding-bottom: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 
 a {
@@ -11,7 +11,7 @@ a {
 }
 
 .heading {
-  margin-top: -2rem;
+  margin-top: 3rem;
   position: fixed;
 }
 
