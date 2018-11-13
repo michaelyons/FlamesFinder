@@ -64,7 +64,7 @@ export const getCampsiteData = async () => {
   const { latitude, longitude } = position.coords;
   const url = `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campgrounds?api_key=${
     process.env.REACT_APP_CAMPSITEKEY
-  }contractCode=CO&landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true`;
+  }&landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&origin=*`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
@@ -75,9 +75,9 @@ export const getCampsiteData = async () => {
 };
 
 export const getCampsite = async (contractID, facilityID) => {
-  const url = `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campground/details?api_key=${
+  const url = `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campground/details?contractCode=${contractID}&parkId=${facilityID}&api_key=${
     process.env.REACT_APP_CAMPSITEKEY
-  }contractCode=${contractID}&parkId=${facilityID}`;
+  }`;
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');
@@ -90,9 +90,9 @@ export const getCampsite = async (contractID, facilityID) => {
 };
 
 export const googleMap = async () => {
-  const url = `https://maps.googleapis.com/maps/api/staticmap?&key=${
+  const url = `https://maps.googleapis.com/maps/api/staticmap?key=${
     process.env.REACT_APP_GOOGLEKEY
-  }center=Denver,CO&zoom=8.8&size=350x350&markers=color:red%7Clabel:%7C39.7508006,-104.9987834&markers=color:blue%7Clabel:1%7C39.6287,-104.8418&markers=color:blue%7Clabel:2%7C39.5431,-105.0648&markers=color:blue%7Clabel:3%7C39.8414,-105.4198&markers=color:blue%7Clabel:4%7C39.39167,-105.10889&markers=color:blue%7Clabel:5%7C39.67889,-105.49278&markers=color:blue%7Clabel:6%7C39.5100,-105.3944`;
+  }&zoom=8.8&size=350x350&markers=color:red%7Clabel:%7C39.7508006,-104.9987834&markers=color:blue%7Clabel:1%7C39.6287,-104.8418&markers=color:blue%7Clabel:2%7C39.5431,-105.0648&markers=color:blue%7Clabel:3%7C39.8414,-105.4198&markers=color:blue%7Clabel:4%7C39.39167,-105.10889&markers=color:blue%7Clabel:5%7C39.67889,-105.49278&markers=color:blue%7Clabel:6%7C39.5100,-105.3944`;
   const response = await fetch(url);
   const data = await response.blob();
   const cleanImage = await cleanLocationImage(data);
