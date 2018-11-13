@@ -39,7 +39,7 @@ export class CampsiteList extends Component {
     if (loading) {
       displayCampsites = <LoadingFire2 />;
     } else {
-      displayCampsites = campsites.slice(4, 30).map((campsite, index) => {
+      displayCampsites = campsites.slice(5, 30).map((campsite, index) => {
         const { facilityID, contractID, facilityName } = campsite.attributes;
         const cleanName =
           facilityName.charAt(0).toUpperCase() +
