@@ -42,7 +42,7 @@ export const getCurrentWeatherData = async (lat, long) => {
 };
 
 export const getTenHourWeatherData = async (lat, long) => {
-  const url = `http://api.wunderground.com/api/${
+  const url = `https://api.wunderground.com/api/${
     process.env.REACT_APP_FORECASTWEATHERKEY
   }/geolookup/conditions/hourly/forecast10day/q/${lat},${long}.json`;
   const response = await fetch(url);
@@ -51,7 +51,7 @@ export const getTenHourWeatherData = async (lat, long) => {
 };
 
 export const getTenDayWeatherData = async (lat, long) => {
-  const url = `http://api.wunderground.com/api/${
+  const url = `https://api.wunderground.com/api/${
     process.env.REACT_APP_FORECASTWEATHERKEY
   }/geolookup/conditions/hourly/forecast10day/q/${lat},${long}.json`;
   const response = await fetch(url);
@@ -62,9 +62,10 @@ export const getTenDayWeatherData = async (lat, long) => {
 export const getCampsiteData = async () => {
   const position = await getCurrentPosition();
   const { latitude, longitude } = position.coords;
-  const url = `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campgrounds?api_key=${
+  const url = `https://cors-anywhere.herokuapp.com/https://api.amp.active.com/camping/campgrounds?api_key=${
     process.env.REACT_APP_CAMPSITEKEY
   }&landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&origin=*`;
+  console.log(url);
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');

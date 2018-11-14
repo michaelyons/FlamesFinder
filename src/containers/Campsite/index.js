@@ -83,18 +83,18 @@ export class Campsite extends Component {
           <p className="campground-city">
             {cityName} {stateName}
           </p>
-          <p className="camp-details">
+          <div className="camp-details">
             <h3>{campgroundName} Amenities </h3>
             {amenities}
-          </p>
-          <p className="camp-details2">
+          </div>
+          <div className="camp-details2">
             <h3>{campgroundName} Details</h3>
             {campDetails}
-          </p>
-          <p className="camp-details3">
+          </div>
+          <div className="camp-details3">
             <h3>{campgroundName} Bulletins</h3>
             {importantCampInfo}
-          </p>
+          </div>
         </div>
       );
     }
