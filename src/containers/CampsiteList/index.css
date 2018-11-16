@@ -3,7 +3,8 @@ h2 {
   font-size: 3rem;
   padding-top: 0;
   padding-bottom: 0.5rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 0;
 }
 
 a {
@@ -11,8 +12,12 @@ a {
 }
 
 .heading {
-  margin-top: 3rem;
+  margin-top: 2.9rem;
   position: fixed;
+}
+
+.camp-container {
+  height: 200px;
 }
 
 .campground-list {
@@ -23,7 +28,7 @@ a {
   font-size: 1.3rem;
   overflow-y: scroll;
   padding-top: 0.75rem;
-  height: 1215px;
+  height: 1000px;
 }
 
 .campsite-list {
@@ -51,4 +56,8 @@ a {
   display: block;
   padding-top: 2.5rem;
   padding-left: 3.2rem;
+}
+
+img {
+  width: 300px;
 }

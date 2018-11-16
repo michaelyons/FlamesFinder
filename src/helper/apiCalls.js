@@ -65,7 +65,6 @@ export const getCampsiteData = async () => {
   const url = `https://cors-anywhere.herokuapp.com/https://api.amp.active.com/camping/campgrounds?api_key=${
     process.env.REACT_APP_CAMPSITEKEY
   }&landmarkName=true&landmarkLat=${latitude}&landmarkLong=${longitude}&xml=true&origin=*`;
-  console.log(url);
   const response = await fetch(url);
   const xmlCampData = await response.text();
   const convert = require('xml-js');

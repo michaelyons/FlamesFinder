@@ -58,7 +58,9 @@ export class CampsiteList extends Component {
         <Header />
         <h2>Nearby Campgrounds</h2>
         <img src={this.state.mapsImage} alt="" />
-        <div className="campground-list">{displayCampsites}</div>
+        <div className="camp-container">
+          <div className="campground-list">{displayCampsites}</div>
+        </div>
       </div>
     );
   }
