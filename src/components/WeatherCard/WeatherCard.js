@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../WeatherCard/WeatherCard.css';
-// const uuidv1 = require('uuid/v1');
 
 export default class WeatherCard extends Component {
   render() {

@@ -99,17 +99,19 @@ export class Campsite extends Component {
       );
     }
     return (
-      <div>
+      <div className="camplist1">
         <Header />
-        <h2 className="campinfo-header">Campground Information</h2>
-        <section>{displayChoosenCampsite}</section>
-        {this.state.allWeatherDataArray.length === 3 && (
-          <WeatherCard
-            currentWeather={this.props.currentWeather}
-            tenHourWeather={this.props.tenHourWeather}
-            tenDayWeather={this.props.tenDayWeather}
-          />
-        )}
+        <div className="height-control">
+          <h2 className="campinfo-header">Campground Information</h2>
+          <section>{displayChoosenCampsite}</section>
+          {this.state.allWeatherDataArray.length === 3 && (
+            <WeatherCard
+              currentWeather={this.props.currentWeather}
+              tenHourWeather={this.props.tenHourWeather}
+              tenDayWeather={this.props.tenDayWeather}
+            />
+          )}
+        </div>
       </div>
     );
   }
