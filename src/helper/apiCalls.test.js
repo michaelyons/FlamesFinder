@@ -20,13 +20,10 @@ import {
   mockText,
   mockResponseBlob
 } from './mockFetchData';
-
 import {
   contractIDMock,
   facilityIDMock
 } from '../containers/Campsite/mockCampsiteData';
-
-import { key, key2, key3, key4 } from '../variables';
 jest.mock('./imgCleaner');
 import { getCurrentPosition } from '../helper/getPosition/getPosition';
 jest.mock('../helper/getPosition/getPosition');
@@ -45,7 +42,9 @@ describe('API calls', () => {
     it('should make a fetch call with the correct params', () => {
       getCurrentWeatherData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `https://api.openweathermap.org/data/2.5/weather?lat=undefined&lon=undefined&us&units=imperial&APPID=${key}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=undefined&lon=undefined&us&units=imperial&APPID=${
+          process.env.REACT_APP_CURRENTWEATHERKEY
+        }`
       );
     });
   });
@@ -63,7 +62,9 @@ describe('API calls', () => {
     it('should make a fetch call with the correct params', () => {
       getTenHourWeatherData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/undefined,undefined.json`
+        `http://api.wunderground.com/api/${
+          process.env.REACT_APP_FORECASTWEATHERKEY
+        }/geolookup/conditions/hourly/forecast10day/q/undefined,undefined.json`
       );
     });
   });
@@ -81,7 +82,9 @@ describe('API calls', () => {
     it('should make a fetch with the correct params', () => {
       getTenDayWeatherData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `http://api.wunderground.com/api/${key2}/geolookup/conditions/hourly/forecast10day/q/undefined,undefined.json`
+        `http://api.wunderground.com/api/${
+          process.env.REACT_APP_FORECASTWEATHERKEY
+        }/geolookup/conditions/hourly/forecast10day/q/undefined,undefined.json`
       );
     });
   });
@@ -98,7 +101,9 @@ describe('API calls', () => {
     it('should make a fetch with the correct params', () => {
       getCampsite(contractIDMock, facilityIDMock);
       expect(window.fetch).toHaveBeenCalledWith(
-        `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campground/details?contractCode=NRSO&parkId=148541&api_key=${key3}`
+        `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campground/details?contractCode=NRSO&parkId=148541&api_key=${
+          process.env.REACT_APP_CAMPSITEKEY
+        }`
       );
     });
   });
@@ -121,7 +126,9 @@ describe('API calls', () => {
     it('should make a fetch with the correct params', async () => {
       await getCampsiteData();
       expect(window.fetch).toHaveBeenCalledWith(
-        `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campgrounds?contractCode=CO&landmarkName=true&landmarkLat=39&landmarkLong=-104&xml=true&api_key=${key3}`
+        `https://cors-anywhere.herokuapp.com/http://api.amp.active.com/camping/campgrounds?contractCode=CO&landmarkName=true&landmarkLat=39&landmarkLong=-104&xml=true&api_key=${
+          process.env.REACT_APP_CAMPSITEKEY
+        }`
       );
     });
   });
@@ -140,7 +147,9 @@ describe('API calls', () => {
     it('should make a fetch with the corret params', () => {
       googleMap();
       expect(window.fetch).toHaveBeenCalledWith(
-        `https://maps.googleapis.com/maps/api/staticmap?center=Denver,CO&zoom=8.8&size=350x350&markers=color:red%7Clabel:%7C39.7508006,-104.9987834&markers=color:blue%7Clabel:1%7C39.6287,-104.8418&markers=color:blue%7Clabel:2%7C39.5431,-105.0648&markers=color:blue%7Clabel:3%7C39.8414,-105.4198&markers=color:blue%7Clabel:4%7C39.39167,-105.10889&markers=color:blue%7Clabel:5%7C39.67889,-105.49278&markers=color:blue%7Clabel:6%7C39.5100,-105.3944&key=${key4}`
+        `https://maps.googleapis.com/maps/api/staticmap?center=Denver,CO&zoom=8.8&size=350x350&markers=color:red%7Clabel:%7C39.7508006,-104.9987834&markers=color:blue%7Clabel:1%7C39.6287,-104.8418&markers=color:blue%7Clabel:2%7C39.5431,-105.0648&markers=color:blue%7Clabel:3%7C39.8414,-105.4198&markers=color:blue%7Clabel:4%7C39.39167,-105.10889&markers=color:blue%7Clabel:5%7C39.67889,-105.49278&markers=color:blue%7Clabel:6%7C39.5100,-105.3944&key=${
+          process.env.REACT_APP_GOOGLEKEY
+        }`
       );
     });
   });
